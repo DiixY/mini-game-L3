@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author youne
- *
- */
-module test {
-}
