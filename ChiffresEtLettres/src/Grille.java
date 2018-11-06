@@ -18,25 +18,26 @@ public class Grille {
 		
 		try {
 			
-			this.autorise = new char[x];
-			this.grille = new char[x][y];
+			this.autorise = new char[y];
+			this.grille = new char[x-1][y];
 			FileReader fr = new FileReader(f);
 			BufferedReader br = new BufferedReader(fr);
 			
 			String temp = br.readLine();
-			for(int i=0;i<x;i++)
-			autorise[i] = temp.charAt(i);
 			
-			for(int i=0;i<x;i++)
+			for(int i=0;i<this.y;i++)
+				autorise[i] = temp.charAt(i);
+			
+			for(int i=1;i<this.x;i++)
 			{	
 				temp = br.readLine();
-				for(int j=0;j<y;j++)
+				for(int j=0;j<this.y;j++)
 				{
-					//System.out.println(temp);
-					this.grille[i][j] = temp.charAt(j);
+					System.out.println(temp);
+					this.grille[i-1][j] = temp.charAt(j);
 				}	
 			}
-			br.close();
+			
 			fr.close();
 		} catch (FileNotFoundException e) {
 			System.out.println ("Le fichier n'a pas été trouvé");
@@ -82,6 +83,34 @@ public class Grille {
 	 */
 	public void setAutorise(char[] autorise) {
 		this.autorise = autorise;
+	}
+
+	/**
+	 * @return the x
+	 */
+	public int getX() {
+		return x;
+	}
+
+	/**
+	 * @return the y
+	 */
+	public int getY() {
+		return y;
+	}
+
+	/**
+	 * @param x the x to set
+	 */
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	/**
+	 * @param y the y to set
+	 */
+	public void setY(int y) {
+		this.y = y;
 	}
 	
 }
