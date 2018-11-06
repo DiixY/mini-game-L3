@@ -18,22 +18,22 @@ public class Grille {
 		
 		try {
 			
-			this.autorise = new char[x];
-			this.grille = new char[x][y];
+			this.autorise = new char[y];
+			this.grille = new char[x-1][y];
 			FileReader fr = new FileReader(f);
 			BufferedReader br = new BufferedReader(fr);
 			
 			String temp = br.readLine();
-			for(int i=0;i<x;i++)
+			for(int i=0;i<y;i++)
 			autorise[i] = temp.charAt(i);
 			
-			for(int i=0;i<x;i++)
+			for(int i=1;i<x;i++)
 			{	
 				temp = br.readLine();
 				for(int j=0;j<y;j++)
 				{
 					//System.out.println(temp);
-					this.grille[i][j] = temp.charAt(j);
+					this.grille[i-1][j] = temp.charAt(j);
 				}	
 			}
 			br.close();
