@@ -36,7 +36,7 @@ public class Grille {
 					this.grille[i][j] = temp.charAt(j);
 				}	
 			}
-			
+			br.close();
 			fr.close();
 		} catch (FileNotFoundException e) {
 			System.out.println ("Le fichier n'a pas été trouvé");
