@@ -8,6 +8,7 @@ import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 	
@@ -18,10 +19,12 @@ public class Main extends Application {
 		
 		this.primaryStage = primaryStage;
 		Parent root = FXMLLoader.load(getClass().getResource("MainView.fxml"));
-		this.primaryStage.setTitle("MiniGames!");
+		this.primaryStage.setTitle("miniGames!");
 		
-		
+		primaryStage.setResizable(false);
+		primaryStage.initStyle(StageStyle.DECORATED);
 		Scene scene = new Scene(root);
+		
 		this.primaryStage.setScene(scene);
 		this.primaryStage.show();
 	}

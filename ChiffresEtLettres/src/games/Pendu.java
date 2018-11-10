@@ -40,10 +40,10 @@ public class Pendu implements ITFWordManagement {
 	
 	public Pendu () {
 		this.cuTry = 11;
-		this.word = "";
+		this.word = takeWord();
 		this.playCara = ' ';
 		this.end = false;
-		this.progW = new char[0];
+		this.progW = hideWord(this.word);
 	}
 	
 	//Méthodes
@@ -110,45 +110,31 @@ public class Pendu implements ITFWordManagement {
 		System.out.println("");
 	}
 	
-	public Pendu pendu_game(){
-		Pendu p1 = new Pendu();
-		word = takeWord();	
-		progW = hideWord(word);
-		Scanner sc = new Scanner(System.in);
-		
-		String carac;
-		System.out.println("Début de la partie : mot de "+word.length()+" caractères.");
-		while(!end && cuTry >= 1) {
-			System.out.println("Nombre d'essai restant : " +cuTry);
-			carac = sc.nextLine();
-			playCara = Character.toUpperCase(carac.charAt(0));
-			System.out.println(word);
-			System.out.println(playCara);
+	public boolean pendu_game(char c)
+	{
 			
-			if (checkLetter(word,playCara) == true) { //La lettre est dans le mot
-					System.out.println("Test1");
-					for(int i = 0;i<word.length();i++) {
-						if(word.charAt(i) == playCara) {
-							progW[i] = playCara;
-						}
-					}
+		if (checkLetter(word,c) == true) 
+		{ //La lettre est dans le mot
+			
+			for(int i = 0;i<word.length();i++) 
+			{
+				if(this.word.charAt(i) == c) 
+				{
+					this.progW[i] = c;
 				}
-				else {	//La lettre n'est pas dans le mot
-					System.out.println("Test2");
-					cuTry--;
-				}
-			aff(progW);
-			if(checkWord(word, String.valueOf(progW)) == true) {
-				end = true;
-				System.out.println("Vous avez gagné !");
+				else if(this.word.charAt(i) != progW[i]) progW[i] = '_';
 			}
-				
+			
+			return true;
 		}
-		sc.close();
-		System.out.println("Fin de la partie !");
-		
-		return p1;
+		else 
+		{	//La lettre n'est pas dans le mot
+			cuTry--;
+			return false;
+		}
 	}
+
+
 
 	/**
 	 * @return the cuTry
@@ -176,6 +162,27 @@ public class Pendu implements ITFWordManagement {
 	 */
 	public void setWord(String word) {
 		this.word = word;
+	}
+
+	/**
+	 * @return the end
+	 */
+	public Boolean getEnd() {
+		return end;
+	}
+
+	/**
+	 * @return the playCara
+	 */
+	public char getPlayCara() {
+		return playCara;
+	}
+
+	/**
+	 * @return the progW
+	 */
+	public char[] getProgW() {
+		return progW;
 	}
 	
 }

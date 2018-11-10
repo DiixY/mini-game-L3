@@ -105,11 +105,10 @@
     -fx-background-radius: 5,4,3,5;
     -fx-background-insets: 0,1,2,0;
     -fx-text-fill: white;
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
-    -fx-font-family: Arvin;
+    -fx-font-family: 'Arvin';
     -fx-text-fill: linear-gradient(white, #d0d0d0);
-    -fx-font-size: 5px;
-    -fx-padding: 10 20 10 20;
+    -fx-font-size: 11px;
+
 }
 #dark-blue-2:pressed {
     -fx-background-color: 
@@ -120,11 +119,10 @@
     -fx-background-radius: 5,4,3,5;
     -fx-background-insets: 0,1,2,0;
     -fx-text-fill: white;
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
-    -fx-font-family: Arial;
+    -fx-font-family: 'Arvin';
     -fx-text-fill: linear-gradient(white, #d0d0d0);
-    -fx-font-size: 5px;
-    -fx-padding: 10 20 10 20;
+    -fx-font-size: 11px;
+
 }
 
 
@@ -288,6 +286,36 @@
     -fx-padding: 3 30 3 30;
     -fx-text-fill: black;
     -fx-font-size: 14px;
+}
+
+#pendu-button {
+	-fx-background-image: url("pendu.png");
+	-fx-background-repeat: no-repeat;
+  -fx-background-position: center;
+}
+
+.button{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 1em; /* 12 */
+    -fx-text-fill: #828282;
+}
+
+.button:focused {
+    -fx-border-color: transparent;
+    -fx-border-width: 1, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:pressed {
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: white;
 }
 
 #grad {
