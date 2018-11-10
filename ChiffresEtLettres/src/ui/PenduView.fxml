@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane id="custom-bg" minHeight="400.0" minWidth="640.0" stylesheets="@../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.PenduController">
+   <bottom>
+      <GridPane alignment="CENTER" minHeight="50.0" minWidth="500.0">
+        <columnConstraints>
+            <ColumnConstraints minWidth="25.0" prefWidth="25.0" />
+            <ColumnConstraints minWidth="25.0" prefWidth="25.0" />
+            <ColumnConstraints minWidth="25.0" prefWidth="25.0" />
+            <ColumnConstraints minWidth="25.0" prefWidth="25.0" />
+            <ColumnConstraints minWidth="25.0" prefWidth="25.0" />
+            <ColumnConstraints minWidth="25.0" prefWidth="25.0" />
+            <ColumnConstraints minWidth="25.0" prefWidth="25.0" />
+            <ColumnConstraints minWidth="25.0" prefWidth="25.0" />
+            <ColumnConstraints minWidth="25.0" prefWidth="25.0" />
+          <ColumnConstraints minWidth="25.0" prefWidth="25.0" />
+          <ColumnConstraints minWidth="25.0" prefWidth="25.0" />
+            <ColumnConstraints minWidth="25.0" prefWidth="25.0" />
+            <ColumnConstraints minWidth="25.0" prefWidth="25.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints fillHeight="false" minHeight="25.0" prefHeight="25.0" />
+          <RowConstraints minHeight="25.0" prefHeight="25.0" />
+        </rowConstraints>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="2">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="D" textAlignment="CENTER" GridPane.columnIndex="3">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.columnIndex="4">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="F" textAlignment="CENTER" GridPane.columnIndex="5">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="G" textAlignment="CENTER" GridPane.columnIndex="6">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="H" textAlignment="CENTER" GridPane.columnIndex="7">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="I" textAlignment="CENTER" GridPane.columnIndex="8">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="J" textAlignment="CENTER" GridPane.columnIndex="9">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="K" textAlignment="CENTER" GridPane.columnIndex="10">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="N" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="O" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="P" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="Q" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="R" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="S" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="T" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" stylesheets="@../../Res/style.css" text="U" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="X" textAlignment="CENTER" GridPane.columnIndex="10" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" alignment="CENTER" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="A" textAlignment="CENTER">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="B" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="L" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="M" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="Button" GridPane.columnIndex="11" />
+            <Button id="dark-blue-2" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="Y" GridPane.columnIndex="11" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" stylesheets="@../../Res/style.css" text="Button" GridPane.columnIndex="12" />
+            <Button id="dark-blue-2" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" stylesheets="@../../Res/style.css" text="Z" GridPane.columnIndex="12" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+         </children>
+      </GridPane>
+   </bottom>
+   <right>
+      <Button fx:id="play" maxHeight="10.0" maxWidth="50.0" mnemonicParsing="false" onAction="#startGame" text="Button" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin></Button>
+   </right>
+   <center>
+      <Label fx:id="chances" text="Label" textFill="WHITE" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
