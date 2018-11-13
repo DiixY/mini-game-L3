@@ -125,11 +125,14 @@ public class Pendu implements ITFWordManagement {
 				else if(this.word.charAt(i) != progW[i]) progW[i] = '_';
 			}
 			
+			end = checkWord(word,String.valueOf(progW));
+				
 			return true;
 		}
 		else 
 		{	//La lettre n'est pas dans le mot
-			cuTry--;
+			cuTry = cuTry-1;
+			if(cuTry==0) end=false;
 			return false;
 		}
 	}

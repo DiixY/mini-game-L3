@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.paint.Color;
 import javafx.scene.text.TextAlignment;
 
 public class PenduController implements Initializable {
@@ -77,6 +78,8 @@ public class PenduController implements Initializable {
 	private Label word;
 	@FXML
 	private Label character;
+	@FXML
+	private Label status; 
 	
 	
 	
@@ -84,6 +87,34 @@ public class PenduController implements Initializable {
 	void startGame(ActionEvent event)
 	{
 		start.setDisable(true);
+		A.setDisable(false);
+		B.setDisable(false);
+		C.setDisable(false);
+		D.setDisable(false);
+		E.setDisable(false);
+		F.setDisable(false);
+		G.setDisable(false);
+		H.setDisable(false);
+		I.setDisable(false);
+		J.setDisable(false);
+		K.setDisable(false);
+		L.setDisable(false);
+		M.setDisable(false);
+		N.setDisable(false);
+		O.setDisable(false);
+		P.setDisable(false);
+		Q.setDisable(false);
+		R.setDisable(false);
+		S.setDisable(false);
+		T.setDisable(false);
+		U.setDisable(false);
+		V.setDisable(false);
+		W.setDisable(false);
+		X.setDisable(false);
+		Y.setDisable(false);
+		Z.setDisable(false);
+		
+		status.setText("");
 		chances.setText("");
 		word.setText("");
 		p = new Pendu();
@@ -91,12 +122,25 @@ public class PenduController implements Initializable {
 		
 	}
 	
+	
 	public void playCar(char c)
 	{
 		if(p.pendu_game(c))
 		{
 			word.setTextAlignment(TextAlignment.CENTER);
 			word.setText(String.valueOf(p.getProgW()));
+			if(p.getEnd()==true)
+			{
+				status.setText("Gagné !");
+				status.setTextFill(Color.GREEN);
+				start.setDisable(false);
+			}
+			else if(p.getEnd() == false && p.getCuTry()<1)
+			{
+				status.setText("Perdu !");
+				status.setTextFill(Color.RED);
+				start.setDisable(false);
+			}
 		}
 		else
 		{
@@ -112,6 +156,9 @@ public class PenduController implements Initializable {
 		al.setContentText("Il faut d'abord cliquer sur Lancer pour pouvoir jouer ;-)");
 		al.showAndWait();
 	}
+	
+	
+	
 	
 	@FXML
 	public void playCarA(ActionEvent event)
