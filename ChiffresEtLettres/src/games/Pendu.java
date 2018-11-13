@@ -83,6 +83,10 @@ public class Pendu implements ITFWordManagement {
 
 	public char[] hideWord(String word) {
 		char[] hWord = new char[word.length()];
+		for(int i=0;i<word.length();i++)
+		{
+			hWord[i]='_';
+		}
 		return hWord;
 	}
 		

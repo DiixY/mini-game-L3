@@ -116,8 +116,8 @@ public class PenduController implements Initializable {
 		
 		status.setText("");
 		chances.setText("");
-		word.setText("");
 		p = new Pendu();
+		word.setText(String.valueOf(p.getProgW()));
 		chances.setText("Chance(s) restante(s) : "+ p.getCuTry());
 		
 	}
@@ -132,7 +132,7 @@ public class PenduController implements Initializable {
 			if(p.getEnd()==true)
 			{
 				status.setText("Gagné !");
-				status.setTextFill(Color.GREEN);
+				status.setTextFill(Color.ORANGE);
 				start.setDisable(false);
 			}
 			else if(p.getEnd() == false && p.getCuTry()<1)
