@@ -1,4 +1,4 @@
-0000000000000
+aubergine|bettrave|carotte|chou|citrouille|comcombre|courgette|epinard|haricot|navet|poireau|radis
 DLECARTNERNIR
 HCBNCIEPINARD
 AMIRINDTHIVIA
@@ -14,16 +14,14 @@ NESIACITNRIAN
 NAVICOURGETTE
 
 mots de gauches a droite et de haut en bas
-mots:
-aubergine
-bettrave
-carotte
-chou
-citrouille
-comcombre
-courgette
-epinard
-haricot
-navet
-poireau
-radis
+
+
+
+
+
+
+
+
+
+
+
