@@ -1,38 +1,21 @@
 package games;
 import java.util.NavigableSet;
 
-import Interfaces.ITFWordManagement;
 
-public class WordSearchPuzzle implements ITFWordManagement {
+public class WordSearchPuzzle extends ABSWordManagement {
 	//attributs:
 	NavigableSet<String> mots;
 	int choixGrille;
+	int debut[][];
+	int fin [][];
 	//constructeurs:
 	//methodes:
 	
-	//methodes de l'intterface
-	@Override
-	public String takeWord() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
-	public boolean checkWord(String WordInDictionnary, String WordToTest) {
+	public void BidonPower() {
 		// TODO Auto-generated method stub
-		if(WordInDictionnary == WordToTest) 
-			return true;
-		else 
-			return false;
-	}
-
-	@Override
-	public boolean checkLetter(String word, char LetterToTest) {
-		// TODO Auto-generated method stub
-		if( (word.indexOf(LetterToTest)) >= 0)
-			return true;
-		else
-			return false;
+		
 	}
 	
 	
