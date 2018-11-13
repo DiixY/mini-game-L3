@@ -50,7 +50,7 @@ public class Pendu implements ITFWordManagement {
 	public String takeWord() {
 		Random r = new Random();
 		int valeurMin = 1;//premiere ligne du fichier
-		int valeurMax = 27236;//derniere ligne +1 du fichier
+		int valeurMax = 369086;//derniere ligne +1 du fichier
 		int ligne= valeurMin + r.nextInt(valeurMax - valeurMin);//nombre aleatoire entre [1;27236[
 		int compt=0;
 		String word="";

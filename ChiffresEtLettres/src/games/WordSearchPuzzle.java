@@ -1,3 +1,4 @@
+package games;
 import java.util.NavigableSet;
 
 import Interfaces.ITFWordManagement;
@@ -19,7 +20,7 @@ public class WordSearchPuzzle implements ITFWordManagement {
 	@Override
 	public boolean checkWord(String WordInDictionnary, String WordToTest) {
 		// TODO Auto-generated method stub
-		if(WordInDictionnary== WordToTest) 
+		if(WordInDictionnary == WordToTest) 
 			return true;
 		else 
 			return false;
