@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Random;
 import java.util.Scanner;
-
+import Interfaces.ITFWordManagement;
 /*  Pendu : 11 étapes
  1 - Sol
  2 - Poteau
@@ -19,12 +19,12 @@ import java.util.Scanner;
 10 - Jambe gauche
 11 - Jambe droite + perdu */
 
-public class Pendu{ 
+public class Pendu implements ITFWordManagement { 
 	
 	//Attributs
 	private int cuTry;			//Nombre d'essais utilisés
 	private String word;		//Mot choisi par checkletter
-	private char playCara;	//Lettre jouée par le joueur
+	private char playCara;		//Lettre jouée par le joueur
 	private Boolean end;		//Partie terminée ? (True = Oui ; False = Non)
 	private String[] progW;		//Progression du joueur (lettres trouvées etc)
 	
@@ -37,7 +37,7 @@ public class Pendu{
 		this.progW = progW;
 	}
 	
-	public Pendu (String word) {
+	public Pendu () {
 		this.cuTry = 0;
 		this.word = word;
 		this.playCara = playCara;
@@ -46,7 +46,7 @@ public class Pendu{
 	}
 	
 	//Méthodes
-	
+
 	public String takeWord() {
 		Random r = new Random();
 		int valeurMin = 1;//premiere ligne du fichier
@@ -93,24 +93,38 @@ public class Pendu{
 	}
 	
 	public boolean checkLetter(String word, char LetterToTest) {
-		if( (word.indexOf(LetterToTest)) == 0)
+		if( (word.indexOf(LetterToTest)) >= 0)
 			return true;
 		else
 			return false;			
 	}
 	
-	public int pendu_game(){
+	public void aff(String[] progW) {
+		for (int i = 1;i<progW.length;i++) {
+			if (progW[i] == null)
+				System.out.print("_");
+			else
+				System.out.print(progW[i]);
+		}
+		System.out.println("");
+	}
+	
+	public Pendu pendu_game(){
+		Pendu p1 = new Pendu();
 		word = takeWord();	
 		progW = hideWord(word);
 		Scanner sc = new Scanner(System.in);
 		
 		String carac;
-		
-		while(end == false || cuTry > 11) {
+		System.out.println("Début de la partie : mot de "+word.length()+" caractères.");
+		while(end == false && cuTry < 11) {
+			System.out.println("Essai numéro : " +(cuTry+1));
 			carac = sc.nextLine();
 			playCara = carac.charAt(0);
-		
-				if (checkLetter(word,playCara)==true) { //La lettre est dans le mot
+			System.out.println(playCara);
+			
+			if (checkLetter(word,playCara) == true) { //La lettre est dans le mot
+					System.out.println("Test1");
 					for(int i = 0;i<word.length();i++) {
 						if(word.charAt(i) == playCara) {
 							progW[i] = Character.toString(playCara);
@@ -118,13 +132,19 @@ public class Pendu{
 					}
 				}
 				else {	//La lettre n'est pas dans le mot
+					System.out.println("Test2");
 					cuTry++;
 				}
-			
-			if(checkWord(word, String.valueOf(progW)) == true)
+			aff(progW);
+			if(checkWord(word, String.valueOf(progW)) == true) {
 				end = true;
+				System.out.println("Vous avez gagné !");
+			}
+				
 		}
 		sc.close();
-		return 0;
+		System.out.println("Fin de la partie !");
+		
+		return p1;
 	}
 }
