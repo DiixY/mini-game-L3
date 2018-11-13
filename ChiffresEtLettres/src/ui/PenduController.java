@@ -122,6 +122,35 @@ public class PenduController implements Initializable {
 		
 	}
 	
+	public void disButton()
+	{
+		A.setDisable(true);
+		B.setDisable(true);
+		C.setDisable(true);
+		D.setDisable(true);
+		E.setDisable(true);
+		F.setDisable(true);
+		G.setDisable(true);
+		H.setDisable(true);
+		I.setDisable(true);
+		J.setDisable(true);
+		K.setDisable(true);
+		L.setDisable(true);
+		M.setDisable(true);
+		N.setDisable(true);
+		O.setDisable(true);
+		P.setDisable(true);
+		Q.setDisable(true);
+		R.setDisable(true);
+		S.setDisable(true);
+		T.setDisable(true);
+		U.setDisable(true);
+		V.setDisable(true);
+		W.setDisable(true);
+		X.setDisable(true);
+		Y.setDisable(true);
+		Z.setDisable(true);
+	}
 	
 	public void playCar(char c)
 	{
@@ -137,32 +166,7 @@ public class PenduController implements Initializable {
 					status.setText("Gagné !");
 					status.setTextFill(Color.ORANGE);
 					start.setDisable(false);
-					A.setDisable(true);
-					B.setDisable(true);
-					C.setDisable(true);
-					D.setDisable(true);
-					E.setDisable(true);
-					F.setDisable(true);
-					G.setDisable(true);
-					H.setDisable(true);
-					I.setDisable(true);
-					J.setDisable(true);
-					K.setDisable(true);
-					L.setDisable(true);
-					M.setDisable(true);
-					N.setDisable(true);
-					O.setDisable(true);
-					P.setDisable(true);
-					Q.setDisable(true);
-					R.setDisable(true);
-					S.setDisable(true);
-					T.setDisable(true);
-					U.setDisable(true);
-					V.setDisable(true);
-					W.setDisable(true);
-					X.setDisable(true);
-					Y.setDisable(true);
-					Z.setDisable(true);
+					disButton();
 				}
 			}
 			else 
@@ -170,6 +174,7 @@ public class PenduController implements Initializable {
 				status.setText("Perdu !");
 				status.setTextFill(Color.RED);
 				start.setDisable(false);
+				disButton();
 			}
 		
 			chances.setText("Chance(s) restante(s) : "+ p.getCuTry());
