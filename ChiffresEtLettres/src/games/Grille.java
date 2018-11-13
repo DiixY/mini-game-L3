@@ -16,7 +16,6 @@ public class Grille {
 	public Grille(int x,int y,File f) {
 		this.x = x;
 		this.y = y;
-		
 		try {
 			
 			this.autorise = new char[y];
