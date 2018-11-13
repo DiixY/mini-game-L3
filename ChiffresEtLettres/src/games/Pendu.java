@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Random;
-import java.util.Scanner;
 import Interfaces.ITFWordManagement;
 /*  Pendu : 11 étapes
  1 - Sol
@@ -114,10 +113,10 @@ public class Pendu implements ITFWordManagement {
 		System.out.println("");
 	}
 	
-	public boolean pendu_game(char c)
+	public void pendu_game(char c)
 	{
 			
-		if (checkLetter(word,c) == true) 
+		if (checkLetter(word,c)) 
 		{ //La lettre est dans le mot
 			
 			for(int i = 0;i<word.length();i++) 
@@ -128,16 +127,10 @@ public class Pendu implements ITFWordManagement {
 				}
 				else if(this.word.charAt(i) != progW[i]) progW[i] = '_';
 			}
-			
-			end = checkWord(word,String.valueOf(progW));
-				
-			return true;
 		}
 		else 
 		{	//La lettre n'est pas dans le mot
 			cuTry = cuTry-1;
-			if(cuTry==0) end=false;
-			return false;
 		}
 	}
 
