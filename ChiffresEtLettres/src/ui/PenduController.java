@@ -1,7 +1,6 @@
 package ui;
 
 import java.net.URL;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 import games.Pendu;
 import javafx.event.ActionEvent;
@@ -117,6 +116,7 @@ public class PenduController implements Initializable {
 		status.setText("");
 		chances.setText("");
 		p = new Pendu();
+		p.setCuTry(11);
 		word.setText(String.valueOf(p.getProgW()));
 		chances.setText("Chance(s) restante(s) : "+ p.getCuTry());
 		
@@ -125,28 +125,56 @@ public class PenduController implements Initializable {
 	
 	public void playCar(char c)
 	{
-		if(p.pendu_game(c))
-		{
-			word.setTextAlignment(TextAlignment.CENTER);
-			word.setText(String.valueOf(p.getProgW()));
-			if(p.getEnd()==true)
+		p.pendu_game(c);
+		
+			if(p.getCuTry()>0) 
 			{
-				status.setText("Gagné !");
-				status.setTextFill(Color.ORANGE);
-				start.setDisable(false);
+				
+				word.setTextAlignment(TextAlignment.CENTER);
+				word.setText(String.valueOf(p.getProgW()));
+				if(p.checkWord(p.getWord(),String.valueOf(p.getProgW())))
+				{
+					status.setText("Gagné !");
+					status.setTextFill(Color.ORANGE);
+					start.setDisable(false);
+					A.setDisable(true);
+					B.setDisable(true);
+					C.setDisable(true);
+					D.setDisable(true);
+					E.setDisable(true);
+					F.setDisable(true);
+					G.setDisable(true);
+					H.setDisable(true);
+					I.setDisable(true);
+					J.setDisable(true);
+					K.setDisable(true);
+					L.setDisable(true);
+					M.setDisable(true);
+					N.setDisable(true);
+					O.setDisable(true);
+					P.setDisable(true);
+					Q.setDisable(true);
+					R.setDisable(true);
+					S.setDisable(true);
+					T.setDisable(true);
+					U.setDisable(true);
+					V.setDisable(true);
+					W.setDisable(true);
+					X.setDisable(true);
+					Y.setDisable(true);
+					Z.setDisable(true);
+				}
 			}
-			else if(p.getEnd() == false && p.getCuTry()<1)
+			else 
 			{
 				status.setText("Perdu !");
 				status.setTextFill(Color.RED);
 				start.setDisable(false);
 			}
-		}
-		else
-		{
+		
 			chances.setText("Chance(s) restante(s) : "+ p.getCuTry());
-		}
 	}
+
 	
 	public void errAlert(char c)
 	{
