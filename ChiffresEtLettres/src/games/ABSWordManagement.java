@@ -9,6 +9,36 @@ import java.util.Random;
 
 public abstract class ABSWordManagement {
 	public abstract void BidonPower();
+	
+	public String takeWord(int ligne) {
+		int compt=0;
+		String word="";
+		
+		File f = new File("Annexes","Dictionary.txt");
+		if(f.exists()) {
+			try{
+				InputStream flux=new FileInputStream(f); 
+				InputStreamReader lecture=new InputStreamReader(flux);
+				BufferedReader buff=new BufferedReader(lecture);
+				while (compt<(ligne-1)){
+					compt++;
+					buff.readLine();
+				}
+				word = buff.readLine();
+				buff.close(); 
+				}		
+				catch (Exception e){
+				System.out.println(e.toString());
+				}
+
+		} 
+		else{
+			System.out.println("Fichier introuvable");
+		}
+
+		 return word;
+	}
+	
 	public String takeWord() {
 		Random r = new Random();
 		int valeurMin = 1;//premiere ligne du fichier
@@ -55,4 +85,6 @@ public abstract class ABSWordManagement {
 		else
 			return false;			
 	}
+	
+	
 }
