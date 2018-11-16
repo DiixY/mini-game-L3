@@ -11,7 +11,7 @@
 
 <BorderPane id="custom-bg" minHeight="400.0" minWidth="640.0" stylesheets="@../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.PenduController">
    <bottom>
-      <GridPane alignment="CENTER" minHeight="50.0" minWidth="500.0" BorderPane.alignment="CENTER">
+      <GridPane alignment="CENTER" maxWidth="400.0" minHeight="50.0" minWidth="400.0" prefHeight="64.0" prefWidth="610.0" BorderPane.alignment="CENTER">
         <columnConstraints>
             <ColumnConstraints minWidth="30.0" prefWidth="30.0" />
             <ColumnConstraints minWidth="30.0" prefWidth="30.0" />
@@ -183,6 +183,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
+            <Button id="dark-blue" layoutX="14.0" layoutY="104.0" mnemonicParsing="false" onAction="#goGames" stylesheets="@../../Res/style.css" text="Retour" />
          </children>
       </Pane>
    </center>
