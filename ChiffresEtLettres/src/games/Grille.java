@@ -10,32 +10,25 @@ import java.util.Arrays;
 public class Grille {
 
 	private char grille[][];
-	private char autorise[];
 	private int x,y;
 
-	public Grille(int x,int y,File f) {
+	public Grille(int x,int y,String fpath) {
 		this.x = x;
 		this.y = y;
+		
 		try {
-			
-			this.autorise = new char[y];
+			File f = new File(fpath);
+	
 			this.grille = new char[x-1][y];
 			FileReader fr = new FileReader(f);
 			BufferedReader br = new BufferedReader(fr);
-			
 			String temp = br.readLine();
 			
-			for(int i=0;i<this.y;i++)
-				autorise[i] = temp.charAt(i);
 			
 			for(int i=1;i<this.x;i++)
 			{	
 				temp = br.readLine();
-				for(int j=0;j<this.y;j++)
-				{
-					System.out.println(temp);
-					this.grille[i-1][j] = temp.charAt(j);
-				}	
+				this.grille[i-1] = temp.toCharArray();
 			}
 			
 			fr.close();
@@ -65,25 +58,13 @@ public class Grille {
 	}
 
 	/**
-	 * @return the autorise
-	 */
-	public char[] getAutorise() {
-		return autorise;
-	}
-
-	/**
 	 * @param grille the grille to set
 	 */
 	public void setGrille(char[][] grille) {
 		this.grille = grille;
 	}
 
-	/**
-	 * @param autorise the autorise to set
-	 */
-	public void setAutorise(char[] autorise) {
-		this.autorise = autorise;
-	}
+
 
 	/**
 	 * @return the x
