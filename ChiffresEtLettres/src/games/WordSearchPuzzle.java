@@ -6,9 +6,17 @@ public class WordSearchPuzzle extends ABSWordManagement {
 	//attributs:
 	NavigableSet<String> mots;
 	int choixGrille;
-	int debut[][];
-	int fin [][];
+	int debutMot [];
+	int finMot [];
+	
 	//constructeurs:
+    public WordSearchPuzzle(int choixGrille, NavigableSet<String> mots) {
+		// TODO Auto-generated constructor stub
+    	this.choixGrille = choixGrille;
+    	this.mots = mots;
+    	
+    	
+	}
 	//methodes:
 	
 
@@ -18,6 +26,6 @@ public class WordSearchPuzzle extends ABSWordManagement {
 		
 	}
 	
-	
+
 
 }
