@@ -1,19 +1,22 @@
 package games;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 
 //on considere que la 1ere case du tableau est 1-1
 public final class WordSearchPuzzle extends ABSWordManagement {
 	//attributs:
-	private int xdebutMot ;//coordonnees x de la 1ere lettre du mot choisit
-	private int ydebutMot;//coordonnees y de la 1ere lettre du mot choisit
-	private int xfinMot ;//coordonnees x de la derniere lettre du mot choisit
-	private int yfinMot ;//coordonnees y de la derniere lettre du mot choisit
-	private GrilleMelee grille;
+	private int colonneDebutMot;//coordonnees x de la 1ere lettre du mot choisit
+	private int ligneDebutMot;//coordonnees y de la 1ere lettre du mot choisit
+	
+	private int colonneFinMot;//coordonnees x de la derniere lettre du mot choisit
+	private int ligneFinMot;//coordonnees y de la derniere lettre du mot choisit
+	
+	private GrilleMelee grille;//la grille choisit
 	private String fpath;//chemin du fichier choisit
-	private String word;
+	private int nbMots;
 	
 	//constructeurs:
     public WordSearchPuzzle(String fpath) throws IOException {
@@ -22,26 +25,28 @@ public final class WordSearchPuzzle extends ABSWordManagement {
     	
     	if (this.fpath.equals("Annexes/Mots_meles/Fruits.txt")) {
     		this.grille = new GrilleMelee(this.fpath,11,10);
+    		this.nbMots = 12;
     	}
     		
     	else if(this.fpath.equals("Annexes/Mots_meles/Legumes.txt")) {
     		this.grille = new GrilleMelee(this.fpath,14,13);
+    		this.nbMots = 12;
     	}
     		
     	else if(this.fpath.equals("Annexes/Mots_meles/Noel.txt") ) {
     		this.grille = new GrilleMelee(this.fpath,15,13);
+    		this.nbMots = 15;
     	}
     		
     	else
     		System.out.println("pas de grille a cette adresse");	
  
-    	this.xdebutMot = 0;
-    	this.ydebutMot = 0;
+    	this.colonneDebutMot = 0;
+    	this.ligneDebutMot = 0;
     	
-    	this.xfinMot = 0;
-    	this.yfinMot = 0;
+    	this.colonneFinMot = 0;
+    	this.ligneFinMot = 0;
     	
-    	this.word="";
 	}
     
 	//methodes:
@@ -52,36 +57,36 @@ public final class WordSearchPuzzle extends ABSWordManagement {
 		
 	}
 
-	public int getXdebutMot() {
-		return xdebutMot;
+	public int getColonneDebutMot() {
+		return colonneDebutMot;
 	}
 
-	public void setXdebutMot(int xdebutMot) {
-		this.xdebutMot = xdebutMot;
+	public void setColonneDebutMot(int xdebutMot) {
+		this.colonneDebutMot = xdebutMot;
 	}
 
-	public int getYdebutMot() {
-		return ydebutMot;
+	public int getLigneDebutMot() {
+		return ligneDebutMot;
 	}
 
-	public void setYdebutMot(int ydebutMot) {
-		this.ydebutMot = ydebutMot;
+	public void setLigneDebutMot(int ydebutMot) {
+		this.ligneDebutMot = ydebutMot;
 	}
 
-	public int getXfinMot() {
-		return xfinMot;
+	public int getColonneFinMot() {
+		return colonneFinMot;
 	}
 
-	public void setXfinMot(int xfinMot) {
-		this.xfinMot = xfinMot;
+	public void setColonneFinMot(int xfinMot) {
+		this.colonneFinMot = xfinMot;
 	}
 
-	public int getYfinMot() {
-		return yfinMot;
+	public int getLigneFinMot() {
+		return ligneFinMot;
 	}
 
-	public void setYfinMot(int yfinMot) {
-		this.yfinMot = yfinMot;
+	public void setLigneFinMot(int yfinMot) {
+		this.ligneFinMot = yfinMot;
 	}
 
 	public String getFpath() {
@@ -92,76 +97,124 @@ public final class WordSearchPuzzle extends ABSWordManagement {
 		return grille;
 	}
 
-	public String getWord() {
-		return word;
+	public int getNbMots() {
+		return nbMots;
 	}
 
-	public void setWord(String word) {
-		this.word = word;
+	public void setNbMots(int nbMots) {
+		this.nbMots = nbMots;
 	}
 
 	public void changeDebutMot(Scanner sc) {//permet de changer les coordonnées du debut du mot
 		int temp;
-		System.out.println("saisir le x de la lettre du debut du mot");
+		System.out.println("saisir la ligne de la lettre du debut du mot");
 		temp=sc.nextInt();
-		this.setXdebutMot(temp-1);
+		this.setLigneDebutMot(temp-1);
 		sc.nextLine();
-		System.out.println("saisir le y de la lettre du debut du mot");
+		
+		System.out.println("saisir la colonne de la lettre du debut du mot");
 		temp=sc.nextInt();
-		this.setYdebutMot(temp-1);
+		this.setColonneDebutMot(temp-1);
 		sc.nextLine();
+
 	}
 	
 	public void changeFinMot(Scanner sc) {//permet de changer les coordonnées de la fin du mot
 		int temp;
-		System.out.println("saisir le x de la lettre de fin du mot");
+		System.out.println("saisir la ligne de la lettre de fin du mot");
 		temp=sc.nextInt();
-		this.setXfinMot(temp-1);
+		this.setLigneFinMot(temp-1);
 		sc.nextLine();
-		System.out.println("saisir le y de la lettre de fin du mot");
+		
+		System.out.println("saisir la colonne de la lettre de fin du mot");
 		temp=sc.nextInt();
-		this.setYfinMot(temp-1);
+		this.setColonneFinMot(temp-1);
 		sc.nextLine();
 	}
 	
-	public void WordSelection(){//permet de selectionner un mots de la grille
+	public String WordSelection(){//permet de selectionner un mots de la grille
 		Scanner sc= new Scanner(System.in);
 		this.changeDebutMot(sc);
 		this.changeFinMot(sc);
-		
-		//probleme avec les cas(a refaire sur eclipse) la feuille
-		if(this.getXdebutMot() == this.getXfinMot()) {//cas 1:mots est a la verticale
+		String word="";
+		if(this.getColonneDebutMot() == this.getColonneFinMot()) {//cas 1:mots est a la verticale
 			
-			if(this.getYdebutMot() <= this.getYfinMot()) {//cas 1.1:le mot est de haut en bas
+			if(this.getLigneDebutMot() <= this.getLigneFinMot()) {//cas 1.1:le mot est de haut en bas
 				
-				for(int compt = 0; compt < (this.getYfinMot() - this.getYdebutMot() + 1) ; compt++){
-					System.out.println(this.grille.getGrille()[(this.getXdebutMot() + compt)] [this.getYdebutMot()] );
+				for(int compt = 0; compt < (this.getLigneFinMot() - this.getLigneDebutMot() + 1) ; compt++){
+					word = word + (this.grille.getGrille() [(this.getLigneDebutMot() + compt)] [this.getColonneDebutMot() ]);
+					//this.setWord(this.getWord()+(this.grille.getGrille() [(this.getLigneDebutMot() + compt)] [this.getColonneDebutMot() ]));
 				}
+				return word.toLowerCase();
 			}
 			else {//cas 1.2:le mot est de bas en haut
-				for(int compt = 0; compt < (this.getYdebutMot()-this.getYfinMot() + 1) ; compt++){
-					System.out.println(this.grille.getGrille()[(this.getXdebutMot())] [this.getYdebutMot()- compt] );
+				
+				for(int compt = 0; compt < (this.getLigneDebutMot() - this.getLigneFinMot()  + 1) ; compt++){
+					word = word + (this.grille.getGrille() [(this.getLigneDebutMot() - compt)] [this.getColonneDebutMot()]);
+					//this.setWord(this.getWord() + (this.grille.getGrille() [(this.getLigneDebutMot() - compt)] [this.getColonneDebutMot()]));
 				}
+				return word.toLowerCase();
 			}
 			 
 		}
-		else if(this.getYdebutMot() == this.getYfinMot()) {//cas 2:le mot est a l'horizontale
+		else if(this.getLigneDebutMot() == this.getLigneFinMot()) {//cas 2:le mot est a l'horizontale
 			
-			if(this.getXdebutMot() < this.getXfinMot()) {//cas 2.1:le mot est de gauche a droite
-
+			if(this.getColonneDebutMot() <= this.getColonneFinMot()) {//cas 2.1:le mot est de gauche a droite
+				
+				for(int compt = 0; compt < (this.getColonneFinMot() - this.getColonneDebutMot() + 1) ; compt++){
+					word = word + (this.grille.getGrille() [this.getLigneDebutMot()] [(this.getColonneDebutMot() + compt)]);
+				}
+				return word.toLowerCase();
 			}
 			else {//cas 2.2:le mot est de droite a gauche
-
+				
+				for(int compt = 0; compt < (this.getColonneDebutMot() - this.getColonneFinMot() + 1) ; compt++){
+					word = word + (this.grille.getGrille() [this.getLigneDebutMot()] [(this.getColonneDebutMot() - compt)]);
+				}
+				return word.toLowerCase();
 			}
 		}
 		else {//cas 3:on reset la selection
 			System.out.println("Erreur,le mot ne peut pas etre en diagonale");
-			this.setXdebutMot(0);
-			this.setYdebutMot(0);
 			
-			this.setXfinMot(0);
-			this.setYfinMot(0);
+			this.setColonneDebutMot(0);
+			this.setLigneDebutMot(0);
+			
+			this.setColonneFinMot(0);
+			this.setLigneFinMot(0);
+			
+			return word.toLowerCase();
 		}
-		sc.close();
+	}
+
+	public String [] modifTab(int i) {//change la valeur d'une case du tableau de mots autoriser
+		String  tab2[]= new String[this.getGrille().getAutorise().length];
+		for(int j = 0 ; j < this.getGrille().getAutorise().length ; j++) {
+			tab2[j] = this.getGrille().getAutorise()[j];
+		}
+		tab2[i] = "-";
+		return tab2;
+		
+	}
+	public void jouer() {//permet de faire un jeu complet de mots meles
+		String word;
+		
+		while(this.getNbMots() > 0) {
+			
+			System.out.println("il vous reste " + this.getNbMots() + " mots a trouver: " + Arrays.deepToString(this.getGrille().getAutorise()));
+			word = this.WordSelection();
+			System.out.println("votre mot est: " + word);
+			
+			for(int i = 0; i < this.getGrille().getAutorise().length ; i++) {
+				
+				if(checkWord(word,this.getGrille().getAutorise()[i])) {
+					this.getGrille().setAutorise(modifTab(i));
+					this.setNbMots(this.getNbMots() - 1);
+				}
+				
+			}
+			
+		}
+		System.out.println("GAGNE");
 	}
 }
