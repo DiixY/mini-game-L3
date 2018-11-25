@@ -1,41 +1,17 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+import games.WordSearchPuzzle;
 
 
 public class Test {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		int compt=0;
-		String word="";
-		int ligne=256129;
 		
-		File f = new File("Annexes","Dictionary.txt");
-		if(f.exists()) {
-			try{
-				InputStream flux=new FileInputStream(f); 
-				InputStreamReader lecture=new InputStreamReader(flux);
-				BufferedReader buff=new BufferedReader(lecture);
-				while (compt<(ligne-1)){
-					compt++;
-					buff.readLine();
-				}
-				word = buff.readLine();
-				buff.close(); 
-				}		
-				catch (Exception e){
-				System.out.println(e.toString());
-				}
-
-		} 
-		else{
-			System.out.println("Fichier introuvable");
-		}
-
-		 System.out.println(word);
+		WordSearchPuzzle wsp = new WordSearchPuzzle("Annexes/Mots_meles/Noel.txt");
+		wsp.WordSelection();
+		System.out.println("x1:"+wsp.getXdebutMot()+" y1:"+wsp.getYdebutMot()+" |x2:"+wsp.getXfinMot()+" y2:"+wsp.getYfinMot());
 		
 	}
 
