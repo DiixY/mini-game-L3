@@ -10,8 +10,7 @@ public class Test {
 		// TODO Auto-generated method stub
 		
 		WordSearchPuzzle wsp = new WordSearchPuzzle("Annexes/Mots_meles/Noel.txt");
-		wsp.WordSelection();
-		System.out.println("x1:"+wsp.getXdebutMot()+" y1:"+wsp.getYdebutMot()+" |x2:"+wsp.getXfinMot()+" y2:"+wsp.getYfinMot());
+		System.out.println(wsp.WordSelection());
 		
 	}
 
