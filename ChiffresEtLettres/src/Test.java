@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.util.Scanner;
 
 import games.WordSearchPuzzle;
 
@@ -10,7 +9,7 @@ public class Test {
 		// TODO Auto-generated method stub
 		
 		WordSearchPuzzle wsp = new WordSearchPuzzle("Annexes/Mots_meles/Noel.txt");
-		System.out.println(wsp.WordSelection());
+		wsp.jouer();
 		
 	}
 

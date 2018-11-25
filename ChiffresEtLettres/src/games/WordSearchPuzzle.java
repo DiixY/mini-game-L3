@@ -1,6 +1,7 @@
 package games;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -15,6 +16,7 @@ public final class WordSearchPuzzle extends ABSWordManagement {
 	
 	private GrilleMelee grille;//la grille choisit
 	private String fpath;//chemin du fichier choisit
+	private int nbMots;
 	
 	//constructeurs:
     public WordSearchPuzzle(String fpath) throws IOException {
@@ -23,14 +25,17 @@ public final class WordSearchPuzzle extends ABSWordManagement {
     	
     	if (this.fpath.equals("Annexes/Mots_meles/Fruits.txt")) {
     		this.grille = new GrilleMelee(this.fpath,11,10);
+    		this.nbMots = 12;
     	}
     		
     	else if(this.fpath.equals("Annexes/Mots_meles/Legumes.txt")) {
     		this.grille = new GrilleMelee(this.fpath,14,13);
+    		this.nbMots = 12;
     	}
     		
     	else if(this.fpath.equals("Annexes/Mots_meles/Noel.txt") ) {
     		this.grille = new GrilleMelee(this.fpath,15,13);
+    		this.nbMots = 15;
     	}
     		
     	else
@@ -92,6 +97,14 @@ public final class WordSearchPuzzle extends ABSWordManagement {
 		return grille;
 	}
 
+	public int getNbMots() {
+		return nbMots;
+	}
+
+	public void setNbMots(int nbMots) {
+		this.nbMots = nbMots;
+	}
+
 	public void changeDebutMot(Scanner sc) {//permet de changer les coordonnées du debut du mot
 		int temp;
 		System.out.println("saisir la ligne de la lettre du debut du mot");
@@ -132,7 +145,7 @@ public final class WordSearchPuzzle extends ABSWordManagement {
 					word = word + (this.grille.getGrille() [(this.getLigneDebutMot() + compt)] [this.getColonneDebutMot() ]);
 					//this.setWord(this.getWord()+(this.grille.getGrille() [(this.getLigneDebutMot() + compt)] [this.getColonneDebutMot() ]));
 				}
-				return word;
+				return word.toLowerCase();
 			}
 			else {//cas 1.2:le mot est de bas en haut
 				
@@ -140,7 +153,7 @@ public final class WordSearchPuzzle extends ABSWordManagement {
 					word = word + (this.grille.getGrille() [(this.getLigneDebutMot() - compt)] [this.getColonneDebutMot()]);
 					//this.setWord(this.getWord() + (this.grille.getGrille() [(this.getLigneDebutMot() - compt)] [this.getColonneDebutMot()]));
 				}
-				return word;
+				return word.toLowerCase();
 			}
 			 
 		}
@@ -151,14 +164,14 @@ public final class WordSearchPuzzle extends ABSWordManagement {
 				for(int compt = 0; compt < (this.getColonneFinMot() - this.getColonneDebutMot() + 1) ; compt++){
 					word = word + (this.grille.getGrille() [this.getLigneDebutMot()] [(this.getColonneDebutMot() + compt)]);
 				}
-				return word;
+				return word.toLowerCase();
 			}
 			else {//cas 2.2:le mot est de droite a gauche
 				
 				for(int compt = 0; compt < (this.getColonneDebutMot() - this.getColonneFinMot() + 1) ; compt++){
 					word = word + (this.grille.getGrille() [this.getLigneDebutMot()] [(this.getColonneDebutMot() - compt)]);
 				}
-				return word;
+				return word.toLowerCase();
 			}
 		}
 		else {//cas 3:on reset la selection
@@ -170,7 +183,38 @@ public final class WordSearchPuzzle extends ABSWordManagement {
 			this.setColonneFinMot(0);
 			this.setLigneFinMot(0);
 			
-			return word;
+			return word.toLowerCase();
 		}
+	}
+
+	public String [] modifTab(int i) {//change la valeur d'une case du tableau de mots autoriser
+		String  tab2[]= new String[this.getGrille().getAutorise().length];
+		for(int j = 0 ; j < this.getGrille().getAutorise().length ; j++) {
+			tab2[j] = this.getGrille().getAutorise()[j];
+		}
+		tab2[i] = "-";
+		return tab2;
+		
+	}
+	public void jouer() {//permet de faire un jeu complet de mots meles
+		String word;
+		
+		while(this.getNbMots() > 0) {
+			
+			System.out.println("il vous reste " + this.getNbMots() + " mots a trouver: " + Arrays.deepToString(this.getGrille().getAutorise()));
+			word = this.WordSelection();
+			System.out.println("votre mot est: " + word);
+			
+			for(int i = 0; i < this.getGrille().getAutorise().length ; i++) {
+				
+				if(checkWord(word,this.getGrille().getAutorise()[i])) {
+					this.getGrille().setAutorise(modifTab(i));
+					this.setNbMots(this.getNbMots() - 1);
+				}
+				
+			}
+			
+		}
+		System.out.println("GAGNE");
 	}
 }
