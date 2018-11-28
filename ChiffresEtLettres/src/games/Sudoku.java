@@ -36,16 +36,16 @@ public class Sudoku {
 		return true;
 	}
 
-	public boolean verifLine(int l,int r)
+	public boolean verifLine()
 	{
 		int count;
 
 		for(char temp:this.grille.getAutorise()) 
 		{
-			for(int i=0;i<l;i++)
+			for(int i=0;i<9;i++)
 			{
 				count = 0;
-				for(int j=0;j<r;j++)
+				for(int j=0;j<9;j++)
 				{
 					char test = this.grille.getGrille()[i][j];
 					if(Character.compare(test,temp) == 0 && count<2)
@@ -60,16 +60,16 @@ public class Sudoku {
 	}
 
 
-	public boolean verifRow(int l,int r)
+	public boolean verifRow()
 	{
 		int count;
 
 		for(char temp:this.grille.getAutorise()) 
 		{
-			for(int i=0;i<l;i++)
+			for(int i=0;i<9;i++)
 			{
 				count = 0;
-				for(int j=0;j<r;j++)
+				for(int j=0;j<9;j++)
 				{
 					char test = this.grille.getGrille()[j][i];
 					if(Character.compare(test,temp) == 0 && count<2)
@@ -136,7 +136,7 @@ public class Sudoku {
 
 	public boolean verifUnic()
 	{
-		if(verifRow(9,9) && verifLine(9,9) && verifRegion())
+		if(verifRow() && verifLine() && verifRegion())
 			return true;
 		else return false;
 	}
@@ -224,5 +224,4 @@ public class Sudoku {
 	public void setGrille(GrilleSudoku grille) {
 		this.grille = grille;
 	}
-
 }
