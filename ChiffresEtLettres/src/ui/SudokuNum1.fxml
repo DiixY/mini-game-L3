@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane id="custom-bg" minHeight="400.0" minWidth="640.0" stylesheets="@../../Res/style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <right>
+      <Button id="dark-blue" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" styleClass="..\..\Res\style.css" text="Verifier" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </right>
+</BorderPane>
