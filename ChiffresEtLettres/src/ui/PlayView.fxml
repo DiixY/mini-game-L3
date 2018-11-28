@@ -21,7 +21,7 @@
           <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#goSudoNum" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                <graphic>
                   <ImageView>
                      <image>

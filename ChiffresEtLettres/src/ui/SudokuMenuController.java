@@ -20,5 +20,14 @@ public class SudokuMenuController {
 			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
 			mainwindow.setScene(scene);	
 	}
+	
+	public void goGames(ActionEvent event) throws IOException
+	{	
+			Parent playParent = FXMLLoader.load(getClass().getResource("PlayView.fxml"));
+			Scene scene = new Scene(playParent);
+			Stage playwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			
+			playwindow.setScene(scene);	
+	}
 
 }

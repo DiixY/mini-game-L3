@@ -165,48 +165,37 @@ public class Sudoku {
 		}
 	}
 
-	public void playSudoku()
+	public boolean playCoup(int x,int y,char coup)
 	{
-		Scanner sc = new Scanner(System.in);
-		int x,y;
-		char coup,temp;
+		char temp;
 
-		while(!end)
+
+		if(x>=0 && x<=8 && y>=0 && y<=8)
 		{
-			displayGrid();
-			System.out.println("Votre coup ?");
-			coup = sc.nextLine().charAt(0);
-
-			System.out.println("X ?");
-			x = sc.nextInt()-1;
-			sc.nextLine();
-
-			System.out.println("Y ?");
-			y = sc.nextInt()-1;
-			sc.nextLine();
-
-			if(x>=0 && x<=8 && y>=0 && y<=8)
+			if(isAutorized(coup) && Character.compare(this.grille.getGrille()[x][y], '0') == 0)
 			{
-				if(isAutorized(coup) && Character.compare(this.grille.getGrille()[x][y], '0') == 0)
+				temp = this.grille.getGrille()[x][y];
+				this.grille.getGrille()[x][y] = coup;
+				if(!verifUnic())
 				{
-					temp = this.grille.getGrille()[x][y];
-					this.grille.getGrille()[x][y] = coup;
-					if(!verifUnic())
-					{
-						System.out.println("Coup impossible");
-						this.grille.getGrille()[x][y] = temp;
-					}
-					else System.out.println("Coup bon!");
+					this.grille.getGrille()[x][y] = temp;
+					return false;
 				}
-				else System.out.println("Coup impossible");
-
-				if(verifAllPlayed())
-					end = true;
 			}
-			else System.out.println("Coup impossible");
 		}
-		System.out.println("Parti Terminé !");
-		sc.close();
+		
+		return true;
+	}
+
+
+
+	public int getChance() {
+		return chance;
+	}
+
+
+	public void setChance(int chance) {
+		this.chance = chance;
 	}
 
 
