@@ -140,7 +140,7 @@
       </GridPane>
    </bottom>
    <right>
-      <Button id="dark-blue" fx:id="start" alignment="CENTER" maxHeight="40.0" maxWidth="99.0" mnemonicParsing="false" onAction="#startGame" prefHeight="31.0" prefWidth="97.0" stylesheets="@../../Res/style.css" text="Lancer" BorderPane.alignment="CENTER">
+      <Button id="dark-blue" fx:id="start" alignment="CENTER" maxHeight="40.0" maxWidth="10.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#startGame" prefHeight="40.0" prefWidth="100.0" stylesheets="@../../Res/style.css" text="Lancer" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets right="10.0" />
          </BorderPane.margin></Button>
@@ -160,7 +160,7 @@
    <center>
       <Pane BorderPane.alignment="CENTER">
          <children>
-            <Rectangle arcHeight="5.0" fill="#5b5b5b29" height="120.0" layoutX="109.0" layoutY="66.0" strokeType="INSIDE" width="410.0" BorderPane.alignment="CENTER_RIGHT">
+            <Rectangle arcHeight="5.0" fill="#5b5b5b29" height="120.0" layoutX="122.0" layoutY="66.0" strokeType="INSIDE" width="397.0" BorderPane.alignment="CENTER_RIGHT">
                <BorderPane.margin>
                   <Insets right="10.0" />
                </BorderPane.margin>
@@ -173,7 +173,7 @@
                   </LinearGradient>
                </stroke>
             </Rectangle>
-            <Label fx:id="word" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="116.0" layoutY="70.0" prefHeight="112.0" prefWidth="395.0" stylesheets="@../../Res/style.css" textAlignment="CENTER">
+            <Label fx:id="word" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="128.0" layoutY="70.0" prefHeight="112.0" prefWidth="383.0" stylesheets="@../../Res/style.css" textAlignment="CENTER">
                <font>
                   <Font name="Arvin" size="47.0" />
                </font>
@@ -183,7 +183,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button id="dark-blue" layoutX="14.0" layoutY="104.0" mnemonicParsing="false" onAction="#goGames" stylesheets="@../../Res/style.css" text="Retour" />
+            <Button id="dark-blue" layoutX="14.0" layoutY="104.0" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#goGames" prefHeight="140.0" prefWidth="100.0" stylesheets="@../../Res/style.css" text="Retour" />
          </children>
       </Pane>
    </center>

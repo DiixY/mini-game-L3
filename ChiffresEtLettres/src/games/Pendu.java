@@ -1,5 +1,7 @@
 package games;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 /*  Pendu : 11 étapes
  1 - Sol
  2 - Poteau
@@ -32,8 +34,9 @@ public class Pendu extends ABSWordManagement {
 	}
 	
 	public Pendu () {
-		this.cuTry = 11;
+		
 		this.word = takeWord();
+		this.cuTry = ThreadLocalRandom.current().nextInt(this.word.length()/2, this.word.length() + 1);
 		this.playCara = ' ';
 		this.end = false;
 		this.progW = hideWord(this.word);

@@ -122,7 +122,7 @@ public class PenduController implements Initializable {
 		status.setText("");
 		chances.setText("");
 		p = new Pendu();
-		p.setCuTry(11);
+		
 		word.setText(String.valueOf(p.getProgW()));
 		chances.setText("Chance(s) restante(s) : "+ p.getCuTry());
 		

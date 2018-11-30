@@ -17,7 +17,7 @@ public class Test {
 		//System.out.println(Arrays.deepToString(s.getGrille().getGrille()));
 		//System.out.println(Arrays.toString(s.getGrille().getAutorise()));
 
-		s.playSudoku();
+	
 
 	}
 
