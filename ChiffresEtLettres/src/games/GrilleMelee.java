@@ -19,6 +19,7 @@ public class GrilleMelee extends Grille {
 		String temp = br.readLine();
 		
 		this.autorise = temp.split("-",0);
+		br.close();
 	}
 
 	/**
