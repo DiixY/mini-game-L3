@@ -11,11 +11,13 @@ public class Test {
 		
 		
 		
-		GrilleMelee g = new GrilleMelee("Annexes/Grilles/Mots_meles/Fruits.txt",11,10);
+		Sudoku s = new Sudoku("Annexes/Grilles/Sudoku1.txt");
 		
 		
-		System.out.println(Arrays.deepToString(g.getGrille()));
-		System.out.println(Arrays.toString(g.getAutorise()));
+		//System.out.println(Arrays.deepToString(s.getGrille().getGrille()));
+		//System.out.println(Arrays.toString(s.getGrille().getAutorise()));
+
+		s.playSudoku();
 
 	}
 
