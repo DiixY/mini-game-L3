@@ -1,4 +1,4 @@
-aubergine|bettrave|carotte|chou|citrouille|comcombre|courgette|epinard|haricot|navet|poireau|radis
+aubergine-bettrave-carotte-chou-citrouille-comcombre-courgette-epinard-haricot-navet-poireau-radis
 DLECARTNERNIR
 HCBNCIEPINARD
 AMIRINDTHIVIA
@@ -13,7 +13,7 @@ POIREAUAUBIEI
 NESIACITNRIAN
 NAVICOURGETTE
 
-mots de gauches a droite et de haut en bas
+mots de gauches a droite et de haut en bas.
 
 
 

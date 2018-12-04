@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 import java.util.Random;
 
 public abstract class ABSWordManagement {
-	public abstract void BidonPower();
+	public abstract void BidonPower();//methode abstraite qui sert uniquement a pouvoir faire la classe abstraite
 	
 	public String takeWord(int ligne) {
 		int compt=0;
