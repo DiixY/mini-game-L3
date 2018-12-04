@@ -18,7 +18,7 @@ public class Main extends Application {
 		
 		this.primaryStage = primaryStage;
 		Parent root = FXMLLoader.load(getClass().getResource("MainView.fxml"));
-		this.primaryStage.setTitle("miniGames!");
+		this.primaryStage.setTitle("miniGames");
 		
 		primaryStage.setResizable(false);
 		primaryStage.initStyle(StageStyle.DECORATED);
