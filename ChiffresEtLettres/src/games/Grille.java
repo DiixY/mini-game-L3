@@ -24,7 +24,6 @@ public class Grille {
 			BufferedReader br = new BufferedReader(fr);
 			String temp = br.readLine();
 			
-			
 			for(int i=1;i<this.x;i++)
 			{	
 				temp = br.readLine();
