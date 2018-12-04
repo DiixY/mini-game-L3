@@ -87,7 +87,6 @@ public class Pendu extends ABSWordManagement {
 	}
 
 
-
 	/**
 	 * @return the cuTry
 	 */

@@ -10,8 +10,12 @@ public class Test {
 		// TODO Auto-generated method stub
 		
 		
-		
-		Sudoku s = new Sudoku("Annexes/Grilles/Sudoku1.txt");
+		for(int i = 0;i<=25;i++)
+		{
+			char c = (char)(65+i);
+			System.out.println(Character.toString(c));
+		}
+			
 		
 		
 		//System.out.println(Arrays.deepToString(s.getGrille().getGrille()));

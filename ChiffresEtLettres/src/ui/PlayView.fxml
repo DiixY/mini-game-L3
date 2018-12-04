@@ -38,7 +38,14 @@
                   </ImageView>
                </graphic></Button>
             <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
-            <Button alignment="CENTER" mnemonicParsing="false" text="Button" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button alignment="CENTER" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../../Res/motmelee.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
             <Button alignment="CENTER" mnemonicParsing="false" onAction="#goPendu" GridPane.halignment="CENTER">
                <graphic>
                   <ImageView>
