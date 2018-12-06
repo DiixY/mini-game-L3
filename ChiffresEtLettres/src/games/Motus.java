@@ -1,4 +1,5 @@
 package games;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -42,19 +43,35 @@ public final class Motus extends ABSWordManagement {
 	public Motus () {
 		this.cuTry = 0;
 		this.end = false;
-		this.word = takeWord();	
+		
+		this.word = takeWord();
+		while(this.word.length() < 6 || this.word.length() > 8)
+		{
+			this.word = takeWord();
+		}
 		
 		this.ghostCo = hideWord(word);
+		this.ghostCo[0] = this.word.charAt(0);
+		this.ghostCo[3] = this.word.charAt(3);
+		
 		this.ghostEm = hideWord(word);
 	}
 	
 	//Méthodes
 
 
+	public Boolean getEnd() {
+		return end;
+	}
+
+	public void setEnd(Boolean end) {
+		this.end = end;
+	}
+
 	public char[] hideWord(String word) {
 		char[] hWord = new char[word.length()];
 		for(int i=0 ; i<word.length() ; i++)
-			hWord[i] = '0';
+			hWord[i] = '.';
 		return hWord;
 	}		
 	
@@ -68,7 +85,7 @@ public final class Motus extends ABSWordManagement {
 	
 	public char[] videGhost(char[] ghost) {
 		for(int i=0;i<word.length(); i++) {
-			ghost[i] = '0';
+			ghost[i] = '.';
 		}
 		return ghost;
 	}
@@ -92,11 +109,14 @@ public final class Motus extends ABSWordManagement {
 		if(cuTry < 7)
 
 			ghostWo = hideGhost(word);
-		playWord = strplayed.toUpperCase();
-
+			playWord = strplayed.toUpperCase();
+			this.ghostEm = videGhost(ghostEm);
+		
 		//Mot correct ?
 		if(playWord.length()==word.length()) {
-			if(checkWord(word,playWord) == true) { //Le mot joué est correct
+			if(checkWord(word,playWord) == true) {
+				//Le mot joué est correct
+				cuTry++;
 				end = true;
 			}
 			//Vérification lettres
@@ -109,27 +129,15 @@ public final class Motus extends ABSWordManagement {
 						ghostCo[i] = playWord.charAt(i);
 						ghostWo[i] = '0';
 					}
-				}
-
-				for(int k = 0 ; k<word.length() ; k++) {
-
-					//Lettre dans le mot + position 
-					if(checkLetter(word,playWord.charAt(k)) == true) {
-						for(int j = 0 ; j<word.length() ; j++) {
-
-							if(Character.compare(ghostWo[k],playWord.charAt(j)) == 0) {
-								for(int l = 0 ; l<word.length() ; l++) {
-									if(Character.compare(playWord.charAt(j),ghostCo[j])!=0) {
-										ghostWo[k] = '0';
-										ghostEm[k] = playWord.charAt(k);
-									}
-								}
-							}
-						}
+					else if (Character.compare(ghostWo[i],playWord.charAt(i)) != 0 && checkLetter(this.word,playWord.charAt(i)))
+					{
+						ghostEm[i] = playWord.charAt(i);
 					}
+					
 				}
-
-				this.ghostEm = videGhost(ghostEm);
+				
+				System.out.println(Arrays.toString(this.ghostEm));
+				System.out.println(this.word);
 			}
 		}
 		else {
@@ -139,6 +147,46 @@ public final class Motus extends ABSWordManagement {
 		if(checkWord(word, String.valueOf(playWord)) == true) {
 			end = true;
 		}		
+	}
+
+	public int getCuTry() {
+		return cuTry;
+	}
+
+	public void setCuTry(int cuTry) {
+		this.cuTry = cuTry;
+	}
+
+	public String getWord() {
+		return word;
+	}
+
+	public void setWord(String word) {
+		this.word = word;
+	}
+
+	public char[] getGhostWo() {
+		return ghostWo;
+	}
+
+	public void setGhostWo(char[] ghostWo) {
+		this.ghostWo = ghostWo;
+	}
+
+	public char[] getGhostCo() {
+		return ghostCo;
+	}
+
+	public void setGhostCo(char[] ghostCo) {
+		this.ghostCo = ghostCo;
+	}
+
+	public char[] getGhostEm() {
+		return ghostEm;
+	}
+
+	public void setGhostEm(char[] ghostEm) {
+		this.ghostEm = ghostEm;
 	}
 }
 

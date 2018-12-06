@@ -38,6 +38,7 @@ public class GameMenuController implements Initializable{
 			mainwindow.setScene(scene);	
 	}
 	
+	@FXML
 	public void goSudoNum(ActionEvent event) throws IOException
 	{	
 			Parent mainParent = FXMLLoader.load(getClass().getResource("SudokuNumMenuView.fxml"));
@@ -46,6 +47,7 @@ public class GameMenuController implements Initializable{
 			mainwindow.setScene(scene);	
 	}
 	
+	@FXML
 	public void goMotus(ActionEvent event) throws IOException
 	{	
 			Parent mainParent = FXMLLoader.load(getClass().getResource("MotusView.fxml"));
