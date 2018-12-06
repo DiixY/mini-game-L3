@@ -45,6 +45,14 @@ public class GameMenuController implements Initializable{
 			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
 			mainwindow.setScene(scene);	
 	}
+	
+	public void goMotus(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("MotusView.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
