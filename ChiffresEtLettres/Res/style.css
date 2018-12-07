@@ -17,6 +17,11 @@
 	 	linear-gradient(to right top, #084298, #165cb1, #2677ca, #3a93e1, #50aff8);
 }
 
+#custom-back {
+	 -fx-background-image: url("back.jpg");
+	 -fx-background-repeat: repeat;
+}
+
 #green {
     -fx-background-color:
         linear-gradient(#f0ff35, #a9ff00),
