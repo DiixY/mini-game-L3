@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane maxHeight="400" maxWidth="640" minHeight="400.0" minWidth="640.0" style="-fx-background-color: linear-gradient(to right top, #084298, #165cb1, #2677ca, #3a93e1, #50aff8);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.GameMenuController">
+<BorderPane maxHeight="400" maxWidth="640" minHeight="400.0" minWidth="640.0" style="-fx-background-color: linear-gradient(to right top, #084298, #165cb1, #2677ca, #3a93e1, #50aff8);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ChangeSceneButtons">
    <center>
       <GridPane alignment="CENTER" hgap="5.0" maxHeight="100.0" maxWidth="500.0" minHeight="100.0" minWidth="500.0" prefHeight="100.0" prefWidth="495.0" stylesheets="@../../Res/style.css" BorderPane.alignment="CENTER">
         <columnConstraints>

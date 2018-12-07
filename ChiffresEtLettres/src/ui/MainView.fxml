@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane id="custom-back" minHeight="400.0" minWidth="640.0" stylesheets="@../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MainController">
+<BorderPane id="custom-back" minHeight="400.0" minWidth="640.0" stylesheets="@../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ChangeSceneButtons">
    <center>
       <VBox alignment="CENTER">
          <children>
@@ -21,7 +21,7 @@
             </ImageView>
             <HBox id="custom-back" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" stylesheets="@../../Res/style.css" BorderPane.alignment="CENTER">
                <children>
-                  <Button id="dark-blue" fx:id="playbutton" mnemonicParsing="false" onAction="#goGames" prefHeight="50.0" prefWidth="100.0" stylesheets="@../../Res/style.css" text="Jouez !" textAlignment="CENTER">
+                  <Button id="dark-blue" fx:id="playbutton" mnemonicParsing="false" onAction="#goPlayView" prefHeight="50.0" prefWidth="100.0" stylesheets="@../../Res/style.css" text="Jouez !" textAlignment="CENTER">
                      <tooltip>
                         <Tooltip text="En ligne ou seul" />
                      </tooltip>

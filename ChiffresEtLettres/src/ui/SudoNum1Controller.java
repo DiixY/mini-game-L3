@@ -14,7 +14,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 
-public class SudoNum1Controller {
+public class SudoNum1Controller extends ChangeSceneButtons{
 	//Attributes
 	Sudoku s;
 	ArrayList<String> coordinates;
@@ -23,7 +23,7 @@ public class SudoNum1Controller {
 	Button launch;
 	
 	@FXML 
-	Button try_sudo = this.createDisabledButton();
+	Button try_sudo;
 	
 	@FXML
 	private Label chances;

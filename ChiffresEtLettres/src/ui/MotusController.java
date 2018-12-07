@@ -28,7 +28,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 
-public final class MotusController implements Initializable{
+public final class MotusController extends ChangeSceneButtons implements Initializable{
 	
 	//creation des objet pour la grille et la zone de texte a manipuler dans l'interface graphique
 	@FXML
@@ -112,19 +112,20 @@ public final class MotusController implements Initializable{
 
 				for(int i = 0 ; i < playWord.length() ; i++)
 				{
+					final int row = i;
 					if(Character.compare(playWord.charAt(i),this.m.getGhostCo()[i]) == 0)
 					{
-						this.grid.getChildren().remove(getNodeByRowColumnIndex(i,this.m.getCuTry()-1));
+						this.grid.getChildren().remove(getNodeByRowColumnIndex(this.m.getCuTry(),i));
 						this.grid.add(this.goodPlaceChar(playWord.charAt(i)), i, this.m.getCuTry()-1);
 					}
 					else if (Character.compare(playWord.charAt(i),this.m.getGhostEm()[i]) == 0)
 					{
-						this.grid.getChildren().remove(getNodeByRowColumnIndex(i,this.m.getCuTry()-1));
+						this.grid.getChildren().remove(getNodeByRowColumnIndex(this.m.getCuTry(),i));
 						this.grid.add(this.wrongPlaceChar(playWord.charAt(i)), i, this.m.getCuTry()-1);
 					}
 					else 
 					{
-						this.grid.getChildren().remove(getNodeByRowColumnIndex(i,this.m.getCuTry()-1));
+						this.grid.getChildren().remove(getNodeByRowColumnIndex(this.m.getCuTry()-1,i));
 						this.grid.add(this.wrongChar(playWord.charAt(i)), i, this.m.getCuTry()-1);
 					}
 				}
@@ -147,7 +148,7 @@ public final class MotusController implements Initializable{
 			{
 				for(int i = 0 ; i < this.m.getWord().length() ; i++)
 				{
-						this.grid.getChildren().remove(getNodeByRowColumnIndex(i,this.m.getCuTry()));
+						
 						this.grid.add(this.wrongChar(this.m.getGhostCo()[i]), i, this.m.getCuTry());
 				}
 				this.word.clear();

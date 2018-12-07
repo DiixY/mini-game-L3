@@ -132,12 +132,8 @@ public final class Motus extends ABSWordManagement {
 					else if (Character.compare(ghostWo[i],playWord.charAt(i)) != 0 && checkLetter(this.word,playWord.charAt(i)))
 					{
 						ghostEm[i] = playWord.charAt(i);
-					}
-					
+					}	
 				}
-				
-				System.out.println(Arrays.toString(this.ghostEm));
-				System.out.println(this.word);
 			}
 		}
 		else {
