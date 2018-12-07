@@ -182,7 +182,7 @@ public class PenduController implements Initializable {
 				start.setDisable(false);
 				disButton();
 			}
-		
+		    
 			chances.setText("Chance(s) restante(s) : "+ p.getCuTry());
 	}
 
