@@ -142,5 +142,7 @@ public class Pendu extends ABSWordManagement {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 	
 }
