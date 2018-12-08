@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -11,7 +12,7 @@
    <center>
       <HBox alignment="CENTER" maxHeight="200.0" maxWidth="550.0" minHeight="200.0" minWidth="550.0" prefHeight="200.0" prefWidth="550.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goChar1">
+            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goSudo1">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="150.0">
                      <image>
@@ -23,7 +24,7 @@
             <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" text="Button" textAlignment="CENTER" />
          </children>
          <BorderPane.margin>
-            <Insets />
+            <Insets bottom="20.0" />
          </BorderPane.margin>
       </HBox>
    </center>
@@ -35,14 +36,14 @@
       </Button>
    </bottom>
    <top>
-      <HBox alignment="CENTER" maxHeight="75.0" maxWidth="400.0" minHeight="75.0" minWidth="400.0" prefHeight="100.0" prefWidth="400.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" maxHeight="75.0" maxWidth="400.0" minHeight="75.0" minWidth="400.0" prefHeight="75.0" prefWidth="400.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="70.0" fitWidth="70.0">
                <image>
                   <Image url="@../../Res/sudokulettre.png" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Sudoku Lettre" textAlignment="CENTER">
+            <Label text="Sudoku Lettre" textAlignment="CENTER">
                <font>
                   <Font name="Arvin" size="30.0" />
                </font>
