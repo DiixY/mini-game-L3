@@ -34,4 +34,23 @@
          </BorderPane.margin>
       </Button>
    </bottom>
+   <top>
+      <HBox alignment="CENTER" maxHeight="75.0" maxWidth="400.0" minHeight="75.0" minWidth="400.0" prefHeight="100.0" prefWidth="400.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0">
+               <image>
+                  <Image url="@../../Res/sudokulettre.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Sudoku Lettre" textAlignment="CENTER">
+               <font>
+                  <Font name="Arvin" size="30.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
 </BorderPane>
