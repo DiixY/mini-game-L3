@@ -14,7 +14,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 
 public class SudoChar1Controller extends ChangeSceneButtons{
@@ -35,8 +34,6 @@ public class SudoChar1Controller extends ChangeSceneButtons{
 	private Label status;
 	
 	@FXML
-	private GridPane r;
-
 	ChoiceBox<Character> c1;
 	@FXML
 	ChoiceBox<Character> c2;
@@ -151,11 +148,15 @@ public class SudoChar1Controller extends ChangeSceneButtons{
 		{
 			Field f = this.getClass().getDeclaredField("c"+i);
 			f.setAccessible(true);
-			ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
+			ChoiceBox<Character> choiceBox = extracted(f);
 			ChoiceBox<Character> temp = choiceBox;
 			
 			temp.setItems(availableChoices);
 		}
+	}
+
+	private ChoiceBox<Character> extracted(Field f) throws IllegalAccessException {
+		return (ChoiceBox<Character>) f.get(this);
 	}
 	
 	public boolean errAlert() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
@@ -164,7 +165,7 @@ public class SudoChar1Controller extends ChangeSceneButtons{
 		{
 			Field f = this.getClass().getDeclaredField("c"+i);
 			f.setAccessible(true);
-			ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
+			ChoiceBox<Character> choiceBox = extracted(f);
 			ChoiceBox<Character> temp = choiceBox;
 
 			if(temp.getValue() == null)
@@ -216,7 +217,7 @@ public class SudoChar1Controller extends ChangeSceneButtons{
 			{
 					Field f = this.getClass().getDeclaredField("c"+i);
 					f.setAccessible(true);
-					ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
+					ChoiceBox<Character> choiceBox = extracted(f);
 					ChoiceBox<Character> temp = choiceBox;
 					
 					if(this.errAlert())
