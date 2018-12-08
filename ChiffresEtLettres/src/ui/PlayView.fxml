@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -62,6 +63,9 @@
                   </ImageView>
                </graphic></Button>
          </children>
+         <BorderPane.margin>
+            <Insets bottom="60.0" />
+         </BorderPane.margin>
       </GridPane>
    </center>
    <bottom>
@@ -71,4 +75,28 @@
          </BorderPane.margin>
       </Button>
    </bottom>
+   <top>
+      <HBox alignment="CENTER" maxHeight="100.0" maxWidth="400.0" minHeight="100.0" minWidth="400.0" prefHeight="100.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Choisis ton " textAlignment="CENTER">
+               <font>
+                  <Font name="Arvin" size="34.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="70.0" fitWidth="138.0" HBox.hgrow="ALWAYS">
+               <image>
+                  <Image url="@../../Res/logoMain.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="!" textAlignment="CENTER">
+               <font>
+                  <Font name="Arvin" size="34.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+   </top>
 </BorderPane>
