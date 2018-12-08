@@ -12,7 +12,7 @@
    <center>
       <HBox alignment="CENTER" maxHeight="200.0" maxWidth="550.0" minHeight="200.0" minWidth="550.0" prefHeight="200.0" prefWidth="550.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goSudo1">
+            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goChar1">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="150.0">
                      <image>
