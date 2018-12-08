@@ -14,7 +14,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 
-public class SudoNum1Controller {
+public class SudoNum1Controller extends ChangeSceneButtons{
 	//Attributes
 	Sudoku s;
 	ArrayList<String> coordinates;
@@ -23,7 +23,7 @@ public class SudoNum1Controller {
 	Button launch;
 	
 	@FXML 
-	Button try_sudo = this.createDisabledButton();
+	Button try_sudo;
 	
 	@FXML
 	private Label chances;
@@ -179,13 +179,26 @@ public class SudoNum1Controller {
 		c44.setItems(availableChoices);
 	}
 	
-	public void errAlert()
+	public boolean errAlert() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
 	{
-		Alert al = new Alert(Alert.AlertType.WARNING);
-		al.setTitle("Problème Soduku");
-		al.setHeaderText("Un oubli ?");
-		al.setContentText("Il faut remplir entièrement la grille avant de pouvoir tester !");
-		al.showAndWait();
+		for(int i = 1;i<=44;i++)
+		{
+			Field f = this.getClass().getDeclaredField("c"+i);
+			f.setAccessible(true);
+			ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
+			ChoiceBox<Character> temp = choiceBox;
+
+			if(temp.getValue() == null)
+			{
+				Alert al = new Alert(Alert.AlertType.WARNING);
+				al.setTitle("Problème Soduku");
+				al.setHeaderText("Un oubli ?");
+				al.setContentText("Il faut remplir entièrement la grille avant de pouvoir tester !");
+				al.showAndWait();
+				return false;
+			}
+		}
+		return true;
 	}
 	
 	public void start(ActionEvent event)
@@ -225,7 +238,8 @@ public class SudoNum1Controller {
 					f.setAccessible(true);
 					ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
 					ChoiceBox<Character> temp = choiceBox;
-					if(temp.getValue() != null)
+					
+					if(this.errAlert())
 					{
 						if(!s.playCoup(this.coordinates.get(i-1).charAt(0)-'0', this.coordinates.get(i-1).charAt(1)-'0', temp.getValue()))
 						{
@@ -236,7 +250,6 @@ public class SudoNum1Controller {
 					}
 					else
 					{
-						this.errAlert();
 						break outofloop;
 					}			
 			}
