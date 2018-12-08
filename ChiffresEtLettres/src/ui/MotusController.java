@@ -64,6 +64,7 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 		this.word.setDisable(false);
 		this.launch.setDisable(true);
 		this.check.setDisable(false);
+		this.status.setText("");
 		this.word.setPromptText("Entrez un mot ! ("+this.m.getWord().length()+"caractères)");
 		
 		
@@ -101,7 +102,7 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 		
 		if(this.m.getCuTry()<6)
 		{
-			if(this.word.getText().equals("") || this.word.getText().length() != this.m.getWord().length())
+			if(this.word.getText().equals("") || this.word.getText().length() != this.m.getWord().length() || !this.m.isWordValid(this.word.getText()))
 			{
 				this.errAlert();
 			}
@@ -112,7 +113,6 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 
 				for(int i = 0 ; i < playWord.length() ; i++)
 				{
-					final int row = i;
 					if(Character.compare(playWord.charAt(i),this.m.getGhostCo()[i]) == 0)
 					{
 						this.grid.getChildren().remove(getNodeByRowColumnIndex(this.m.getCuTry(),i));
@@ -129,33 +129,37 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 						this.grid.add(this.wrongChar(playWord.charAt(i)), i, this.m.getCuTry()-1);
 					}
 				}
+				
+				
+				if(this.m.getEnd())
+				{
+					for(int i = 0 ; i < this.m.getWord().length() ; i++)
+					{
+						this.grid.add(this.goodPlaceChar(this.m.getWord().charAt(i)), i, this.m.getCuTry()-1);
+					}
+					this.status.setText("Gagné");
+					this.check.setDisable(true);
+					this.launch.setDisable(false);
+
+				}
+				else
+				{
+					for(int i = 0 ; i < this.m.getWord().length() ; i++)
+					{
+
+						this.grid.add(this.wrongChar(this.m.getGhostCo()[i]), i, this.m.getCuTry());
+					}
+				}
 				this.word.clear();
 			}
 			
-			if(this.m.getEnd())
-			{
-				for(int i = 0 ; i < this.m.getWord().length() ; i++)
-				{
-						this.grid.add(this.goodPlaceChar(this.m.getWord().charAt(i)), i, this.m.getCuTry()-1);
-				}
-				this.status.setText("Gagné");
-				this.check.setDisable(true);
-				this.launch.setDisable(false);
-				this.word.clear();
-				
-			}
-			else
-			{
-				for(int i = 0 ; i < this.m.getWord().length() ; i++)
-				{
-						
-						this.grid.add(this.wrongChar(this.m.getGhostCo()[i]), i, this.m.getCuTry());
-				}
-				this.word.clear();
-			}
+			
 		}
 		else
 		{
+			this.status.setText("Perdu !");
+			this.status.setTextFill(Paint.valueOf("crimson"));
+			
 			for(int i = 0 ; i < this.m.getWord().length() ; i++)
 			{
 					this.grid.add(this.goodPlaceChar(this.m.getWord().charAt(i)), i, this.m.getCuTry());

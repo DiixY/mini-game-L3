@@ -14,9 +14,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 
-public class SudoNum1Controller extends ChangeSceneButtons{
+public class SudoChar1Controller extends ChangeSceneButtons{
 	//Attributes
 	Sudoku s;
 	ArrayList<String> coordinates;
@@ -32,8 +33,10 @@ public class SudoNum1Controller extends ChangeSceneButtons{
 	
 	@FXML
 	private Label status;
-
+	
 	@FXML
+	private GridPane r;
+
 	ChoiceBox<Character> c1;
 	@FXML
 	ChoiceBox<Character> c2;
@@ -134,26 +137,25 @@ public class SudoNum1Controller extends ChangeSceneButtons{
 	
 	public void setChoiceBoxes() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
 	{
+		
 		List<Character> tempList = new ArrayList<Character>();
+		
 		for(char c:this.s.getGrille().getAutorise())
 		{
 			tempList.add(c);
 		}
 		ObservableList<Character> availableChoices = FXCollections.observableArrayList(tempList); 
-
+		 
+	
 		for(int i = 1;i<=44;i++)
 		{
 			Field f = this.getClass().getDeclaredField("c"+i);
 			f.setAccessible(true);
-			ChoiceBox<Character> choiceBox = extracted(f);
+			ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
 			ChoiceBox<Character> temp = choiceBox;
 			
 			temp.setItems(availableChoices);
 		}
-	}
-
-	private ChoiceBox<Character> extracted(Field f) throws IllegalAccessException {
-		return (ChoiceBox<Character>) f.get(this);
 	}
 	
 	public boolean errAlert() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
@@ -162,7 +164,7 @@ public class SudoNum1Controller extends ChangeSceneButtons{
 		{
 			Field f = this.getClass().getDeclaredField("c"+i);
 			f.setAccessible(true);
-			ChoiceBox<Character> choiceBox = extracted(f);
+			ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
 			ChoiceBox<Character> temp = choiceBox;
 
 			if(temp.getValue() == null)
@@ -214,7 +216,7 @@ public class SudoNum1Controller extends ChangeSceneButtons{
 			{
 					Field f = this.getClass().getDeclaredField("c"+i);
 					f.setAccessible(true);
-					ChoiceBox<Character> choiceBox = extracted(f);
+					ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
 					ChoiceBox<Character> temp = choiceBox;
 					
 					if(this.errAlert())

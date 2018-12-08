@@ -8,8 +8,7 @@
 }
 
 #custom-bg-sudo {
-	 -fx-background-color : 
-	 	linear-gradient(to right top, #f2f2f2, #f3f3f3, #f4f4f4, #f5f5f5, #f7f7f7);
+	-fx-background-image : url("sudokugrid.png");
 }
 
 #custom-bg {
@@ -329,5 +328,18 @@
 }
 
 #grad {
-  -background-image: linear-gradient(#65badf 0%, #a2f2ec 33%, #82bef6 66%, #3f4ca3 100%);
+  -fx-background-color: black, white ;
+   
+}
+
+.grid {
+    /* 1 pixel border around the top and right of the grid: */
+    -fx-background-color: black;
+    -fx-background-insets: 0, 1 1 0 0 ;
+    -fx-padding: 1 ;
+}
+.cell {
+    /* 1 pixel border around the left and bottom of each cell: */
+    -fx-background-color: black, white ;
+    -fx-background-insets: 0, 0 0 1 1 ;
 }
