@@ -406,14 +406,22 @@
          </font>
       </Label>
    </top>
-   <left>
-      <Label fx:id="status" alignment="CENTER" contentDisplay="CENTER" maxHeight="25.0" maxWidth="100.0" minHeight="25.0" minWidth="100.0" prefHeight="25.0" prefWidth="100.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="16.0" />
-         </font>
+      <left>
+      <VBox alignment="CENTER" maxHeight="150.0" maxWidth="100.0" minHeight="150.0" minWidth="100.0" prefHeight="150.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="status" alignment="CENTER" contentDisplay="CENTER" maxHeight="25.0" maxWidth="100.0" minHeight="25.0" minWidth="100.0" prefHeight="25.0" prefWidth="100.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets bottom="25.0" left="20.0" />
+               </BorderPane.margin>
+            </Label>
+            <Button id="dark-blue" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#goSudoNum" prefHeight="40.0" prefWidth="100.0" stylesheets="@../../Res/style.css" text="Retour" textAlignment="CENTER" />
+         </children>
          <BorderPane.margin>
-            <Insets bottom="25.0" left="20.0" />
+            <Insets bottom="50.0" left="10.0" />
          </BorderPane.margin>
-      </Label>
+      </VBox>
    </left>
 </BorderPane>

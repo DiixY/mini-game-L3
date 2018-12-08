@@ -19,7 +19,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws IOException {
 		
 		this.primaryStage = primaryStage;
-		Font.loadFont("/Res/Arvin.ttf", 12);
+		Font.loadFont("Res/Arvin.ttf", 12);
 		Parent root = FXMLLoader.load(getClass().getResource("MainView.fxml"));
 		this.primaryStage.setTitle("miniGames");
 		
