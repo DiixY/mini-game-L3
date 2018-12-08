@@ -1,9 +1,14 @@
 package games;
-public class Player {
+
+import java.io.Serializable;
+
+public class Player implements Comparable<Player>,Serializable{
 	
 	//Attributs
 		//Identité
+	private static int compt=0;   //compteur de l'id
 	private String pseudo;      //pseudo du joueur
+	private int id;				//id du joueur
 	
 		//Scores
 	private int scoreG;			//Score général
@@ -26,7 +31,7 @@ public class Player {
 	//Constructeurs
 	public Player(String pseudo,
 				int scoreG, int scoreSud, int scoreSudAZ, int scoreMotMel, int scorePen, int scoreMotus,
-				int nbPartG, int nbPartSud, int nbPartSudAZ, int nbPartMotMel, int nbPartPen, int nbPartMotus) {
+				int nbPartG, int nbPartSud, int nbPartSudAZ, int nbPartMotMel, int nbPartPen, int nbPartMotus,int id) {
 		
 		//Initialisation Identité
 		this.pseudo = pseudo;
@@ -46,6 +51,8 @@ public class Player {
 		this.nbPartMotMel = nbPartMotMel;
 		this.nbPartPen = nbPartPen;
 		this.nbPartMotus = nbPartMotus;
+		this.id = id;
+		this.compt = this.compt +1;
 	}
 
 	public Player(String pseudo) {
@@ -53,7 +60,8 @@ public class Player {
 		//Initialisation Identité
 
 		this.pseudo = pseudo;
-		
+		this.id = this.compt;
+		this.compt = this.compt +1;
 		//Initialisation Scores
 		this.scoreG = 0;
 		this.scoreSud = 0;
@@ -172,5 +180,15 @@ public class Player {
 	public String getPseudo() {
 		return pseudo;
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	@Override
+	public int compareTo(Player emp) {
+		   return this.getPseudo().compareTo(emp.getPseudo());
+	}
+	
 	
 }
