@@ -40,6 +40,15 @@ public class ChangeSceneButtons {
 	}
 	
 	@FXML
+	public void goSudoChar(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("SudokuCharMenuView.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
+	
+	@FXML
 	public void goMotus(ActionEvent event) throws IOException
 	{	
 			Parent mainParent = FXMLLoader.load(getClass().getResource("MotusView.fxml"));
@@ -52,6 +61,15 @@ public class ChangeSceneButtons {
 	public void goSudo1(ActionEvent event) throws IOException
 	{	
 			Parent mainParent = FXMLLoader.load(getClass().getResource("SudokuNum1.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
+	
+	@FXML
+	public void goChar1(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("SudokuChar1.fxml"));
 			Scene scene = new Scene(mainParent);
 			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
 			mainwindow.setScene(scene);	

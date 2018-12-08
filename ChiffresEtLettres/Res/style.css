@@ -1,14 +1,12 @@
+/*CSS avec plusieurs boutons trouvées sur internet et d'autres background et police d'écritures ajoutées par nos soins */
 @font-face {
 	font-family: Arvin;
 	src: url("Fonts/Arvin.ttf");
 }
 
-.combo-box .arrow, .combo-box .arrow-button{
-    -fx-background-color: transparent;
-}
-
 #custom-bg-sudo {
 	-fx-background-image : url("sudokugrid.png");
+	-fx-background-size: cover;
 }
 
 #custom-bg {
@@ -100,6 +98,8 @@
     -fx-font-size: 16px;
     -fx-padding: 10 20 10 20;
 }
+
+/*Bouton modifié par nos soins */
 #dark-blue Text {
     -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
 }
@@ -297,12 +297,8 @@
     -fx-font-size: 14px;
 }
 
-#pendu-button {
-	-fx-background-image: url("pendu.png");
-	-fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
 
+/*Modification des boutons systemes present dans la librairie de base de Java (Caspian.css) */
 .button{
     -fx-border-color: transparent;
     -fx-border-width: 0;
@@ -327,19 +323,6 @@
     -fx-text-fill: white;
 }
 
-#grad {
-  -fx-background-color: black, white ;
-   
-}
-
-.grid {
-    /* 1 pixel border around the top and right of the grid: */
-    -fx-background-color: black;
-    -fx-background-insets: 0, 1 1 0 0 ;
-    -fx-padding: 1 ;
-}
-.cell {
-    /* 1 pixel border around the left and bottom of each cell: */
-    -fx-background-color: black, white ;
-    -fx-background-insets: 0, 0 0 1 1 ;
+.choice-box .arrow, .choice-box .arrow-button{
+    -fx-background-color: transparent;
 }

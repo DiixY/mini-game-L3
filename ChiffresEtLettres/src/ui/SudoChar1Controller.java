@@ -186,7 +186,7 @@ public class SudoChar1Controller extends ChangeSceneButtons{
 			this.status.setText("");
 			this.chances.setText("");
 
-			this.s = new Sudoku("Annexes/Grilles/Sudoku1.txt");
+			this.s = new Sudoku("Annexes/Grilles/SudokuChar1.txt");
 			this.setChoiceBoxes();
 			coordinates = new ArrayList<>(Arrays.asList("01","03","04","07","08",
 					"11","12","14","15","17",

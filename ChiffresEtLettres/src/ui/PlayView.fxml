@@ -29,7 +29,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#goSudoChar" GridPane.columnIndex="2" GridPane.halignment="CENTER">
                <graphic>
                   <ImageView>
                      <image>
