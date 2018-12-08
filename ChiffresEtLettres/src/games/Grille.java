@@ -1,9 +1,10 @@
 package games;
 import java.io.BufferedReader;
-import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 
 
@@ -15,22 +16,24 @@ public class Grille {
 	public Grille(int x,int y,String fpath) {
 		this.x = x;
 		this.y = y;
-		
+
 		try {
-			File f = new File(fpath);
-	
+
+
 			this.grille = new char[x-1][y];
-			FileReader fr = new FileReader(f);
-			BufferedReader br = new BufferedReader(fr);
+			InputStream flux=new FileInputStream(fpath);
+			InputStreamReader lecture=new InputStreamReader(flux);
+
+			BufferedReader br = new BufferedReader(lecture);
 			String temp = br.readLine();
-			
+
 			for(int i=1;i<this.x;i++)
 			{	
 				temp = br.readLine();
 				this.grille[i-1] = temp.toCharArray();
 			}
-			
-			fr.close();
+
+			br.close();
 		} catch (FileNotFoundException e) {
 			System.out.println ("Le fichier n'a pas été trouvé");
 			e.printStackTrace();
