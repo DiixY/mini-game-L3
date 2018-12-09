@@ -1,7 +1,6 @@
 package ui;
 
 
-import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import games.Motus;
@@ -61,12 +60,7 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 			this.grid.getColumnConstraints().removeAll(this.grid.getColumnConstraints());
 		}
 		
-		try {
-			this.m = new Motus();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		this.m = new Motus();
 		this.word.setDisable(false);
 		this.launch.setDisable(true);
 		this.check.setDisable(false);

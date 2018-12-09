@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Random;
@@ -37,33 +38,40 @@ public abstract class ABSWordManagement {
 		return word;
 	}
 	
-	public String takeWord() throws FileNotFoundException {
+	public String takeWord() {
 		Random r = new Random();
 		int valeurMin = 1;//premiere ligne du fichier
 		int valeurMax = 369086;//derniere ligne +1 du fichier
 		int ligne= valeurMin + r.nextInt(valeurMax - valeurMin);//nombre aleatoire entre [1;27236[
 		int compt=0;
 		String word="";
-
-		InputStream flux=new FileInputStream("Annexes/Dictionary.txt");
+		
+		
 
 		try{
+			File f = new File("Annexes/Dictionary.txt");
+			
+			
+			FileReader fr = new FileReader(f);
+			/*InputStream flux= getClass().getResourceAsStream("/Annexes/Dictionary.txt");
+			InputStreamReader lecture=new InputStreamReader(flux);*/
+			BufferedReader buff=new BufferedReader(fr);
+				
+				while (compt<(ligne-1)){
+					compt++;
+					buff.readLine();
+				}
+				word = buff.readLine();
+				buff.close(); 
+				}		
+				catch (Exception e){
+				System.out.println(e.toString());
+				}
 
-			InputStreamReader lecture=new InputStreamReader(flux);
-			BufferedReader buff=new BufferedReader(lecture);
+		 
+		
 
-			while (compt<(ligne-1)){
-				compt++;
-				buff.readLine();
-			}
-			word = buff.readLine();
-			buff.close(); 
-		}		
-		catch (Exception e){
-			System.out.println(e.toString());
-		}
-
-		return word;
+		 return word;
 	}
 	
 	public boolean checkWord(String WordInDictionnary, String WordToTest) {

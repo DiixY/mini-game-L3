@@ -75,9 +75,19 @@ public class ChangeSceneButtons {
 			mainwindow.setScene(scene);	
 	}
 	
+	
 	public void goPlayView(ActionEvent event) throws IOException
 	{
 		Parent root = FXMLLoader.load(getClass().getResource("PlayView.fxml"));
+		Scene scene = new Scene(root);
+		Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+		mainwindow.setScene(scene);	
+	}
+	
+	@FXML
+	public void goWordSearch(ActionEvent event) throws IOException
+	{
+		Parent root = FXMLLoader.load(getClass().getResource("MotMelee.fxml"));
 		Scene scene = new Scene(root);
 		Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
 		mainwindow.setScene(scene);	

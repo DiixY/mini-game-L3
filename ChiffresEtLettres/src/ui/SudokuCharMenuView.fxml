@@ -16,7 +16,7 @@
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="150.0">
                      <image>
-                        <Image url="@../../Res/GrilleSudoNum1.PNG" />
+                        <Image url="@../../Res/GrilleSudoChar1.PNG" />
                      </image>
                   </ImageView>
                </graphic></Button>

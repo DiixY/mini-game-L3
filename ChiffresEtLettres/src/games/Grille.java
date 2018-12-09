@@ -1,7 +1,9 @@
 package games;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -19,12 +21,15 @@ public class Grille {
 
 		try {
 
-
+			File f = new File(fpath);
+			
 			this.grille = new char[x-1][y];
-			InputStream flux=new FileInputStream(fpath);
-			InputStreamReader lecture=new InputStreamReader(flux);
+			FileReader fr = new FileReader(f);
+			/*this.grille = new char[x-1][y];
+			InputStream flux=getClass().getResourceAsStream("/"+fpath);
+			InputStreamReader lecture=new InputStreamReader(flux);*/
 
-			BufferedReader br = new BufferedReader(lecture);
+			BufferedReader br = new BufferedReader(fr);
 			String temp = br.readLine();
 
 			for(int i=1;i<this.x;i++)

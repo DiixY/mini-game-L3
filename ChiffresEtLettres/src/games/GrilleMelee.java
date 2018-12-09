@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class GrilleMelee extends Grille {
 	
@@ -13,9 +15,9 @@ public class GrilleMelee extends Grille {
 	{
 		super(x,y,fpath);
 		
-		File f = new File(fpath);
-		FileReader fr = new FileReader(f);
-		BufferedReader br = new BufferedReader(fr);
+		InputStream flux=getClass().getResourceAsStream("/"+fpath);
+		InputStreamReader lecture=new InputStreamReader(flux);
+		BufferedReader br = new BufferedReader(lecture);
 		String temp = br.readLine();
 		
 		this.autorise = temp.split("-",0);

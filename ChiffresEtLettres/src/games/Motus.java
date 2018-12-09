@@ -1,5 +1,4 @@
 package games;
-import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -41,7 +40,7 @@ public final class Motus extends ABSWordManagement {
 		this.ghostEm = ghostEm;
 	}
 	
-	public Motus () throws FileNotFoundException {
+	public Motus () {
 		this.cuTry = 0;
 		this.end = false;
 		

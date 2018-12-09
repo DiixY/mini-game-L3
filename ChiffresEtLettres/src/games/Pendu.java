@@ -1,6 +1,5 @@
 package games;
 
-import java.io.FileNotFoundException;
 import java.util.concurrent.ThreadLocalRandom;
 
 /*  Pendu : 11 étapes
@@ -34,7 +33,7 @@ public class Pendu extends ABSWordManagement {
 		this.progW = progW;
 	}
 	
-	public Pendu () throws FileNotFoundException {
+	public Pendu () {
 		
 		this.word = takeWord();
 		this.cuTry = ThreadLocalRandom.current().nextInt(this.word.length()/2, this.word.length() + 1);

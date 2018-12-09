@@ -101,12 +101,9 @@ public class PenduController extends ChangeSceneButtons implements Initializable
 		
 		status.setText("");
 		chances.setText("");
-		try {
+
 			p = new Pendu();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
 		
 		word.setText(String.valueOf(p.getProgW()));
 		chances.setText("Chance(s) restante(s) : "+ p.getCuTry());

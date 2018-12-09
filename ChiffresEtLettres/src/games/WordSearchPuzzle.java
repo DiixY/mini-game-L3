@@ -134,8 +134,8 @@ public final class WordSearchPuzzle extends ABSWordManagement {
 	
 	public String WordSelection(){//permet de selectionner un mots de la grille
 		Scanner sc= new Scanner(System.in);
-		this.changeDebutMot(sc);
-		this.changeFinMot(sc);
+		//this.changeDebutMot(sc);
+		//this.changeFinMot(sc);
 		String word="";
 		if(this.getColonneDebutMot() == this.getColonneFinMot()) {//cas 1:mots est a la verticale
 			
