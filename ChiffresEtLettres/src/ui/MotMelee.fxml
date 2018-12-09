@@ -7,7 +7,7 @@
 
 <BorderPane id="custom-bg" minHeight="400.0" minWidth="640.0" stylesheets="@../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.WordSearchController">
    <center>
-      <GridPane alignment="CENTER" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-insets: 0,1111;" BorderPane.alignment="CENTER">
+      <GridPane fx:id="grid" alignment="CENTER" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-insets: 0,1111;" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -33,107 +33,110 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" text="A" />
-            <Button mnemonicParsing="false" text="B" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" text="C" GridPane.columnIndex="2" />
-            <Button mnemonicParsing="false" text="D" GridPane.columnIndex="3" />
-            <Button mnemonicParsing="false" text="E" GridPane.columnIndex="4" />
-            <Button mnemonicParsing="false" text="E" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="F" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="R" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="A" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="E" GridPane.columnIndex="5" />
-            <Button mnemonicParsing="false" text="H" GridPane.columnIndex="6" />
-            <Button mnemonicParsing="false" text="C" GridPane.columnIndex="7" />
-            <Button mnemonicParsing="false" text="E" GridPane.columnIndex="8" />
-            <Button mnemonicParsing="false" text="P" GridPane.columnIndex="9" />
-            <Button mnemonicParsing="false" text="I" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="S" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="E" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="O" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="J" GridPane.columnIndex="8" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="U" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="N" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="B" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="C" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="T" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="O" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="C" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="I" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="R" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="B" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="A" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="A" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="N" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="A" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="N" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="A" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="S" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="G" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="A" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="E" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="V" GridPane.columnIndex="9" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="N" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" text="E" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" text="C" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" text="U" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" text="E" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" text="P" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" text="I" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" text="N" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" text="H" GridPane.columnIndex="8" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" text="E" GridPane.columnIndex="9" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" text="A" GridPane.rowIndex="5" />
-            <Button mnemonicParsing="false" text="C" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Button mnemonicParsing="false" text="E" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <Button mnemonicParsing="false" text="M" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-            <Button mnemonicParsing="false" text="M" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-            <Button mnemonicParsing="false" text="O" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-            <Button mnemonicParsing="false" text="P" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-            <Button mnemonicParsing="false" text="G" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-            <Button mnemonicParsing="false" text="P" GridPane.columnIndex="8" GridPane.rowIndex="5" />
-            <Button mnemonicParsing="false" text="L" GridPane.columnIndex="9" GridPane.rowIndex="5" />
-            <Button mnemonicParsing="false" text="B" GridPane.rowIndex="6" />
-            <Button mnemonicParsing="false" text="L" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <Button mnemonicParsing="false" text="C" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-            <Button mnemonicParsing="false" text="I" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-            <Button mnemonicParsing="false" text="E" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-            <Button mnemonicParsing="false" text="I" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-            <Button mnemonicParsing="false" text="R" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-            <Button mnemonicParsing="false" text="E" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-            <Button mnemonicParsing="false" text="V" GridPane.columnIndex="8" GridPane.rowIndex="6" />
-            <Button mnemonicParsing="false" text="K" GridPane.columnIndex="9" GridPane.rowIndex="6" />
-            <Button mnemonicParsing="false" text="A" GridPane.rowIndex="7" />
-            <Button mnemonicParsing="false" text="B" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <Button mnemonicParsing="false" text="C" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-            <Button mnemonicParsing="false" text="I" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-            <Button mnemonicParsing="false" text="T" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-            <Button mnemonicParsing="false" text="R" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-            <Button mnemonicParsing="false" text="O" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-            <Button mnemonicParsing="false" text="N" GridPane.columnIndex="7" GridPane.rowIndex="7" />
-            <Button mnemonicParsing="false" text="C" GridPane.columnIndex="8" GridPane.rowIndex="7" />
-            <Button mnemonicParsing="false" text="I" GridPane.columnIndex="9" GridPane.rowIndex="7" />
-            <Button mnemonicParsing="false" text="M" GridPane.rowIndex="8" />
-            <Button mnemonicParsing="false" text="P" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <Button mnemonicParsing="false" text="R" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-            <Button mnemonicParsing="false" text="U" GridPane.columnIndex="3" GridPane.rowIndex="8" />
-            <Button mnemonicParsing="false" text="N" GridPane.columnIndex="4" GridPane.rowIndex="8" />
-            <Button mnemonicParsing="false" text="E" GridPane.columnIndex="5" GridPane.rowIndex="8" />
-            <Button mnemonicParsing="false" text="I" GridPane.columnIndex="6" GridPane.rowIndex="8" />
-            <Button mnemonicParsing="false" text="K" GridPane.columnIndex="7" GridPane.rowIndex="8" />
-            <Button mnemonicParsing="false" text="I" GridPane.columnIndex="8" GridPane.rowIndex="8" />
-            <Button mnemonicParsing="false" text="W" GridPane.columnIndex="9" GridPane.rowIndex="8" />
-            <Button mnemonicParsing="false" text="C" GridPane.rowIndex="9" />
-            <Button mnemonicParsing="false" text="E" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-            <Button mnemonicParsing="false" text="R" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-            <Button mnemonicParsing="false" text="I" GridPane.columnIndex="3" GridPane.rowIndex="9" />
-            <Button mnemonicParsing="false" text="S" GridPane.columnIndex="4" GridPane.rowIndex="9" />
-            <Button mnemonicParsing="false" text="E" GridPane.columnIndex="5" GridPane.rowIndex="9" />
-            <Button mnemonicParsing="false" text="N" GridPane.columnIndex="6" GridPane.rowIndex="9" />
-            <Button mnemonicParsing="false" text="N" GridPane.columnIndex="7" GridPane.rowIndex="9" />
-            <Button mnemonicParsing="false" text="I" GridPane.columnIndex="8" GridPane.rowIndex="9" />
-            <Button mnemonicParsing="false" text="I" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+            <Button mnemonicParsing="false" onAction="#test" text="A" />
+            <Button mnemonicParsing="false" onAction="#test" text="B" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="2" />
+            <Button mnemonicParsing="false" onAction="#test" text="D" GridPane.columnIndex="3" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="4" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#test" text="F" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#test" text="R" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="5" />
+            <Button mnemonicParsing="false" onAction="#test" text="H" GridPane.columnIndex="6" />
+            <Button mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="7" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="8" />
+            <Button mnemonicParsing="false" onAction="#test" text="P" GridPane.columnIndex="9" />
+            <Button mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#test" text="S" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#test" text="O" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#test" text="J" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#test" text="U" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#test" text="N" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#test" text="B" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#test" text="T" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#test" text="O" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#test" text="R" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#test" text="B" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#test" text="A" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#test" text="S" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#test" text="G" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#test" text="V" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#test" text="N" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#test" text="U" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#test" text="P" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#test" text="H" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#test" text="A" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#test" text="M" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#test" text="M" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#test" text="O" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#test" text="P" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#test" text="G" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#test" text="P" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#test" text="L" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#test" text="B" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#test" text="L" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#test" text="R" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#test" text="V" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#test" text="K" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#test" text="A" GridPane.rowIndex="7" />
+            <Button mnemonicParsing="false" onAction="#test" text="B" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Button mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Button mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <Button mnemonicParsing="false" onAction="#test" text="T" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <Button mnemonicParsing="false" onAction="#test" text="R" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <Button mnemonicParsing="false" onAction="#test" text="O" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+            <Button mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+            <Button mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+            <Button mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+            <Button mnemonicParsing="false" onAction="#test" text="M" GridPane.rowIndex="8" />
+            <Button mnemonicParsing="false" onAction="#test" text="P" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Button mnemonicParsing="false" onAction="#test" text="R" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <Button mnemonicParsing="false" onAction="#test" text="U" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <Button mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+            <Button mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+            <Button mnemonicParsing="false" onAction="#test" text="K" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+            <Button mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+            <Button mnemonicParsing="false" onAction="#test" text="W" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+            <Button mnemonicParsing="false" onAction="#test" text="C" GridPane.rowIndex="9" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Button mnemonicParsing="false" onAction="#test" text="R" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <Button mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <Button mnemonicParsing="false" onAction="#test" text="S" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+            <Button mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+            <Button mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+            <Button mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+            <Button mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+            <Button mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="9" GridPane.rowIndex="9" />
          </children>
       </GridPane>
    </center>
+   <right>
+      <Button id="dark-blue" fx:id="launch" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#start" stylesheets="@../../Res/style.css" text="Lancer" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+   </right>
 </BorderPane>
