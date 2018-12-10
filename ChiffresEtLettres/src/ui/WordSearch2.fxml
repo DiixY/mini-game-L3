@@ -563,7 +563,7 @@
       </HBox>
    </bottom>
    <top>
-      <Label fx:id="words" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="550.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+      <Label fx:id="words" alignment="CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="601.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets top="10.0" />
          </BorderPane.margin>
