@@ -30,12 +30,12 @@ public final class WordSearchPuzzle extends ABSWordManagement {
     		
     	else if(this.fpath.equals("Annexes/Mots_meles/Legumes.txt")) {
     		this.grille = new GrilleMelee(this.fpath,14,13);
-    		this.nbMots = 12;
+    		this.nbMots = 10;
     	}
     		
     	else if(this.fpath.equals("Annexes/Mots_meles/Noel.txt") ) {
     		this.grille = new GrilleMelee(this.fpath,15,13);
-    		this.nbMots = 15;
+    		this.nbMots = 10;
     	}
     		
     	else

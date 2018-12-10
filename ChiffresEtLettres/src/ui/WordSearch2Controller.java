@@ -36,6 +36,7 @@ public class WordSearch2Controller extends ChangeSceneButtons {
 	//Initialisation de tout les attibuts dont on a besoin lors de la partie ( Messages , boutons , etc..)
 	public void start(ActionEvent event) throws Exception
 	{
+		cleanGrid();
 		this.launch.setDisable(true);
 		this.buttons = new Button[2];
 		//this.status.setText("");
@@ -158,9 +159,23 @@ public class WordSearch2Controller extends ChangeSceneButtons {
 	    return result;
 	}
 	
+	//Fonction qui remet la couleur de fond de toute la grille en blanc (Utilisé lorsque l'on relance une partie)
+	public void cleanGrid(){
+
+		ObservableList<Node> childrens = this.grid.getChildren();
+
+		for (Node node : childrens) {
+			{
+				StackPane temp = (StackPane)node;
+				temp.setBackground(new Background(new BackgroundFill(Paint.valueOf("white"), null, null)));
+			}
+		}
+
+	}
 	
 	
-	//Renvoie l'index de la ligne du Node entré en paramètre
+	
+	//Change l'état des boutons de la grille (Activé : etat = false , Désactivé : etat = true)
 	public void setButtonsEnable(boolean etat)
 	{
 		

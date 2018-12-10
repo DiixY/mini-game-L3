@@ -36,11 +36,12 @@ public class WordSearch3Controller extends ChangeSceneButtons {
 	//Initialisation de tout les attibuts dont on a besoin lors de la partie ( Messages , boutons , etc..)
 	public void start(ActionEvent event) throws Exception
 	{
+		cleanGrid();
 		this.launch.setDisable(true);
 		this.buttons = new Button[2];
 		//this.status.setText("");
 		this.grid.getParent().requestFocus();
-		this.g = new WordSearchPuzzle("Annexes/Mots_meles/Fruits.txt");
+		this.g = new WordSearchPuzzle("Annexes/Mots_meles/Noel.txt");
 		setButtonsEnable(false);
 		String str = Arrays.toString(this.g.getGrille().getAutorise()).substring(1, Arrays.toString(this.g.getGrille().getAutorise()).length()-1);
 		this.words.setText(str);
@@ -158,18 +159,31 @@ public class WordSearch3Controller extends ChangeSceneButtons {
 	}
 	
 	
-	
-	//Renvoie l'index de la ligne du Node entré en paramètre
-	public void setButtonsEnable(boolean etat)
-	{
-		
-		ObservableList<Node> childrens = this.grid.getChildren();
+	//Fonction qui remet la couleur de fond de toute la grille en blanc (Utilisé lorsque l'on relance une partie)
+		public void cleanGrid(){
 
-		for(Node temp:childrens)
+			ObservableList<Node> childrens = this.grid.getChildren();
+
+			for (Node node : childrens) {
+				{
+					StackPane temp = (StackPane)node;
+					temp.setBackground(new Background(new BackgroundFill(Paint.valueOf("white"), null, null)));
+				}
+			}
+
+		}
+	
+		//Change l'état des boutons de la grille (Activé : etat = false , Désactivé : etat = true)
+		public void setButtonsEnable(boolean etat)
 		{
-			StackPane temp2 = (StackPane)temp;
-			temp2.getChildren().get(0).setDisable(etat);	
-		}		
-		
-	}
+
+			ObservableList<Node> childrens = this.grid.getChildren();
+
+			for(Node temp:childrens)
+			{
+				StackPane temp2 = (StackPane)temp;
+				temp2.getChildren().get(0).setDisable(etat);
+			}		
+
+		}
 }
