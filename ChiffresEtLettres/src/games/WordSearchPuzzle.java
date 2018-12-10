@@ -133,7 +133,7 @@ public final class WordSearchPuzzle extends ABSWordManagement {
 	}
 	
 	public String WordSelection(){//permet de selectionner un mots de la grille
-		Scanner sc= new Scanner(System.in);
+		
 		//this.changeDebutMot(sc);
 		//this.changeFinMot(sc);
 		String word="";
@@ -196,25 +196,26 @@ public final class WordSearchPuzzle extends ABSWordManagement {
 		return tab2;
 		
 	}
-	public void jouer() {//permet de faire un jeu complet de mots meles
+	
+	public boolean jouer() {//permet de faire un jeu complet de mots meles
 		String word;
-		
-		while(this.getNbMots() > 0) {
-			
-			System.out.println("il vous reste " + this.getNbMots() + " mots a trouver: " + Arrays.deepToString(this.getGrille().getAutorise()));
-			word = this.WordSelection();
-			System.out.println("votre mot est: " + word);
-			
-			for(int i = 0; i < this.getGrille().getAutorise().length ; i++) {
+
+		//System.out.println("il vous reste " + this.getNbMots() + " mots a trouver: " + Arrays.deepToString(this.getGrille().getAutorise()));
+		word = this.WordSelection();
+		//System.out.println("votre mot est: " + word);
+		StringBuilder wordreverse = new StringBuilder(word);
+		wordreverse = wordreverse.reverse();
 				
-				if(checkWord(word,this.getGrille().getAutorise()[i])) {
-					this.getGrille().setAutorise(modifTab(i));
-					this.setNbMots(this.getNbMots() - 1);
-				}
-				
+		for(int i = 0; i < this.getGrille().getAutorise().length ; i++) {
+
+			if(checkWord(word,this.getGrille().getAutorise()[i]) || checkWord(wordreverse.toString(),this.getGrille().getAutorise()[i])) {
+				this.getGrille().setAutorise(modifTab(i));
+				this.setNbMots(this.getNbMots() - 1);
+				return true;
 			}
-			
 		}
-		System.out.println("GAGNE");
+		
+		return false;
 	}
 }
+

@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane id="custom-bg" maxHeight="400.0" maxWidth="640.0" minHeight="400.0" minWidth="640.0" prefHeight="400.0" prefWidth="640.0" stylesheets="@../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.WordSearch1Controller">
+   <center>
+      <GridPane fx:id="grid" alignment="CENTER" maxHeight="250.0" maxWidth="300.0" minHeight="250.0" minWidth="300.0" prefHeight="250.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-insets: 0,1111;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          	<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          	<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          	<RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          	<RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          	<RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <StackPane GridPane.columnIndex="0" GridPane.rowIndex="0">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="A" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="0">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="B" GridPane.columnIndex="1" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="2" GridPane.rowIndex="0">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="2" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="3" GridPane.rowIndex="0">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="D" GridPane.columnIndex="3" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="4" GridPane.rowIndex="0">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="4" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="5" GridPane.rowIndex="0">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="5" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="6" GridPane.rowIndex="0">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="H" GridPane.columnIndex="6" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="7" GridPane.rowIndex="0">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="7" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="8" GridPane.rowIndex="0">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="8" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="9" GridPane.rowIndex="0">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="P" GridPane.columnIndex="9" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="0" GridPane.rowIndex="1">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.rowIndex="1" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="F" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="R" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="S" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="7" GridPane.rowIndex="1">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="O" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="8" GridPane.rowIndex="1">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="J" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="9" GridPane.rowIndex="1">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="U" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="0" GridPane.rowIndex="2">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="N" GridPane.rowIndex="2" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="B" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="T" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="O" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="7" GridPane.rowIndex="2">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="R" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="8" GridPane.rowIndex="2">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="B" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="9" GridPane.rowIndex="2">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="0" GridPane.rowIndex="3">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="A" GridPane.rowIndex="3" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="5" GridPane.rowIndex="3">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="S" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="6" GridPane.rowIndex="3">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="G" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="7" GridPane.rowIndex="3">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="8" GridPane.rowIndex="3">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="9" GridPane.rowIndex="3">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="V" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="0" GridPane.rowIndex="4">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="N" GridPane.rowIndex="4" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="U" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="5" GridPane.rowIndex="4">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="P" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="6" GridPane.rowIndex="4">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="7" GridPane.rowIndex="4">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="8" GridPane.rowIndex="4">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="H" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="9" GridPane.rowIndex="4">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="0" GridPane.rowIndex="5">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="A" GridPane.rowIndex="5" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <children>
+                  <Button alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="M" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="M" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="5" GridPane.rowIndex="5">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="O" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="6" GridPane.rowIndex="5">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="P" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="7" GridPane.rowIndex="5">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="G" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="8" GridPane.rowIndex="5">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="P" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="9" GridPane.rowIndex="5">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="L" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="0" GridPane.rowIndex="6">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="B" GridPane.rowIndex="6" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="L" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="4" GridPane.rowIndex="6">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="5" GridPane.rowIndex="6">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="6" GridPane.rowIndex="6">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="R" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="7" GridPane.rowIndex="6">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="8" GridPane.rowIndex="6">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="V" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="9" GridPane.rowIndex="6">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="K" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="0" GridPane.rowIndex="7">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="A" GridPane.rowIndex="7" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="B" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="4" GridPane.rowIndex="7">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="T" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="5" GridPane.rowIndex="7">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="R" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="6" GridPane.rowIndex="7">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="O" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="7" GridPane.rowIndex="7">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="8" GridPane.rowIndex="7">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="9" GridPane.rowIndex="7">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="0" GridPane.rowIndex="8">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="M" GridPane.rowIndex="8" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="P" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="R" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="3" GridPane.rowIndex="8">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="U" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="4" GridPane.rowIndex="8">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="5" GridPane.rowIndex="8">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="6" GridPane.rowIndex="8">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="7" GridPane.rowIndex="8">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="K" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="8" GridPane.rowIndex="8">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="9" GridPane.rowIndex="8">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="W" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="0" GridPane.rowIndex="9">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.rowIndex="9" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="2" GridPane.rowIndex="9">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="R" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="3" GridPane.rowIndex="9">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="4" GridPane.rowIndex="9">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="S" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="5" GridPane.rowIndex="9">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="6" GridPane.rowIndex="9">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="7" GridPane.rowIndex="9">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="8" GridPane.rowIndex="9">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="9" GridPane.rowIndex="9">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+               </children>
+            </StackPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets bottom="100.0" left="100.0" top="100.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <right>
+      <VBox alignment="CENTER" maxHeight="200.0" maxWidth="100.0" minHeight="200.0" minWidth="100.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="dark-blue" fx:id="launch" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#start" prefHeight="40.0" prefWidth="100.0" stylesheets="@../../Res/style.css" text="Lancer" textAlignment="CENTER" />
+            <Button id="dark-blue" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#goPlayView" prefHeight="40.0" prefWidth="100.0" stylesheets="@../../Res/style.css" text="Retour" textAlignment="CENTER" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="100.0" right="10.0" top="100.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox alignment="CENTER" maxHeight="50.0" maxWidth="200.0" minHeight="50.0" minWidth="200.0" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="status" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="99.0" textAlignment="CENTER" />
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <Label fx:id="words" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="550.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+</BorderPane>

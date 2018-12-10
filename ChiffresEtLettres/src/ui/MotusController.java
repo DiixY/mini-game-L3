@@ -169,6 +169,10 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 	}
 	
 	
+	/*
+	 * Fonction qui retourne une Node specifique d'un GridPane grace a ses coordonnées (Fonction trouvé sur une discussion Stack OverFlow : 
+	 * https://stackoverflow.com/questions/20825935/javafx-get-node-by-row-and-column
+	 * Tout crédit revient à son créateur */
 	public Node getNodeByRowColumnIndex (final int row, final int column) {
 	    Node result = null;
 	    ObservableList<Node> childrens = this.grid.getChildren();
@@ -182,6 +186,8 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 
 	    return result;
 	}
+	
+	
 	//Fonction qui créer la fenetre de warning
 	public void errAlert()
 	{

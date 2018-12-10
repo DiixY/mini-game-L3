@@ -85,12 +85,39 @@ public class ChangeSceneButtons {
 	}
 	
 	@FXML
-	public void goWordSearch(ActionEvent event) throws IOException
-	{
-		Parent root = FXMLLoader.load(getClass().getResource("MotMelee.fxml"));
-		Scene scene = new Scene(root);
-		Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
-		mainwindow.setScene(scene);	
+	public void goWordSearch1(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("WordSearch1.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
+	
+	@FXML
+	public void goWordSearch2(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("WordSearch2.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
+	
+	@FXML
+	public void goWordSearch3(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("WordSearch3.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
+	
+	@FXML
+	public void goWordSearchMenu(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("WordSearchMenu.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
 	}
 	
 }
