@@ -12,7 +12,7 @@
    <center>
       <HBox alignment="CENTER" maxHeight="200.0" maxWidth="550.0" minHeight="200.0" minWidth="550.0" prefHeight="200.0" prefWidth="550.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goSudo1">
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goSudo1" textAlignment="CENTER">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="150.0">
                      <image>
@@ -20,8 +20,22 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goSudo2" text="Button" />
-            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goSudo3" text="Button" textAlignment="CENTER" />
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goSudo2" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="150.0">
+                     <image>
+                        <Image url="@../../Res/GrilleSudoNum2.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goSudo3" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="150.0">
+                     <image>
+                        <Image url="@../../Res/GrilleSudoNum3.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
          </children>
          <BorderPane.margin>
             <Insets bottom="20.0" />

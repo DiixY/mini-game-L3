@@ -20,8 +20,22 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goChar2" text="Button" />
-            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goChar3" text="Button" textAlignment="CENTER" />
+            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goChar2">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="150.0">
+                     <image>
+                        <Image url="@../../Res/GrilleSudoChar2.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goChar3" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="150.0">
+                     <image>
+                        <Image url="@../../Res/GrilleSudoChar3.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
          </children>
          <BorderPane.margin>
             <Insets bottom="20.0" />
