@@ -16,7 +16,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 
-public class SudoNum1Controller extends ChangeSceneButtons{
+public class SudoNum3Controller extends ChangeSceneButtons{
 	//Attributes
 	Sudoku s;
 	ArrayList<String> coordinates;
@@ -185,17 +185,17 @@ public class SudoNum1Controller extends ChangeSceneButtons{
 			this.status.setText("");
 			this.chances.setText("");
 
-			this.s = new Sudoku("Annexes/Grilles/Sudoku1.txt");
+			this.s = new Sudoku("Annexes/Grilles/Sudoku3.txt");
 			this.setChoiceBoxes();
-			coordinates = new ArrayList<>(Arrays.asList("01","03","04","07","08",
-					"11","12","14","15","17",
-					"22","24","25","27","28",
-					"30","32","35","36","38",
-					"40","43","44","45","48",
-					"50","52","56","58",
-					"60","61","63","64","66",
-					"71","73","74","76","77",
-					"80","81","84","85","87"));
+			coordinates = new ArrayList<>(Arrays.asList("00","02","05","08",
+					"10","13","14","15","16","17",
+					"20","21","26","27","28",
+					"31","32","33","35","36","37",
+					"40","42","45","46","48",
+					"50","51","54","55","57",
+					"60","62","66","68",
+					"70","71","73","76","78",
+					"82","83","85","88"));
 			this.launch.setDisable(true);
 			this.try_sudo.setDisable(false);
 			this.chances.setText("Chances Restantes : "+s.getChance());

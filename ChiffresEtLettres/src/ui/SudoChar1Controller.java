@@ -132,6 +132,7 @@ public class SudoChar1Controller extends ChangeSceneButtons{
 		return temp;
 	}
 	
+	//Fonction qui initialise tout les menu deroulants avec les caractères autorisés pour la grille 
 	public void setChoiceBoxes() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
 	{
 		
@@ -148,16 +149,13 @@ public class SudoChar1Controller extends ChangeSceneButtons{
 		{
 			Field f = this.getClass().getDeclaredField("c"+i);
 			f.setAccessible(true);
-			ChoiceBox<Character> choiceBox = extracted(f);
+			ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
 			ChoiceBox<Character> temp = choiceBox;
 			
 			temp.setItems(availableChoices);
 		}
 	}
-
-	private ChoiceBox<Character> extracted(Field f) throws IllegalAccessException {
-		return (ChoiceBox<Character>) f.get(this);
-	}
+	
 	
 	public boolean errAlert() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
 	{
@@ -165,7 +163,7 @@ public class SudoChar1Controller extends ChangeSceneButtons{
 		{
 			Field f = this.getClass().getDeclaredField("c"+i);
 			f.setAccessible(true);
-			ChoiceBox<Character> choiceBox = extracted(f);
+			ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
 			ChoiceBox<Character> temp = choiceBox;
 
 			if(temp.getValue() == null)
@@ -217,7 +215,7 @@ public class SudoChar1Controller extends ChangeSceneButtons{
 			{
 					Field f = this.getClass().getDeclaredField("c"+i);
 					f.setAccessible(true);
-					ChoiceBox<Character> choiceBox = extracted(f);
+					ChoiceBox<Character> choiceBox =(ChoiceBox<Character>) f.get(this);
 					ChoiceBox<Character> temp = choiceBox;
 					
 					if(this.errAlert())

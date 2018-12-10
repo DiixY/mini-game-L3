@@ -14,14 +14,28 @@
          <children>
             <Button alignment="CENTER" contentDisplay="CENTER" minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goWordSearch1" textAlignment="CENTER">
                <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="150.0">
+                  <ImageView fitHeight="130.0" fitWidth="150.0">
                      <image>
-                        <Image url="@../../Res/GrilleSudoNum1.PNG" />
+                        <Image url="@../../Res/WordSearch1.png" />
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goWordSearch2" text="Button" />
-            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goWordSearch3" text="Button" textAlignment="CENTER" />
+            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goWordSearch2">
+               <graphic>
+                  <ImageView fitHeight="130.0" fitWidth="150.0">
+                     <image>
+                        <Image url="@../../Res/WordSearch2.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goWordSearch3" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="130.0" fitWidth="150.0">
+                     <image>
+                        <Image url="@../../Res/WordSearch3.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
          </children>
          <BorderPane.margin>
             <Insets bottom="20.0" />

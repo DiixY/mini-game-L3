@@ -20,8 +20,8 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" text="Button" />
-            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" text="Button" textAlignment="CENTER" />
+            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goSudo2" text="Button" />
+            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goSudo3" text="Button" textAlignment="CENTER" />
          </children>
          <BorderPane.margin>
             <Insets bottom="20.0" />
