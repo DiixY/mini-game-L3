@@ -23,6 +23,7 @@ import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -138,6 +139,7 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 						this.grid.add(this.goodPlaceChar(this.m.getWord().charAt(i)), i, this.m.getCuTry()-1);
 					}
 					this.status.setText("Gagné");
+					this.status.setTextFill(Color.ORANGE);
 					this.check.setDisable(true);
 					this.launch.setDisable(false);
 
@@ -225,7 +227,7 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 		this.circle = new Circle(15,Paint.valueOf("rgb(230, 230, 0)"));
 		text.setText(Character.toString(c));
 		text.setFont(new Font("Arial",16));
-		text.setTextFill(Paint.valueOf("white"));
+		text.setTextFill(Paint.valueOf("black"));
 		
 		s.getChildren().addAll(this.circle,text);
 		return s;

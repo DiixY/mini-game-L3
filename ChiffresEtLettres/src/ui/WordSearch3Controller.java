@@ -124,7 +124,8 @@ public class WordSearch3Controller extends ChangeSceneButtons {
 			//Reinitialisation du tableau de boutons a null pour recuperer la prochaine saisie
 			this.buttons[0] = null;
 			this.buttons[1] = null;
-			this.words.setText(Arrays.toString(this.g.getGrille().getAutorise()));
+			String str = Arrays.toString(this.g.getGrille().getAutorise()).substring(1, Arrays.toString(this.g.getGrille().getAutorise()).length()-1);
+			this.words.setText(str);
 
 			if(this.g.getNbMots() == 0 ) // Test si l'utilisateur a trouvé tout les mots ,si oui on affiche le message gagné et on active/désactive les boutons nécessaire au bon fonctionnement d'une nouvel partie
 			{

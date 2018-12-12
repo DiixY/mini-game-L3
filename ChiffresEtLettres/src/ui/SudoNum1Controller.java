@@ -206,6 +206,7 @@ public class SudoNum1Controller extends ChangeSceneButtons{
 		}	
 	}
 	
+	
 	public void verif(ActionEvent event) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
 	{
 		if(s.getChance()>0)

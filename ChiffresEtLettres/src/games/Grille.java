@@ -21,15 +21,15 @@ public class Grille {
 
 		try {
 
-			File f = new File(fpath);
+			
+			
+			
 			
 			this.grille = new char[x-1][y];
-			FileReader fr = new FileReader(f);
-			/*this.grille = new char[x-1][y];
 			InputStream flux=getClass().getResourceAsStream("/"+fpath);
-			InputStreamReader lecture=new InputStreamReader(flux);*/
+			InputStreamReader lecture=new InputStreamReader(flux);
 
-			BufferedReader br = new BufferedReader(fr);
+			BufferedReader br = new BufferedReader(lecture);
 			String temp = br.readLine();
 
 			for(int i=1;i<this.x;i++)

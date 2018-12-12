@@ -49,13 +49,11 @@ public abstract class ABSWordManagement {
 		
 
 		try{
-			File f = new File("Annexes/Dictionary.txt");
-			
-			
-			FileReader fr = new FileReader(f);
-			/*InputStream flux= getClass().getResourceAsStream("/Annexes/Dictionary.txt");
-			InputStreamReader lecture=new InputStreamReader(flux);*/
-			BufferedReader buff=new BufferedReader(fr);
+			/*File f = new File("Annexes/Dictionary.txt");
+			FileReader fr = new FileReader(f);*/
+			InputStream flux= getClass().getResourceAsStream("/Annexes/Dictionary.txt");
+			InputStreamReader lecture=new InputStreamReader(flux);
+			BufferedReader buff=new BufferedReader(lecture);
 				
 				while (compt<(ligne-1)){
 					compt++;

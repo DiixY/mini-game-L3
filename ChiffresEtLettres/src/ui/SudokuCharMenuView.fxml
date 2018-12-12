@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane id="custom-bg" minHeight="400.0" minWidth="640.0" stylesheets="@../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ChangeSceneButtons">
+<BorderPane id="custom-back" minHeight="400.0" minWidth="640.0" stylesheets="@../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ChangeSceneButtons">
    <center>
       <HBox alignment="CENTER" maxHeight="200.0" maxWidth="550.0" minHeight="200.0" minWidth="550.0" prefHeight="200.0" prefWidth="550.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
@@ -57,7 +57,7 @@
                   <Image url="@../../Res/sudokulettre.png" />
                </image>
             </ImageView>
-            <Label text="Sudoku Lettre" textAlignment="CENTER">
+            <Label text="Sudoku Lettre" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Arvin" size="30.0" />
                </font>

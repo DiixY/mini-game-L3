@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane id="custom-bg" maxHeight="400.0" maxWidth="640.0" minHeight="400.0" minWidth="640.0" prefHeight="400.0" prefWidth="640.0" stylesheets="@../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.WordSearch3Controller">
+<BorderPane id="custom-back" maxHeight="400.0" maxWidth="640.0" minHeight="400.0" minWidth="640.0" prefHeight="400.0" prefWidth="640.0" stylesheets="@../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.WordSearch3Controller">
    <center>
       <GridPane fx:id="grid" alignment="CENTER" maxHeight="250.0" maxWidth="300.0" minHeight="250.0" minWidth="300.0" prefHeight="250.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-insets: 0,1111;" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -563,7 +563,7 @@
       </HBox>
    </bottom>
    <top>
-      <Label fx:id="words" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="550.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+      <Label fx:id="words" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="550.0" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets top="10.0" />
          </BorderPane.margin>
