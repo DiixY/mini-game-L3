@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -7,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane maxHeight="400" maxWidth="640" minHeight="400.0" minWidth="640.0" style="-fx-background-color: linear-gradient(to right top, #084298, #165cb1, #2677ca, #3a93e1, #50aff8);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ChangeSceneButtons">
+<BorderPane id="custom-back" maxHeight="400" maxWidth="640" minHeight="400.0" minWidth="640.0" stylesheets="@../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ChangeSceneButtons">
    <center>
       <GridPane alignment="CENTER" hgap="5.0" maxHeight="100.0" maxWidth="500.0" minHeight="100.0" minWidth="500.0" prefHeight="100.0" prefWidth="495.0" stylesheets="@../../Res/style.css" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -29,7 +30,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#goSudoChar" GridPane.columnIndex="2" GridPane.halignment="CENTER">
                <graphic>
                   <ImageView>
                      <image>
@@ -45,7 +46,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button alignment="CENTER" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#goWordSearchMenu" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <graphic>
                   <ImageView>
                      <image>
@@ -62,6 +63,9 @@
                   </ImageView>
                </graphic></Button>
          </children>
+         <BorderPane.margin>
+            <Insets bottom="60.0" />
+         </BorderPane.margin>
       </GridPane>
    </center>
    <bottom>
@@ -71,4 +75,28 @@
          </BorderPane.margin>
       </Button>
    </bottom>
+   <top>
+      <HBox alignment="CENTER" maxHeight="100.0" maxWidth="400.0" minHeight="100.0" minWidth="400.0" prefHeight="100.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Choisis ton " textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arvin" size="34.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="70.0" fitWidth="140.0" HBox.hgrow="ALWAYS">
+               <image>
+                  <Image url="@../../Res/logoMain.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="!" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arvin" size="34.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+   </top>
 </BorderPane>

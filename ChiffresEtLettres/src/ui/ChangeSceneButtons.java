@@ -40,6 +40,15 @@ public class ChangeSceneButtons {
 	}
 	
 	@FXML
+	public void goSudoChar(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("SudokuCharMenuView.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
+	
+	@FXML
 	public void goMotus(ActionEvent event) throws IOException
 	{	
 			Parent mainParent = FXMLLoader.load(getClass().getResource("MotusView.fxml"));
@@ -57,12 +66,94 @@ public class ChangeSceneButtons {
 			mainwindow.setScene(scene);	
 	}
 	
+	@FXML
+	public void goChar1(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("SudokuChar1.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
+	
+	@FXML
+	public void goSudo2(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("SudokuNum2.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
+	
+	@FXML
+	public void goChar2(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("SudokuChar2.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
+	
+	@FXML
+	public void goSudo3(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("SudokuNum3.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
+	
+	@FXML
+	public void goChar3(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("SudokuChar3.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
+	
+	
 	public void goPlayView(ActionEvent event) throws IOException
 	{
 		Parent root = FXMLLoader.load(getClass().getResource("PlayView.fxml"));
 		Scene scene = new Scene(root);
 		Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
 		mainwindow.setScene(scene);	
+	}
+	
+	@FXML
+	public void goWordSearch1(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("WordSearch1.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
+	
+	@FXML
+	public void goWordSearch2(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("WordSearch2.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
+	
+	@FXML
+	public void goWordSearch3(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("WordSearch3.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
+	}
+	
+	@FXML
+	public void goWordSearchMenu(ActionEvent event) throws IOException
+	{	
+			Parent mainParent = FXMLLoader.load(getClass().getResource("WordSearchMenu.fxml"));
+			Scene scene = new Scene(mainParent);
+			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
+			mainwindow.setScene(scene);	
 	}
 	
 }

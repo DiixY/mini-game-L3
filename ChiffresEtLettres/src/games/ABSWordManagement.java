@@ -3,6 +3,8 @@ package games;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Random;
@@ -10,33 +12,30 @@ import java.util.Random;
 public abstract class ABSWordManagement {
 	public abstract void BidonPower();//methode abstraite qui sert uniquement a pouvoir faire la classe abstraite
 	
-	public String takeWord(int ligne) {
+	public String takeWord(int ligne) throws FileNotFoundException {
 		int compt=0;
 		String word="";
-		
-		File f = new File("Annexes","Dictionary.txt");
-		if(f.exists()) {
-			try{
-				InputStream flux=new FileInputStream(f); 
-				InputStreamReader lecture=new InputStreamReader(flux);
-				BufferedReader buff=new BufferedReader(lecture);
-				while (compt<(ligne-1)){
-					compt++;
-					buff.readLine();
-				}
-				word = buff.readLine();
-				buff.close(); 
-				}		
-				catch (Exception e){
-				System.out.println(e.toString());
-				}
 
-		} 
-		else{
-			System.out.println("Fichier introuvable");
+		InputStream flux=new FileInputStream("Annexes/Dictionary.txt");
+
+		try{
+
+			InputStreamReader lecture=new InputStreamReader(flux);
+			BufferedReader buff=new BufferedReader(lecture);
+			while (compt<(ligne-1)){
+				compt++;
+				buff.readLine();
+			}
+			word = buff.readLine();
+			buff.close(); 
+		}		
+		catch (Exception e){
+			System.out.println(e.toString());
 		}
 
-		 return word;
+
+
+		return word;
 	}
 	
 	public String takeWord() {
@@ -47,12 +46,15 @@ public abstract class ABSWordManagement {
 		int compt=0;
 		String word="";
 		
-		File f = new File("Annexes","Dictionary.txt");
-		if(f.exists()) {
-			try{
-				InputStream flux=new FileInputStream(f); 
-				InputStreamReader lecture=new InputStreamReader(flux);
-				BufferedReader buff=new BufferedReader(lecture);
+		
+
+		try{
+			/*File f = new File("Annexes/Dictionary.txt");
+			FileReader fr = new FileReader(f);*/
+			InputStream flux= getClass().getResourceAsStream("/Annexes/Dictionary.txt");
+			InputStreamReader lecture=new InputStreamReader(flux);
+			BufferedReader buff=new BufferedReader(lecture);
+				
 				while (compt<(ligne-1)){
 					compt++;
 					buff.readLine();
@@ -64,10 +66,8 @@ public abstract class ABSWordManagement {
 				System.out.println(e.toString());
 				}
 
-		} 
-		else{
-			System.out.println("Fichier introuvable");
-		}
+		 
+		
 
 		 return word;
 	}

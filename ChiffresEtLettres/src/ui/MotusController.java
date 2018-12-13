@@ -23,6 +23,7 @@ import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -64,6 +65,7 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 		this.word.setDisable(false);
 		this.launch.setDisable(true);
 		this.check.setDisable(false);
+		this.status.setText("");
 		this.word.setPromptText("Entrez un mot ! ("+this.m.getWord().length()+"caractères)");
 		
 		
@@ -101,7 +103,7 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 		
 		if(this.m.getCuTry()<6)
 		{
-			if(this.word.getText().equals("") || this.word.getText().length() != this.m.getWord().length())
+			if(this.word.getText().equals("") || this.word.getText().length() != this.m.getWord().length() || !this.m.isWordValid(this.word.getText()))
 			{
 				this.errAlert();
 			}
@@ -112,7 +114,6 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 
 				for(int i = 0 ; i < playWord.length() ; i++)
 				{
-					final int row = i;
 					if(Character.compare(playWord.charAt(i),this.m.getGhostCo()[i]) == 0)
 					{
 						this.grid.getChildren().remove(getNodeByRowColumnIndex(this.m.getCuTry(),i));
@@ -129,33 +130,38 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 						this.grid.add(this.wrongChar(playWord.charAt(i)), i, this.m.getCuTry()-1);
 					}
 				}
+				
+				
+				if(this.m.getEnd())
+				{
+					for(int i = 0 ; i < this.m.getWord().length() ; i++)
+					{
+						this.grid.add(this.goodPlaceChar(this.m.getWord().charAt(i)), i, this.m.getCuTry()-1);
+					}
+					this.status.setText("Gagné");
+					this.status.setTextFill(Color.ORANGE);
+					this.check.setDisable(true);
+					this.launch.setDisable(false);
+
+				}
+				else
+				{
+					for(int i = 0 ; i < this.m.getWord().length() ; i++)
+					{
+
+						this.grid.add(this.wrongChar(this.m.getGhostCo()[i]), i, this.m.getCuTry());
+					}
+				}
 				this.word.clear();
 			}
 			
-			if(this.m.getEnd())
-			{
-				for(int i = 0 ; i < this.m.getWord().length() ; i++)
-				{
-						this.grid.add(this.goodPlaceChar(this.m.getWord().charAt(i)), i, this.m.getCuTry()-1);
-				}
-				this.status.setText("Gagné");
-				this.check.setDisable(true);
-				this.launch.setDisable(false);
-				this.word.clear();
-				
-			}
-			else
-			{
-				for(int i = 0 ; i < this.m.getWord().length() ; i++)
-				{
-						
-						this.grid.add(this.wrongChar(this.m.getGhostCo()[i]), i, this.m.getCuTry());
-				}
-				this.word.clear();
-			}
+			
 		}
 		else
 		{
+			this.status.setText("Perdu !");
+			this.status.setTextFill(Paint.valueOf("crimson"));
+			
 			for(int i = 0 ; i < this.m.getWord().length() ; i++)
 			{
 					this.grid.add(this.goodPlaceChar(this.m.getWord().charAt(i)), i, this.m.getCuTry());
@@ -165,6 +171,10 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 	}
 	
 	
+	/*
+	 * Fonction qui retourne une Node specifique d'un GridPane grace a ses coordonnées (Fonction trouvé sur une discussion Stack OverFlow : 
+	 * https://stackoverflow.com/questions/20825935/javafx-get-node-by-row-and-column
+	 * Tout crédit revient à son créateur */
 	public Node getNodeByRowColumnIndex (final int row, final int column) {
 	    Node result = null;
 	    ObservableList<Node> childrens = this.grid.getChildren();
@@ -178,6 +188,8 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 
 	    return result;
 	}
+	
+	
 	//Fonction qui créer la fenetre de warning
 	public void errAlert()
 	{
@@ -215,7 +227,7 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 		this.circle = new Circle(15,Paint.valueOf("rgb(230, 230, 0)"));
 		text.setText(Character.toString(c));
 		text.setFont(new Font("Arial",16));
-		text.setTextFill(Paint.valueOf("white"));
+		text.setTextFill(Paint.valueOf("black"));
 		
 		s.getChildren().addAll(this.circle,text);
 		return s;
