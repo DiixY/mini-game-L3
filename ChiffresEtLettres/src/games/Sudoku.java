@@ -1,24 +1,22 @@
 package games;
 
-import java.io.File;
+
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
+
 
 public class Sudoku {
 
 	private GrilleSudoku grille;
 	private int chance;
-	private boolean end;
+	
 
 
 	public Sudoku(String fpath) throws IOException
 	{
-		File f = new File(fpath);
+		
 		this.grille = new GrilleSudoku(fpath);
 		this.chance = 15;
-		this.end = false;
 	}
 
 

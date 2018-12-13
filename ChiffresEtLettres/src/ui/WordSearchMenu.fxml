@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane id="custom-back" minHeight="400.0" minWidth="640.0" stylesheets="@../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ChangeSceneButtons">
+   <center>
+      <HBox alignment="CENTER" maxHeight="200.0" maxWidth="550.0" minHeight="200.0" minWidth="550.0" prefHeight="200.0" prefWidth="550.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goWordSearch1" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="130.0" fitWidth="150.0">
+                     <image>
+                        <Image url="@../../Res/WordSearch1.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goWordSearch2">
+               <graphic>
+                  <ImageView fitHeight="130.0" fitWidth="150.0">
+                     <image>
+                        <Image url="@../../Res/WordSearch2.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button minHeight="150.0" minWidth="166.0" mnemonicParsing="false" onAction="#goWordSearch3" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="130.0" fitWidth="150.0">
+                     <image>
+                        <Image url="@../../Res/WordSearch3.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+   <bottom>
+      <Button id="dark-blue" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#goPlayView" prefHeight="40.0" prefWidth="100.0" stylesheets="@../../Res/style.css" text="Retour" textAlignment="CENTER" BorderPane.alignment="TOP_CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+   <top>
+      <HBox alignment="CENTER" maxHeight="75.0" maxWidth="400.0" minHeight="75.0" minWidth="400.0" prefHeight="100.0" prefWidth="400.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0">
+               <image>
+                  <Image url="@../../Res/motmelee.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Mots Mêlés" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arvin" size="30.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+</BorderPane>

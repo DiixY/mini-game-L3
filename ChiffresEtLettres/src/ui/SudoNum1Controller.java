@@ -3,6 +3,8 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+
 import games.Sudoku;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,7 +16,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 
-public class SudoNum1Controller {
+public class SudoNum1Controller extends ChangeSceneButtons{
 	//Attributes
 	Sudoku s;
 	ArrayList<String> coordinates;
@@ -23,14 +25,14 @@ public class SudoNum1Controller {
 	Button launch;
 	
 	@FXML 
-	Button try_sudo = this.createDisabledButton();
+	Button try_sudo;
 	
 	@FXML
 	private Label chances;
 	
 	@FXML
 	private Label status;
-
+	
 	@FXML
 	ChoiceBox<Character> c1;
 	@FXML
@@ -130,89 +132,80 @@ public class SudoNum1Controller {
 		return temp;
 	}
 	
-	public void setChoiceBoxes()
+	//Fonction qui initialise tout les menu deroulants avec les caractères autorisés pour la grille 
+	public void setChoiceBoxes() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
 	{
-		ObservableList<Character> availableChoices = FXCollections.observableArrayList('1','2','3','4','5','6','7','8','9'); 
-		c1.setItems(availableChoices);		
-		c2.setItems(availableChoices);		
-		c3.setItems(availableChoices);		
-		c4.setItems(availableChoices);		
-		c5.setItems(availableChoices);		
-		c6.setItems(availableChoices);		
-		c7.setItems(availableChoices);		
-		c8.setItems(availableChoices);		
-		c9.setItems(availableChoices);		
-		c10.setItems(availableChoices);		
-		c11.setItems(availableChoices);		
-		c12.setItems(availableChoices);		
-		c13.setItems(availableChoices);		
-		c14.setItems(availableChoices);		
-		c15.setItems(availableChoices);		
-		c16.setItems(availableChoices);		
-		c17.setItems(availableChoices);		
-		c18.setItems(availableChoices);		
-		c19.setItems(availableChoices);	
-		c20.setItems(availableChoices);		
-		c21.setItems(availableChoices);		
-		c22.setItems(availableChoices);		
-		c23.setItems(availableChoices);	
-		c24.setItems(availableChoices);	
-		c25.setItems(availableChoices);	
-		c26.setItems(availableChoices);	
-		c27.setItems(availableChoices);	
-		c28.setItems(availableChoices);	
-		c29.setItems(availableChoices);	
-		c30.setItems(availableChoices);	
-		c31.setItems(availableChoices);	
-		c32.setItems(availableChoices);	
-		c33.setItems(availableChoices);	
-		c34.setItems(availableChoices);	
-		c35.setItems(availableChoices);	
-		c36.setItems(availableChoices);	
-		c37.setItems(availableChoices);	
-		c38.setItems(availableChoices);	
-		c39.setItems(availableChoices);	
-		c40.setItems(availableChoices);	
-		c41.setItems(availableChoices);	
-		c42.setItems(availableChoices);	
-		c43.setItems(availableChoices);
-		c44.setItems(availableChoices);
+		
+		List<Character> tempList = new ArrayList<Character>();
+		
+		for(char c:this.s.getGrille().getAutorise())
+		{
+			tempList.add(c);
+		}
+		ObservableList<Character> availableChoices = FXCollections.observableArrayList(tempList); 
+		 
+	
+		for(int i = 1;i<=44;i++)
+		{
+			Field f = this.getClass().getDeclaredField("c"+i);
+			f.setAccessible(true);
+			ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
+			ChoiceBox<Character> temp = choiceBox;
+			
+			temp.setItems(availableChoices);
+		}
 	}
 	
-	public void errAlert()
+	
+	public boolean errAlert() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
 	{
-		Alert al = new Alert(Alert.AlertType.WARNING);
-		al.setTitle("Problème Soduku");
-		al.setHeaderText("Un oubli ?");
-		al.setContentText("Il faut remplir entièrement la grille avant de pouvoir tester !");
-		al.showAndWait();
+		for(int i = 1;i<=44;i++)
+		{
+			Field f = this.getClass().getDeclaredField("c"+i);
+			f.setAccessible(true);
+			ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
+			ChoiceBox<Character> temp = choiceBox;
+
+			if(temp.getValue() == null)
+			{
+				Alert al = new Alert(Alert.AlertType.WARNING);
+				al.setTitle("Problème Soduku");
+				al.setHeaderText("Un oubli ?");
+				al.setContentText("Il faut remplir entièrement la grille avant de pouvoir tester !");
+				al.showAndWait();
+				return false;
+			}
+		}
+		return true;
 	}
 	
-	public void start(ActionEvent event)
+	public void start(ActionEvent event) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
 	{
 		try {
 			this.status.setText("");
 			this.chances.setText("");
+
 			this.s = new Sudoku("Annexes/Grilles/Sudoku1.txt");
 			this.setChoiceBoxes();
 			coordinates = new ArrayList<>(Arrays.asList("01","03","04","07","08",
-														"11","12","14","15","17",
-														"22","24","25","27","28",
-														"30","32","35","36","38",
-														"40","43","44","45","48",
-														"50","52","56","58",
-														"60","61","63","64","66",
-														"71","73","74","76","77",
-														"80","81","84","85","87"));
+					"11","12","14","15","17",
+					"22","24","25","27","28",
+					"30","32","35","36","38",
+					"40","43","44","45","48",
+					"50","52","56","58",
+					"60","61","63","64","66",
+					"71","73","74","76","77",
+					"80","81","84","85","87"));
 			this.launch.setDisable(true);
 			this.try_sudo.setDisable(false);
 			this.chances.setText("Chances Restantes : "+s.getChance());
-			
+		
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
 	}
+	
 	
 	public void verif(ActionEvent event) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
 	{
@@ -223,9 +216,10 @@ public class SudoNum1Controller {
 			{
 					Field f = this.getClass().getDeclaredField("c"+i);
 					f.setAccessible(true);
-					ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
+					ChoiceBox<Character> choiceBox =(ChoiceBox<Character>) f.get(this);
 					ChoiceBox<Character> temp = choiceBox;
-					if(temp.getValue() != null)
+					
+					if(this.errAlert())
 					{
 						if(!s.playCoup(this.coordinates.get(i-1).charAt(0)-'0', this.coordinates.get(i-1).charAt(1)-'0', temp.getValue()))
 						{
@@ -236,7 +230,6 @@ public class SudoNum1Controller {
 					}
 					else
 					{
-						this.errAlert();
 						break outofloop;
 					}			
 			}
