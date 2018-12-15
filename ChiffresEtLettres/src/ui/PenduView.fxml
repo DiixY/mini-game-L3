@@ -173,7 +173,7 @@
                   </LinearGradient>
                </stroke>
             </Rectangle>
-            <Label fx:id="word" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="128.0" layoutY="70.0" prefHeight="112.0" prefWidth="383.0" stylesheets="@../../Res/style.css" textAlignment="CENTER">
+            <Label fx:id="word" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="128.0" layoutY="70.0" prefHeight="112.0" prefWidth="383.0" stylesheets="@../../Res/style.css" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Arvin" size="47.0" />
                </font>

@@ -397,7 +397,7 @@
       </VBox>
    </right>
    <top>
-      <Label fx:id="chances" alignment="CENTER" maxHeight="25.0" maxWidth="300.0" minHeight="25.0" minWidth="300.0" prefHeight="25.0" prefWidth="300.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+      <Label fx:id="chances" alignment="CENTER" maxHeight="25.0" maxWidth="300.0" minHeight="25.0" minWidth="300.0" prefHeight="25.0" prefWidth="300.0" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets top="20.0" />
          </BorderPane.margin>
