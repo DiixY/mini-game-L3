@@ -15,9 +15,9 @@ public class GrilleMelee extends Grille {
 	{
 		super(x,y,fpath);
 		
-		/*Ligne pour lire des fichiers dans un .jar
-		InputStream flux=getClass().getResourceAsStream("/"+fpath);
-		InputStreamReader lecture=new InputStreamReader(flux);*/
+		/*Ligne pour lire des fichiers dans un .jar*/
+		//InputStream flux=getClass().getResourceAsStream("/"+fpath);
+		//InputStreamReader lecture=new InputStreamReader(flux);
 		
 		File f = new File(fpath);
 		FileReader lecture = new FileReader(f);

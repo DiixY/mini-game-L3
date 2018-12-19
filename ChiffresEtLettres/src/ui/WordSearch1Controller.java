@@ -89,7 +89,7 @@ public class WordSearch1Controller extends ChangeSceneButtons {
 
 			if(this.g.jouer()) // Test si le mot est correct et fait parti de la liste des mots à trouver
 			{
-				System.out.println(this.g.getNbMots());
+				
 				if(GridPane.getColumnIndex(b1) == GridPane.getColumnIndex(b2)) //cas où la selection du joueur est en colonne
 				{
 					if(GridPane.getRowIndex(b1) < GridPane.getRowIndex(b2)) //cas où le mot se lit de gauche a droite

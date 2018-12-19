@@ -14,9 +14,9 @@ public class GrilleSudoku extends Grille {
 	public GrilleSudoku(String fpath) throws IOException
 	{
 		super(10,9,fpath);
-		/*Ligne pour lire des fichiers dans un .jar
-		InputStream flux=getClass().getResourceAsStream("/"+fpath);
-		InputStreamReader lecture=new InputStreamReader(flux);*/
+		/*Ligne pour lire des fichiers dans un .jar*/
+		//InputStream flux=getClass().getResourceAsStream("/"+fpath);
+		//InputStreamReader lecture=new InputStreamReader(flux);
 		
 		File f = new File(fpath);
 		FileReader lecture = new FileReader(f);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -540,7 +541,7 @@
             <Insets />
          </opaqueInsets>
          <BorderPane.margin>
-            <Insets bottom="100.0" left="100.0" top="100.0" />
+            <Insets bottom="100.0" right="20.0" top="100.0" />
          </BorderPane.margin>
       </GridPane>
    </center>
