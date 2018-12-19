@@ -1,12 +1,17 @@
 package ui;
 
 import java.io.IOException;
-
+import games.PlayerGestion;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
@@ -20,9 +25,10 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		
+		
 		this.primaryStage = primaryStage;
 		Font.loadFont("Res/Arvin.ttf", 12);
-		Parent root = FXMLLoader.load(getClass().getResource("MainView.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("layout/MainView.fxml"));
 		this.primaryStage.setTitle("miniGames");
 		
 		primaryStage.setResizable(false);
@@ -34,7 +40,8 @@ public class Main extends Application {
 		this.primaryStage.show();
 	}
 	
-		
+	
+	
 
 	public static void main(String[] args) {
 		launch(args);

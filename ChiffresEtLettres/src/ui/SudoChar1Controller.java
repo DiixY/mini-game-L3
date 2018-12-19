@@ -183,29 +183,37 @@ public class SudoChar1Controller extends ChangeSceneButtons{
 	
 	public void start(ActionEvent event) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
 	{
-		try {
-			this.status.setText("");
-			this.chances.setText("");
+		if(this.getPlayer()==null)
+		{
+			this.namefield.setVisible(true);
+			this.validate.setVisible(true);
+		}
+		else
+		{
+			try {
+				this.status.setText("");
+				this.chances.setText("");
 
-			this.s = new Sudoku("Annexes/Grilles/SudokuChar1.txt");
-			this.setChoiceBoxes();
-			coordinates = new ArrayList<>(Arrays.asList("01","03","04","07","08",
-					"11","12","14","15","17",
-					"22","24","25","27","28",
-					"30","32","35","36","38",
-					"40","43","44","45","48",
-					"50","52","56","58",
-					"60","61","63","64","66",
-					"71","73","74","76","77",
-					"80","81","84","85","87"));
-			this.launch.setDisable(true);
-			this.try_sudo.setDisable(false);
-			this.chances.setText("Chances Restantes : "+s.getChance());
-		
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	
+				this.s = new Sudoku("Annexes/Grilles/SudokuChar1.txt");
+				this.setChoiceBoxes();
+				coordinates = new ArrayList<>(Arrays.asList("01","03","04","07","08",
+						"11","12","14","15","17",
+						"22","24","25","27","28",
+						"30","32","35","36","38",
+						"40","43","44","45","48",
+						"50","52","56","58",
+						"60","61","63","64","66",
+						"71","73","74","76","77",
+						"80","81","84","85","87"));
+				this.launch.setDisable(true);
+				this.try_sudo.setDisable(false);
+				this.chances.setText("Chances Restantes : "+s.getChance());
+
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 	
 	public void verif(ActionEvent event) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
@@ -237,7 +245,9 @@ public class SudoChar1Controller extends ChangeSceneButtons{
 
 			if(s.verifAllPlayed())
 			{
-				status.setText("Gagné !");
+				this.status.setText("Gagné ! +300p");
+				this.player.setScoreSudAZ(300+this.player.getScoreSudAZ());
+				this.pg.savePlayers();
 				status.setTextFill(Color.ORANGE);
 				try_sudo.setDisable(true);
 				launch.setDisable(false);

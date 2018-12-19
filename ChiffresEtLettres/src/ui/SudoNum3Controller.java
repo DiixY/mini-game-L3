@@ -182,6 +182,13 @@ public class SudoNum3Controller extends ChangeSceneButtons{
 	
 	public void start(ActionEvent event) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
 	{
+		if(this.getPlayer()==null)
+		{
+			this.namefield.setVisible(true);
+			this.validate.setVisible(true);
+		}
+		else
+		{
 		try {
 			this.status.setText("");
 			this.chances.setText("");
@@ -204,7 +211,8 @@ public class SudoNum3Controller extends ChangeSceneButtons{
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	
+		}
+		}
 	}
 	
 	public void verif(ActionEvent event) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
@@ -236,7 +244,9 @@ public class SudoNum3Controller extends ChangeSceneButtons{
 
 			if(s.verifAllPlayed())
 			{
-				status.setText("Gagné !");
+				this.status.setText("Gagné ! +500p");
+				this.player.setScoreSud(500+this.player.getScoreSud());
+				this.pg.savePlayers();
 				status.setTextFill(Color.ORANGE);
 				try_sudo.setDisable(true);
 				launch.setDisable(false);

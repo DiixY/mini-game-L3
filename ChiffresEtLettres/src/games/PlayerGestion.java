@@ -124,6 +124,7 @@ public final class PlayerGestion {
 			p.setScoreG(p.getScoreMotMel() + p.getScoreMotus() + p.getScorePen() + p.getScoreSud() + p.getScoreSudAZ());
 		}
 		Collections.sort(this.getPlayerList(), Collections.reverseOrder());
+		Collections.reverse(this.getPlayerList());
 	}
 
 	public ArrayList<Player> getPlayerList() {
@@ -138,8 +139,7 @@ public final class PlayerGestion {
 		return fpath;
 	}
 
-	public Player choosePlayer() {
-		Scanner sc = new Scanner(System.in);
+	public Player choosePlayer(String pseudo) {
 		if(this.getPlayerList() != null) {
 			if(!this.getPlayerList().isEmpty()){
 				System.out.println("Liste des joueurs disponibles: ");
@@ -148,9 +148,6 @@ public final class PlayerGestion {
 					System.out.print(b.getPseudo()+"||");
 				}
 
-				System.out.println("\n Saisir le nom du joeur a selectionner:");
-				String pseudo=sc.nextLine();
-				sc.close();
 				for(Player b:this.getPlayerList()){  
 					if(b.getPseudo().equals(pseudo)) {
 						return b;
@@ -172,5 +169,31 @@ public final class PlayerGestion {
 		}
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		String s = "";
+		this.generalRanking(getPlayerList());	
+		if(this.playerList.size()>10)
+		{
+			for(int i = 0;i<10;i++)
+			{
+				Player p = (Player)this.playerList.get(i);
+				s = s + p.getPseudo()+"\t" +"- Générale : "+p.getScoreG()+" P : "+p.getScorePen()+" MM : "+p.getScoreMotMel()+" M : "+p.getScoreMotus()+" SC : "+p.getScoreSud()+" SL : "+p.getScoreSudAZ()+"\n";
+			}
+		}
+		else
+		{
+			for(int i = 0;i<this.playerList.size();i++)
+			{
+				Player p = (Player)this.playerList.get(i);
+				s = s + p.getPseudo()+"\t" +"- Générale : "+p.getScoreG()+" P : "+p.getScorePen()+" MM : "+p.getScoreMotMel()+" M : "+p.getScoreMotus()+" SC : "+p.getScoreSud()+" SL : "+p.getScoreSudAZ()+"\n";
+			}
+		}
+			
+		return s;
+	}
+
+	
 
 }

@@ -38,18 +38,25 @@ public class WordSearch2Controller extends ChangeSceneButtons {
 	//Initialisation de tout les attibuts dont on a besoin lors de la partie ( Messages , boutons , etc..)
 	public void start(ActionEvent event) throws Exception
 	{
-		cleanGrid();
-		this.launch.setDisable(true);
-		this.buttons = new Button[2];
-		//this.status.setText("");
-		this.grid.getParent().requestFocus();
-		this.g = new WordSearchPuzzle("Annexes/Mots_meles/Legumes.txt");
-		setButtonsEnable(false);
-		String str = Arrays.toString(this.g.getGrille().getAutorise()).substring(1, Arrays.toString(this.g.getGrille().getAutorise()).length()-1);
-		this.words.setText(str);
-		this.words.setFont(new Font("Arvin", 14));
-		this.status.setText("");
-		
+		if(this.getPlayer()==null)
+		{
+			this.namefield.setVisible(true);
+			this.validate.setVisible(true);
+		}
+		else
+		{
+			cleanGrid();
+			this.launch.setDisable(true);
+			this.buttons = new Button[2];
+			this.status.setText("");
+			this.grid.getParent().requestFocus();
+			this.g = new WordSearchPuzzle("Annexes/Mots_meles/Legumes.txt");
+			setButtonsEnable(false);
+			String str = Arrays.toString(this.g.getGrille().getAutorise()).substring(1, Arrays.toString(this.g.getGrille().getAutorise()).length()-1);
+			this.words.setText(str);
+			this.words.setFont(new Font("Arvin", 14));
+			this.status.setText("");
+		}
 		
 	}
 	
@@ -137,7 +144,9 @@ public class WordSearch2Controller extends ChangeSceneButtons {
 			if(this.g.getNbMots() == 0 ) // Test si l'utilisateur a trouvé tout les mots ,si oui on affiche le message gagné et on active/désactive les boutons nécessaire au bon fonctionnement d'une nouvel partie
 			{
 				this.launch.setDisable(false);
-				this.status.setText("Gagné !");
+				this.status.setText("Gagné ! +100p");
+				this.player.setScoreMotMel(100+this.player.getScoreMotMel());
+				this.pg.savePlayers();
 				this.status.setTextFill(Color.ORANGE);
 				setButtonsEnable(false);
 			}
