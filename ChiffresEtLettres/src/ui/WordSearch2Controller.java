@@ -30,6 +30,8 @@ public class WordSearch2Controller extends ChangeSceneButtons {
 	@FXML
 	Label words; //Attribut FXML qui manipule la liste des mots a trouver
 	
+	private Background tempbackground = null; //Attribut pour sauvegarder la couleur de fond d'une case (si le mot selectionné n'est pas bon)
+	
 	
 	WordSearchPuzzle g;
 	
@@ -54,17 +56,20 @@ public class WordSearch2Controller extends ChangeSceneButtons {
 	//Fonction qui va recuperer l'interaction avec l'utilisateur et va jouer le mot choisit par celui-ci
 	public void test(ActionEvent event)
 	{
-
+		
 		if(this.buttons[0] == null)
 		{
-			this.buttons[0] = (Button)event.getSource(); //recupere le premier bouton cliqué lors de l'event
+			this.buttons[0] = (Button)event.getSource();//recupere le premier bouton cliqué lors de l'event
+			StackPane b1 = (StackPane)this.buttons[0].getParent();
+			if(b1.getBackground() != null) this.tempbackground = b1.getBackground();
+			b1.setBackground(new Background(new BackgroundFill(Paint.valueOf("rgba(255, 102, 102,0.5)"), null, null)));
 		}
 		else if (this.buttons[1] == null)
 		{
 			this.buttons[1] = (Button)event.getSource(); //recupere le deuxieme bouton cliqué lors de l'event
-
-			StackPane b2 = (StackPane)this.buttons[1].getParent(); //recupere le parent du bouton cliqué lors de l'event pour pouvoir chercher les coordonnés du bouton dans la grille et manipuler la couleur de fond
 			StackPane b1 = (StackPane)this.buttons[0].getParent();
+			StackPane b2 = (StackPane)this.buttons[1].getParent(); //recupere le parent du bouton cliqué lors de l'event pour pouvoir chercher les coordonnés du bouton dans la grille et manipuler la couleur de fond
+			
 
 
 
@@ -115,6 +120,7 @@ public class WordSearch2Controller extends ChangeSceneButtons {
 			}
 			else // Sinon on remet les coordonnées du mot a 0 pour la prochaine interaction avec l'utilisateur
 			{
+				b1.setBackground(this.tempbackground);
 				this.g.setColonneDebutMot(0);
 				this.g.setLigneDebutMot(0);
 				this.g.setColonneFinMot(0);
@@ -122,6 +128,7 @@ public class WordSearch2Controller extends ChangeSceneButtons {
 			}
 
 			//Reinitialisation du tableau de boutons a null pour recuperer la prochaine saisie
+			
 			this.buttons[0] = null;
 			this.buttons[1] = null;
 			String str = Arrays.toString(this.g.getGrille().getAutorise()).substring(1, Arrays.toString(this.g.getGrille().getAutorise()).length()-1);

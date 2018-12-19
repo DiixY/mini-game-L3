@@ -137,6 +137,7 @@ public class SudoChar3Controller extends ChangeSceneButtons{
 		
 		List<Character> tempList = new ArrayList<Character>();
 		
+		tempList.add(' ');
 		for(char c:this.s.getGrille().getAutorise())
 		{
 			tempList.add(c);
@@ -165,7 +166,7 @@ public class SudoChar3Controller extends ChangeSceneButtons{
 			ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
 			ChoiceBox<Character> temp = choiceBox;
 
-			if(temp.getValue() == null)
+			if(temp.getValue() == null || Character.compare(temp.getValue(),' ')==0)
 			{
 				Alert al = new Alert(Alert.AlertType.WARNING);
 				al.setTitle("Problème Soduku");

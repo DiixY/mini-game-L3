@@ -297,6 +297,27 @@
     -fx-font-size: 14px;
 }
 
+#wordsearch{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 1em; /* 12 */
+    -fx-text-fill: #828282;
+}
+
+
+#wordsearch:pressed {
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: white;
+}
+
+#wordsearch:hover {
+    -fx-background-color: #ccccb3;
+    -fx-text-fill: white;
+}
 
 /*Modification des boutons systemes present dans la librairie de base de Java (Caspian.css) */
 .button{

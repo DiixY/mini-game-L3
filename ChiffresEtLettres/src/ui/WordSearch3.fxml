@@ -9,7 +9,7 @@
 
 <BorderPane id="custom-back" maxHeight="400.0" maxWidth="640.0" minHeight="400.0" minWidth="640.0" prefHeight="400.0" prefWidth="640.0" stylesheets="@../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.WordSearch3Controller">
    <center>
-      <GridPane fx:id="grid" alignment="CENTER" maxHeight="250.0" maxWidth="300.0" minHeight="250.0" minWidth="300.0" prefHeight="250.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-insets: 0,1111;" BorderPane.alignment="CENTER">
+      <GridPane fx:id="grid" alignment="CENTER" maxHeight="250.0" maxWidth="300.0" minHeight="250.0" minWidth="300.0" prefHeight="250.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: #ffce00; -fx-border-insets: 0,1111;" BorderPane.alignment="CENTER">
         <columnConstraints>
           	<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           	<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -37,502 +37,502 @@
          <children>
             <StackPane GridPane.columnIndex="0" GridPane.rowIndex="0">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="N" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="N" textAlignment="CENTER" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="0">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="1" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="I" textAlignment="CENTER" GridPane.columnIndex="1" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="2" GridPane.rowIndex="0">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="P" GridPane.columnIndex="2" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="P" textAlignment="CENTER" GridPane.columnIndex="2" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="3" GridPane.rowIndex="0">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="3" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="A" textAlignment="CENTER" GridPane.columnIndex="3" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="4" GridPane.rowIndex="0">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="S" GridPane.columnIndex="4" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="S" textAlignment="CENTER" GridPane.columnIndex="4" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="5" GridPane.rowIndex="0">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="G" GridPane.columnIndex="5" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="G" textAlignment="CENTER" GridPane.columnIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="6" GridPane.rowIndex="0">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="X" GridPane.columnIndex="6" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="X" textAlignment="CENTER" GridPane.columnIndex="6" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="7" GridPane.rowIndex="0">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="T" GridPane.columnIndex="7" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="T" textAlignment="CENTER" GridPane.columnIndex="7" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="0">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="B" GridPane.columnIndex="8" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="B" textAlignment="CENTER" GridPane.columnIndex="8" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="9" GridPane.rowIndex="0">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="B" GridPane.columnIndex="9" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="B" textAlignment="CENTER" GridPane.columnIndex="9" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="0" GridPane.rowIndex="1">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="Z" GridPane.rowIndex="1" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="Z" textAlignment="CENTER" GridPane.rowIndex="1" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="U" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="U" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="A" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="3" GridPane.rowIndex="1">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="4" GridPane.rowIndex="1">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="D" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="D" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="5" GridPane.rowIndex="1">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="A" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="1" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="6" GridPane.rowIndex="1">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="1" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="7" GridPane.rowIndex="1">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="I" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="1" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="1">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="U" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="U" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="1" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="9" GridPane.rowIndex="1">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="G" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="G" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="1" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="0" GridPane.rowIndex="2">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.rowIndex="2" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.rowIndex="2" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="2" GridPane.rowIndex="2">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="N" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="3" GridPane.rowIndex="2">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="I" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="4" GridPane.rowIndex="2">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="M" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="M" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="2" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="5" GridPane.rowIndex="2">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="2" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="6" GridPane.rowIndex="2">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="H" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="H" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="2" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="7" GridPane.rowIndex="2">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="2" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="2">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="2" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="9" GridPane.rowIndex="2">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="P" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="P" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="2" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="0" GridPane.rowIndex="3">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.rowIndex="3" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.rowIndex="3" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="2" GridPane.rowIndex="3">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="D" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="D" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="3" GridPane.rowIndex="3">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="4" GridPane.rowIndex="3">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="N" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="3" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="5" GridPane.rowIndex="3">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="N" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="N" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="3" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="6" GridPane.rowIndex="3">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="3" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="7" GridPane.rowIndex="3">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="R" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="R" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="3" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="3">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="H" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="H" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="3" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="9" GridPane.rowIndex="3">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="3" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="0" GridPane.rowIndex="4">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="L" GridPane.rowIndex="4" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="L" textAlignment="CENTER" GridPane.rowIndex="4" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="4">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="Y" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="Y" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="2" GridPane.rowIndex="4">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="G" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="G" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="3" GridPane.rowIndex="4">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="K" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="K" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="4" GridPane.rowIndex="4">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="I" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="4" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="5" GridPane.rowIndex="4">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="J" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="J" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="4" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="6" GridPane.rowIndex="4">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="M" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="M" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="4" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="7" GridPane.rowIndex="4">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="B" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="B" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="4" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="4">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="4" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="9" GridPane.rowIndex="4">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="I" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="4" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="0" GridPane.rowIndex="5">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.rowIndex="5" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="I" textAlignment="CENTER" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="5">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="2" GridPane.rowIndex="5">
                <children>
-                  <Button alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#test" text="H" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Button id="wordsearch" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="H" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="4" GridPane.rowIndex="5">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="3" GridPane.rowIndex="5">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="O" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="O" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="5" GridPane.rowIndex="5">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="O" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="O" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="6" GridPane.rowIndex="5">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="L" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="L" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="7" GridPane.rowIndex="5">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="A" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="5">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="T" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="T" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="9" GridPane.rowIndex="5">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="G" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="G" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="0" GridPane.rowIndex="6">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="O" GridPane.rowIndex="6" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="O" textAlignment="CENTER" GridPane.rowIndex="6" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="6">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="2" GridPane.rowIndex="6">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="6" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="3" GridPane.rowIndex="6">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="H" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="H" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="6" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="4" GridPane.rowIndex="6">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="Z" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="Z" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="6" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="5" GridPane.rowIndex="6">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="U" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="U" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="6" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="6" GridPane.rowIndex="6">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="P" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="P" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="6" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="7" GridPane.rowIndex="6">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="Q" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="Q" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="6" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="6">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="B" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="B" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="6" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="9" GridPane.rowIndex="6">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="U" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="U" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="6" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="0" GridPane.rowIndex="7">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="T" GridPane.rowIndex="7" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="T" textAlignment="CENTER" GridPane.rowIndex="7" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="7">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="K" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="K" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="2" GridPane.rowIndex="7">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="L" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="L" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="3" GridPane.rowIndex="7">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="H" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="H" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="7" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="4" GridPane.rowIndex="7">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="B" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="B" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="7" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="5" GridPane.rowIndex="7">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="7" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="6" GridPane.rowIndex="7">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="R" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="R" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="7" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="7" GridPane.rowIndex="7">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="T" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="T" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="7" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="7">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="A" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="A" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="7" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="9" GridPane.rowIndex="7">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="O" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="O" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="7" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="0" GridPane.rowIndex="8">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="E" GridPane.rowIndex="8" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.rowIndex="8" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="8">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="G" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="G" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="2" GridPane.rowIndex="8">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="M" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="M" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="8" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="3" GridPane.rowIndex="8">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="S" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="S" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="8" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="4" GridPane.rowIndex="8">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="X" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="X" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="8" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="5" GridPane.rowIndex="8">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="T" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="T" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="8" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="6" GridPane.rowIndex="8">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="F" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="F" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="8" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="7" GridPane.rowIndex="8">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="I" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="8" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="8">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="G" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="G" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="8" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="9" GridPane.rowIndex="8">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="B" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="B" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="8" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="0" GridPane.rowIndex="9">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="N" GridPane.rowIndex="9" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="N" textAlignment="CENTER" GridPane.rowIndex="9" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="9">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="I" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="I" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="9" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="2" GridPane.rowIndex="9">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="T" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="T" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="9" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="3" GridPane.rowIndex="9">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="U" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="U" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="9" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="4" GridPane.rowIndex="9">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="L" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="L" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="9" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="5" GridPane.rowIndex="9">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="S" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="S" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="9" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="6" GridPane.rowIndex="9">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="V" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="V" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="9" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="7" GridPane.rowIndex="9">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="9" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="9">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="Z" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="Z" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="9" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="9" GridPane.rowIndex="9">
                <children>
-                  <Button disable="true" mnemonicParsing="false" onAction="#test" text="C" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+                  <Button id="wordsearch" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#test" stylesheets="@../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="9" />
                </children>
             </StackPane>
          </children>
