@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
@@ -184,6 +185,16 @@
                </font>
             </Label>
             <Button id="dark-blue" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="104.0" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#goPlayView" prefHeight="140.0" prefWidth="100.0" stylesheets="@../../Res/style.css" text="Retour" />
+            <Button id="dark-blue" fx:id="validate" alignment="CENTER" contentDisplay="CENTER" layoutX="375.0" layoutY="200.0" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#initPlayer" prefHeight="25.0" prefWidth="25.0" stylesheets="@../../Res/style.css" textAlignment="CENTER" visible="false">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../../Res/check.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField fx:id="namefield" alignment="CENTER" layoutX="226.0" layoutY="200.0" promptText="Choisis ton pseudo !" visible="false" />
          </children>
       </Pane>
    </center>

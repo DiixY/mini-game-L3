@@ -4,6 +4,8 @@ package ui;
 import java.net.URL;
 import java.util.ResourceBundle;
 import games.Motus;
+import games.Player;
+import games.PlayerGestion;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -42,6 +44,9 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 	private Button check;
 	@FXML
 	private Label status;
+	@FXML
+	private Label playername;
+	
 	
 	//Objet du jeu motus
 	private Motus m;
@@ -61,6 +66,7 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 			this.grid.getColumnConstraints().removeAll(this.grid.getColumnConstraints());
 		}
 		
+
 		this.m = new Motus();
 		this.word.setDisable(false);
 		this.launch.setDisable(true);

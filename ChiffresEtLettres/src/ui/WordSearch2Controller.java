@@ -41,7 +41,7 @@ public class WordSearch2Controller extends ChangeSceneButtons {
 		cleanGrid();
 		this.launch.setDisable(true);
 		this.buttons = new Button[2];
-		//this.status.setText("");
+		this.status.setText("");
 		this.grid.getParent().requestFocus();
 		this.g = new WordSearchPuzzle("Annexes/Mots_meles/Legumes.txt");
 		setButtonsEnable(false);

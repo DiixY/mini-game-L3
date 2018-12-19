@@ -1,7 +1,5 @@
 package ui;
 
-
-import java.io.FileNotFoundException;
 import java.lang.reflect.Field;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,7 +16,7 @@ import javafx.scene.text.TextAlignment;
 
 public class PenduController extends ChangeSceneButtons implements Initializable {
 	
-	private Pendu p = null;
+	private Pendu g = null;
 	
 	@FXML
 	Button A;
@@ -83,31 +81,39 @@ public class PenduController extends ChangeSceneButtons implements Initializable
 	private Label character;
 	@FXML
 	private Label status; 
+
 	
 	
 	
 	@FXML
 	void startGame(ActionEvent event) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
 	{
-		for(int i = 0;i<=25;i++)
+		if(this.getPlayer()==null)
 		{
-			char c = (char)(65+i);
+			this.namefield.setVisible(true);
+			this.validate.setVisible(true);
+		}
+		else
+		{
+			for(int i = 0;i<=25;i++)
+			{
+				char c = (char)(65+i);
 				Field f = this.getClass().getDeclaredField(Character.toString(c));
 				f.setAccessible(true);
 				Button temp_button = (Button)f.get(this);
 				temp_button.setDisable(false);
-		}
-		start.setDisable(true);
-		
-		status.setText("");
-		chances.setText("");
+			}
+			start.setDisable(true);
 
-			p = new Pendu();
+			status.setText("");
+			chances.setText("");
 
-		
-		word.setText(String.valueOf(p.getProgW()));
-		chances.setText("Chance(s) restante(s) : "+ p.getCuTry());
-		
+			g = new Pendu();
+
+
+			word.setText(String.valueOf(g.getProgW()));
+			chances.setText(this.player.getPseudo()+" - Chance(s) restante(s) : "+ g.getCuTry());
+		}	
 	}
 	
 	public void disButton() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
@@ -126,35 +132,42 @@ public class PenduController extends ChangeSceneButtons implements Initializable
 	public void playCar(ActionEvent event) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
 	{
 		char c = ((Button) (event.getSource())).getText().charAt(0);
-		if(p != null)
+		if(g != null)
 		{
 
 			((Button) (event.getSource())).setDisable(true);
-			p.pendu_game(c);
+			g.pendu_game(c);
 
-			if(p.getCuTry()>0) 
+			if(g.getCuTry()>0) 
 			{
 
 				word.setTextAlignment(TextAlignment.CENTER);
-				word.setText(String.valueOf(p.getProgW()));
-				if(p.checkWord(p.getWord(),String.valueOf(p.getProgW())))
+				word.setText(String.valueOf(g.getProgW()));
+				if(g.checkWord(g.getWord(),String.valueOf(g.getProgW())))
 				{
 					status.setText("Gagné !");
+					this.player.setScorePen(g.getCuTry()*g.getWord().length());
+					chances.setText(this.player.getPseudo()+" : + "+g.getCuTry()*g.getWord().length()+" points");
 					status.setTextFill(Color.ORANGE);
 					start.setDisable(false);
 					disButton();
+					
+					this.pg.savePlayers();
+				}
+				else
+				{
+					chances.setText(this.player.getPseudo()+" - Chance(s) restante(s) : "+ g.getCuTry());
 				}
 			}
 			else 
 			{
 				status.setText("Perdu !");
-				word.setText(p.getWord());
+				word.setText(g.getWord());
 				status.setTextFill(Color.RED);
 				start.setDisable(false);
 				disButton();
 			}
 
-			chances.setText("Chance(s) restante(s) : "+ p.getCuTry());
 		}
 		else
 		{

@@ -138,8 +138,7 @@ public final class PlayerGestion {
 		return fpath;
 	}
 
-	public Player choosePlayer() {
-		Scanner sc = new Scanner(System.in);
+	public Player choosePlayer(String pseudo) {
 		if(this.getPlayerList() != null) {
 			if(!this.getPlayerList().isEmpty()){
 				System.out.println("Liste des joueurs disponibles: ");
@@ -148,9 +147,6 @@ public final class PlayerGestion {
 					System.out.print(b.getPseudo()+"||");
 				}
 
-				System.out.println("\n Saisir le nom du joeur a selectionner:");
-				String pseudo=sc.nextLine();
-				sc.close();
 				for(Player b:this.getPlayerList()){  
 					if(b.getPseudo().equals(pseudo)) {
 						return b;
