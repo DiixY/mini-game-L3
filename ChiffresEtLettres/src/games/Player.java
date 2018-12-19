@@ -1,10 +1,18 @@
 package games;
-public class Player {
+
+import java.io.Serializable;
+
+public class Player implements Serializable,Comparable<Player>{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//Attributs
 		//Identité
-	private String nom;			//Nom joueur
-	private String prenom;		//Prénom joueur
+	private static int comptID=0;
+	private String pseudo;      //pseudo du joueur
+	private int id;
 	
 		//Scores
 	private int scoreG;			//Score général
@@ -16,23 +24,23 @@ public class Player {
 	
 		//Nombre de parties
 	private int nbPartG;		//Nombre de parties total
-	private int nbPartSud;		//Score Sudoku 1-9
-	private int nbPartSudAZ;	//Score Sudoku A-Z
-	private int nbPartMotMel;	//Score Mots-Mêlés
-	private int nbPartPen;		//Score Pendu
-	private int nbPartMotus;	//Score Motus
+	private int nbPartSud;		//Nombre de parties Sudoku 1-9
+	private int nbPartSudAZ;	//Nombre de parties Sudoku A-Z
+	private int nbPartMotMel;	//Nombre de parties Mots-Mêlés
+	private int nbPartPen;		//Nombre de parties Pendu
+	private int nbPartMotus;	//Nombre de parties Motus
 	
 
 	
 	//Constructeurs
-	public Player(String nom, String prenom,
+	public Player(String pseudo,
 				int scoreG, int scoreSud, int scoreSudAZ, int scoreMotMel, int scorePen, int scoreMotus,
-				int nbPartG, int nbPartSud, int nbPartSudAZ, int nbPartMotMel, int nbPartPen, int nbPartMotus) {
+				int nbPartG, int nbPartSud, int nbPartSudAZ, int nbPartMotMel, int nbPartPen, int nbPartMotus,int id) {
 		
 		//Initialisation Identité
-		this.nom = nom;
-		this.prenom = prenom;
-		
+		this.pseudo = pseudo;
+		this.id=id;
+		this.comptID=this.comptID +1;
 		//Initialisation Scores
 		this.scoreG = scoreG;
 		this.scoreSud = scoreSud;
@@ -50,12 +58,13 @@ public class Player {
 		this.nbPartMotus = nbPartMotus;
 	}
 
-	public Player(String nom, String prenom) {
+	public Player(String pseudo) {
 	
 		//Initialisation Identité
-		this.nom = nom;
-		this.prenom = prenom;
-		
+
+		this.pseudo = pseudo;
+		this.id=this.comptID;
+		this.comptID=this.comptID +1;
 		//Initialisation Scores
 		this.scoreG = 0;
 		this.scoreSud = 0;
@@ -73,13 +82,6 @@ public class Player {
 		this.nbPartMotus = 0;
 }
 	
-
-	
-	//Méthodes
-	public Player create_new_player(String nom, String prenom) {
-		Player new_P = new Player(nom, prenom);
-		return new_P;
-	}
 	
 	//Getters & Setters
 	public int getScoreG() {
@@ -178,11 +180,21 @@ public class Player {
 		this.nbPartMotus = nbPartMotus;
 	}
 
-	public String getNom() {
-		return nom;
+	public String getPseudo() {
+		return pseudo;
 	}
 
-	public String getPrenom() {
-		return prenom;
+	public int getId() {
+		return id;
 	}
+
+	public int compareTo(Player p) {
+		// TODO Auto-generated method stub
+		if(this.getScoreG()>p.getScoreG())
+        return -1;
+		else if(this.getScoreG()<p.getScoreG())
+	        return 1;
+		else return 0;
+	}
+	
 }
