@@ -569,4 +569,23 @@
          </BorderPane.margin>
       </Label>
    </top>
+   <left>
+      <VBox alignment="CENTER" maxHeight="100.0" maxWidth="126.0" minHeight="100.0" minWidth="100.0" prefHeight="100.0" prefWidth="126.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="namefield" alignment="CENTER" promptText="Choisis ton Pseudo" visible="false" />
+            <Button id="dark-blue" fx:id="validate" alignment="CENTER" contentDisplay="CENTER" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#initPlayer" prefHeight="25.0" prefWidth="25.0" stylesheets="@../../../Res/style.css" visible="false">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../../../Res/check.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+   </left>
 </BorderPane>

@@ -146,7 +146,7 @@ public class PenduController extends ChangeSceneButtons implements Initializable
 				if(g.checkWord(g.getWord(),String.valueOf(g.getProgW())))
 				{
 					status.setText("Gagné !");
-					this.player.setScorePen(g.getCuTry()*g.getWord().length());
+					this.player.setScorePen(g.getCuTry()*g.getWord().length()+this.player.getScorePen());
 					chances.setText(this.player.getPseudo()+" : + "+g.getCuTry()*g.getWord().length()+" points");
 					status.setTextFill(Color.ORANGE);
 					start.setDisable(false);
@@ -163,6 +163,7 @@ public class PenduController extends ChangeSceneButtons implements Initializable
 			{
 				status.setText("Perdu !");
 				word.setText(g.getWord());
+				chances.setText(this.player.getPseudo()+" - 0 points ");
 				status.setTextFill(Color.RED);
 				start.setDisable(false);
 				disButton();

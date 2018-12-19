@@ -124,6 +124,7 @@ public final class PlayerGestion {
 			p.setScoreG(p.getScoreMotMel() + p.getScoreMotus() + p.getScorePen() + p.getScoreSud() + p.getScoreSudAZ());
 		}
 		Collections.sort(this.getPlayerList(), Collections.reverseOrder());
+		Collections.reverse(this.getPlayerList());
 	}
 
 	public ArrayList<Player> getPlayerList() {
@@ -168,5 +169,31 @@ public final class PlayerGestion {
 		}
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		String s = "";
+		this.generalRanking(getPlayerList());	
+		if(this.playerList.size()>10)
+		{
+			for(int i = 0;i<10;i++)
+			{
+				Player p = (Player)this.playerList.get(i);
+				s = s + p.getPseudo()+"\t" +"- Générale : "+p.getScoreG()+" P : "+p.getScorePen()+" MM : "+p.getScoreMotMel()+" M : "+p.getScoreMotus()+" SC : "+p.getScoreSud()+" SL : "+p.getScoreSudAZ()+"\n";
+			}
+		}
+		else
+		{
+			for(int i = 0;i<this.playerList.size();i++)
+			{
+				Player p = (Player)this.playerList.get(i);
+				s = s + p.getPseudo()+"\t" +"- Générale : "+p.getScoreG()+" P : "+p.getScorePen()+" MM : "+p.getScoreMotMel()+" M : "+p.getScoreMotus()+" SC : "+p.getScoreSud()+" SL : "+p.getScoreSudAZ()+"\n";
+			}
+		}
+			
+		return s;
+	}
+
+	
 
 }

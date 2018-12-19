@@ -13,13 +13,19 @@
       <GridPane fx:id="grid" alignment="CENTER" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets />
-         </BorderPane.margin></GridPane>
+         </BorderPane.margin>
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints></GridPane>
    </center>
    <bottom>
       <HBox alignment="CENTER" maxHeight="25.0" maxWidth="200.0" minHeight="25.0" minWidth="200.0" prefHeight="25.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="word" disable="true" />
-            <Button id="dark-blue" fx:id="check" alignment="CENTER" contentDisplay="CENTER" disable="true" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="25.0" stylesheets="@../../Res/style.css" text="Button">
+            <Button id="dark-blue" fx:id="check" alignment="CENTER" contentDisplay="CENTER" disable="true" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="25.0" stylesheets="@../../../Res/style.css" text="Button" textAlignment="CENTER">
                <graphic>
                   <ImageView>
                      <image>
@@ -46,7 +52,7 @@
    <left>
       <VBox alignment="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="status" alignment="CENTER" contentDisplay="CENTER" maxHeight="15.0" maxWidth="50.0" minHeight="15.0" minWidth="50.0" prefHeight="15.0" prefWidth="50.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+            <Label fx:id="status" alignment="CENTER" contentDisplay="CENTER" maxHeight="47.0" maxWidth="83.0" minHeight="15.0" minWidth="50.0" prefHeight="47.0" prefWidth="83.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets left="10.0" />
                </BorderPane.margin>
@@ -57,8 +63,27 @@
             <Button id="dark-blue" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#goPlayView" prefHeight="40.0" prefWidth="100.0" stylesheets="@../../../Res/style.css" text="Retour" textAlignment="CENTER" />
          </children>
          <BorderPane.margin>
-            <Insets left="10.0" />
+            <Insets bottom="30.0" left="10.0" />
          </BorderPane.margin>
       </VBox>
    </left>
+   <top>
+      <HBox alignment="CENTER" maxHeight="30.0" maxWidth="200.0" minHeight="30.0" minWidth="200.0" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="5.0" />
+         </BorderPane.margin>
+         <children>
+            <TextField fx:id="namefield" alignment="CENTER" promptText="Choisis ton Pseudo !" visible="false" />
+            <Button id="dark-blue" fx:id="validate" alignment="CENTER" contentDisplay="CENTER" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#initPlayer" prefHeight="25.0" prefWidth="25.0" stylesheets="@../../../Res/style.css" textAlignment="CENTER" visible="false">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../../../Res/check.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </top>
 </BorderPane>

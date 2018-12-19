@@ -200,6 +200,7 @@ public class ChangeSceneButtons {
 			Stage mainwindow = (Stage) (((Node) event.getSource()).getScene().getWindow());
 			mainwindow.setScene(scene);	
 	}
+	
 
 	public PlayerGestion getPg() {
 		return pg;
