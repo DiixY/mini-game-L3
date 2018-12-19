@@ -1,9 +1,18 @@
 package games;
-public class Player {
+
+import java.io.Serializable;
+
+public class Player implements Serializable,Comparable<Player>{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//Attributs
 		//Identité
+	private static int comptID=0;
 	private String pseudo;      //pseudo du joueur
+	private int id;
 	
 		//Scores
 	private int scoreG;			//Score général
@@ -26,11 +35,12 @@ public class Player {
 	//Constructeurs
 	public Player(String pseudo,
 				int scoreG, int scoreSud, int scoreSudAZ, int scoreMotMel, int scorePen, int scoreMotus,
-				int nbPartG, int nbPartSud, int nbPartSudAZ, int nbPartMotMel, int nbPartPen, int nbPartMotus) {
+				int nbPartG, int nbPartSud, int nbPartSudAZ, int nbPartMotMel, int nbPartPen, int nbPartMotus,int id) {
 		
 		//Initialisation Identité
 		this.pseudo = pseudo;
-		
+		this.id=id;
+		this.comptID=this.comptID +1;
 		//Initialisation Scores
 		this.scoreG = scoreG;
 		this.scoreSud = scoreSud;
@@ -53,7 +63,8 @@ public class Player {
 		//Initialisation Identité
 
 		this.pseudo = pseudo;
-		
+		this.id=this.comptID;
+		this.comptID=this.comptID +1;
 		//Initialisation Scores
 		this.scoreG = 0;
 		this.scoreSud = 0;
@@ -171,6 +182,19 @@ public class Player {
 
 	public String getPseudo() {
 		return pseudo;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public int compareTo(Player p) {
+		// TODO Auto-generated method stub
+		if(this.getScoreG()>p.getScoreG())
+        return -1;
+		else if(this.getScoreG()<p.getScoreG())
+	        return 1;
+		else return 0;
 	}
 	
 }
