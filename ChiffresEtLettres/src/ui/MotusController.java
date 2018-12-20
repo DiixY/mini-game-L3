@@ -4,6 +4,8 @@ package ui;
 import java.net.URL;
 import java.util.ResourceBundle;
 import games.Motus;
+import games.Player;
+import games.PlayerGestion;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -42,6 +44,9 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 	private Button check;
 	@FXML
 	private Label status;
+	@FXML
+	private Label playername;
+	
 	
 	//Objet du jeu motus
 	private Motus m;
@@ -53,53 +58,63 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 	
 	public void start(ActionEvent event)
 	{
-		//Si la grille a déjà été utilisé alors on supprime tout son contenu
-		if(this.grid.getChildren() != null)
+		if(this.getPlayer()==null)
 		{
-			this.grid.getChildren().removeAll(this.grid.getChildren());
-			this.grid.getRowConstraints().removeAll(this.grid.getRowConstraints());
-			this.grid.getColumnConstraints().removeAll(this.grid.getColumnConstraints());
+			this.namefield.setVisible(true);
+			this.validate.setVisible(true);
 		}
-		
-		this.m = new Motus();
-		this.word.setDisable(false);
-		this.launch.setDisable(true);
-		this.check.setDisable(false);
-		this.status.setText("");
-		this.word.setPromptText("Entrez un mot ! ("+this.m.getWord().length()+"caractères)");
-		
-		
-		//Permet d'enlever le focus sur la zone de texte et de montrer le prompt text
-		this.word.getParent().requestFocus();
-		
-		BorderStroke bs = new BorderStroke(Paint.valueOf("grey"),BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderStroke.THIN);
-		this.grid.setBorder(new Border(bs));
-		this.grid.setBackground(new Background(new BackgroundFill(Paint.valueOf("rgba(64, 64, 64,0.5)"), null, null)));
-		
-		for(int i = 0;i<m.getWord().length();i++)
+		else
 		{
-			ColumnConstraints c = new ColumnConstraints();
-			c.setPercentWidth(100);
-			this.grid.getColumnConstraints().add(c);
-		}
-		
-		for(int i = 0;i<7;i++)
-		{
-			RowConstraints r = new RowConstraints();
-			r.setPercentHeight(100);
-			this.grid.getRowConstraints().add(r);
+			//Si la grille a déjà été utilisé alors on supprime tout son contenu
+			if(this.grid.getChildren() != null)
+			{
+				this.grid.getChildren().removeAll(this.grid.getChildren());
+				this.grid.getRowConstraints().removeAll(this.grid.getRowConstraints());
+				this.grid.getColumnConstraints().removeAll(this.grid.getColumnConstraints());
+			}
+
+
+			this.m = new Motus();
+			this.word.setDisable(false);
+			this.launch.setDisable(true);
+			this.check.setDisable(false);
+			this.status.setText("");
+			this.word.setPromptText("Entrez un mot ! ("+this.m.getWord().length()+"caractères)");
+
+
+			//Permet d'enlever le focus sur la zone de texte et de montrer le prompt text
+			this.word.getParent().requestFocus();
+
+			BorderStroke bs = new BorderStroke(Paint.valueOf("grey"),BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderStroke.THIN);
+			this.grid.setBorder(new Border(bs));
+			this.grid.setBackground(new Background(new BackgroundFill(Paint.valueOf("rgba(64, 64, 64,0.5)"), null, null)));
+
+			for(int i = 0;i<m.getWord().length();i++)
+			{
+				ColumnConstraints c = new ColumnConstraints();
+				c.setPercentWidth(100);
+				this.grid.getColumnConstraints().add(c);
+			}
+
+			for(int i = 0;i<7;i++)
+			{
+				RowConstraints r = new RowConstraints();
+				r.setPercentHeight(100);
+				this.grid.getRowConstraints().add(r);
+			}
+
+
+
+			for (int i = 0; i< this.m.getWord().length();i++)
+				this.grid.add(this.wrongChar(this.m.getGhostCo()[i]), i, 0);
 		}
 
-		
-		
-		for (int i = 0; i< this.m.getWord().length();i++)
-			this.grid.add(this.wrongChar(this.m.getGhostCo()[i]), i, 0);
-		
 	}
 	
 	
 	public void play(ActionEvent event)
-	{
+	{	
+		System.out.println(m.getWord());
 		
 		if(this.m.getCuTry()<6)
 		{
@@ -138,10 +153,13 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 					{
 						this.grid.add(this.goodPlaceChar(this.m.getWord().charAt(i)), i, this.m.getCuTry()-1);
 					}
-					this.status.setText("Gagné");
+					this.status.setText("Gagné : "+(7-m.getCuTry())*10+"p");
+					this.player.setScoreMotus(m.getCuTry()*10+this.player.getScoreMotus());
 					this.status.setTextFill(Color.ORANGE);
 					this.check.setDisable(true);
 					this.launch.setDisable(false);
+					
+					this.pg.savePlayers();
 
 				}
 				else
@@ -167,6 +185,8 @@ public final class MotusController extends ChangeSceneButtons implements Initial
 					this.grid.add(this.goodPlaceChar(this.m.getWord().charAt(i)), i, this.m.getCuTry());
 			}
 			this.word.clear();
+			this.check.setDisable(true);
+			this.launch.setDisable(false);
 		}
 	}
 	

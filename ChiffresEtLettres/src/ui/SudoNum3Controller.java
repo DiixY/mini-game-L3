@@ -138,6 +138,7 @@ public class SudoNum3Controller extends ChangeSceneButtons{
 		
 		List<Character> tempList = new ArrayList<Character>();
 		
+		tempList.add(' ');
 		for(char c:this.s.getGrille().getAutorise())
 		{
 			tempList.add(c);
@@ -166,7 +167,7 @@ public class SudoNum3Controller extends ChangeSceneButtons{
 			ChoiceBox<Character> choiceBox = (ChoiceBox<Character>) f.get(this);
 			ChoiceBox<Character> temp = choiceBox;
 
-			if(temp.getValue() == null)
+			if(temp.getValue() == null || Character.compare(temp.getValue(),' ')==0)
 			{
 				Alert al = new Alert(Alert.AlertType.WARNING);
 				al.setTitle("Problème Soduku");
@@ -181,6 +182,13 @@ public class SudoNum3Controller extends ChangeSceneButtons{
 	
 	public void start(ActionEvent event) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
 	{
+		if(this.getPlayer()==null)
+		{
+			this.namefield.setVisible(true);
+			this.validate.setVisible(true);
+		}
+		else
+		{
 		try {
 			this.status.setText("");
 			this.chances.setText("");
@@ -203,7 +211,8 @@ public class SudoNum3Controller extends ChangeSceneButtons{
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	
+		}
+		}
 	}
 	
 	public void verif(ActionEvent event) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
@@ -235,7 +244,9 @@ public class SudoNum3Controller extends ChangeSceneButtons{
 
 			if(s.verifAllPlayed())
 			{
-				status.setText("Gagné !");
+				this.status.setText("Gagné ! +500p");
+				this.player.setScoreSud(500+this.player.getScoreSud());
+				this.pg.savePlayers();
 				status.setTextFill(Color.ORANGE);
 				try_sudo.setDisable(true);
 				launch.setDisable(false);

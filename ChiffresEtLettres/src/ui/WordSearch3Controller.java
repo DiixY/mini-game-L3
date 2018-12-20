@@ -20,15 +20,17 @@ import javafx.scene.text.Font;
 public class WordSearch3Controller extends ChangeSceneButtons {
 	
 	
-	Button[] buttons; // Tableau de Button pour recupere les 2 clics nécessaires a la selection du mot (Debut du mot et fin du mot)
+	private Button[] buttons; // Tableau de Button pour recupere les 2 clics nécessaires a la selection du mot (Debut du mot et fin du mot)
 	@FXML
-	Button launch;//Attribut FXML qui manipule le bouton Lancer
+	private Button launch;//Attribut FXML qui manipule le bouton Lancer
 	@FXML
-	Label status; //Attribut FXML qui manipule le message lorsque l'on gagne
+	private Label status; //Attribut FXML qui manipule le message lorsque l'on gagne
 	@FXML
-	GridPane grid; //Attribut FXML qui manipule la grille des boutons
+	private GridPane grid; //Attribut FXML qui manipule la grille des boutons
 	@FXML
-	Label words; //Attribut FXML qui manipule la liste des mots a trouver
+	private Label words; //Attribut FXML qui manipule la liste des mots a trouver
+	
+	private Background tempbackground = null; //Attribut pour sauvegarder la couleur de fond d'une case (si le mot selectionné n'est pas bon)
 	
 	
 	WordSearchPuzzle g;
@@ -36,35 +38,45 @@ public class WordSearch3Controller extends ChangeSceneButtons {
 	//Initialisation de tout les attibuts dont on a besoin lors de la partie ( Messages , boutons , etc..)
 	public void start(ActionEvent event) throws Exception
 	{
-		cleanGrid();
-		this.launch.setDisable(true);
-		this.buttons = new Button[2];
-		//this.status.setText("");
-		this.grid.getParent().requestFocus();
-		this.g = new WordSearchPuzzle("Annexes/Mots_meles/Noel.txt");
-		setButtonsEnable(false);
-		String str = Arrays.toString(this.g.getGrille().getAutorise()).substring(1, Arrays.toString(this.g.getGrille().getAutorise()).length()-1);
-		this.words.setText(str);
-		this.words.setFont(new Font("Arvin", 14));
-		this.status.setText("");
-		
+		if(this.getPlayer()==null)
+		{
+			this.namefield.setVisible(true);
+			this.validate.setVisible(true);
+		}
+		else
+		{
+			cleanGrid();
+			this.launch.setDisable(true);
+			this.buttons = new Button[2];
+			this.status.setText("");
+			this.grid.getParent().requestFocus();
+			this.g = new WordSearchPuzzle("Annexes/Mots_meles/Noel.txt");
+			setButtonsEnable(false);
+			String str = Arrays.toString(this.g.getGrille().getAutorise()).substring(1, Arrays.toString(this.g.getGrille().getAutorise()).length()-1);
+			this.words.setText(str);
+			this.words.setFont(new Font("Arvin", 14));
+			this.status.setText("");
+		}
 		
 	}
 	
 	//Fonction qui va recuperer l'interaction avec l'utilisateur et va jouer le mot choisit par celui-ci
 	public void test(ActionEvent event)
 	{
-
+		
 		if(this.buttons[0] == null)
 		{
-			this.buttons[0] = (Button)event.getSource(); //recupere le premier bouton cliqué lors de l'event
+			this.buttons[0] = (Button)event.getSource();//recupere le premier bouton cliqué lors de l'event
+			StackPane b1 = (StackPane)this.buttons[0].getParent();
+			if(b1.getBackground() != null) this.tempbackground = b1.getBackground();
+			b1.setBackground(new Background(new BackgroundFill(Paint.valueOf("rgba(255, 102, 102,0.5)"), null, null)));
 		}
 		else if (this.buttons[1] == null)
 		{
 			this.buttons[1] = (Button)event.getSource(); //recupere le deuxieme bouton cliqué lors de l'event
-
-			StackPane b2 = (StackPane)this.buttons[1].getParent(); //recupere le parent du bouton cliqué lors de l'event pour pouvoir chercher les coordonnés du bouton dans la grille et manipuler la couleur de fond
 			StackPane b1 = (StackPane)this.buttons[0].getParent();
+			StackPane b2 = (StackPane)this.buttons[1].getParent(); //recupere le parent du bouton cliqué lors de l'event pour pouvoir chercher les coordonnés du bouton dans la grille et manipuler la couleur de fond
+			
 
 
 
@@ -77,7 +89,7 @@ public class WordSearch3Controller extends ChangeSceneButtons {
 
 			if(this.g.jouer()) // Test si le mot est correct et fait parti de la liste des mots à trouver
 			{
-				System.out.println(this.g.getNbMots());
+				
 				if(GridPane.getColumnIndex(b1) == GridPane.getColumnIndex(b2)) //cas où la selection du joueur est en colonne
 				{
 					if(GridPane.getRowIndex(b1) < GridPane.getRowIndex(b2)) //cas où le mot se lit de gauche a droite
@@ -115,6 +127,7 @@ public class WordSearch3Controller extends ChangeSceneButtons {
 			}
 			else // Sinon on remet les coordonnées du mot a 0 pour la prochaine interaction avec l'utilisateur
 			{
+				b1.setBackground(this.tempbackground);
 				this.g.setColonneDebutMot(0);
 				this.g.setLigneDebutMot(0);
 				this.g.setColonneFinMot(0);
@@ -122,6 +135,7 @@ public class WordSearch3Controller extends ChangeSceneButtons {
 			}
 
 			//Reinitialisation du tableau de boutons a null pour recuperer la prochaine saisie
+			
 			this.buttons[0] = null;
 			this.buttons[1] = null;
 			String str = Arrays.toString(this.g.getGrille().getAutorise()).substring(1, Arrays.toString(this.g.getGrille().getAutorise()).length()-1);
@@ -130,13 +144,15 @@ public class WordSearch3Controller extends ChangeSceneButtons {
 			if(this.g.getNbMots() == 0 ) // Test si l'utilisateur a trouvé tout les mots ,si oui on affiche le message gagné et on active/désactive les boutons nécessaire au bon fonctionnement d'une nouvel partie
 			{
 				this.launch.setDisable(false);
-				this.status.setText("Gagné !");
+				this.status.setText("Gagné ! +100p");
+				this.player.setScoreMotMel(100+this.player.getScoreMotMel());
+				this.pg.savePlayers();
 				this.status.setTextFill(Color.ORANGE);
 				setButtonsEnable(false);
 			}
 
 		}
-	}			
+	}				
 
 
 	

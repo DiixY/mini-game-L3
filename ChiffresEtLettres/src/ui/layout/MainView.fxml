@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane id="custom-back" minHeight="400.0" minWidth="640.0" stylesheets="@../../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ChangeSceneButtons">
+   <center>
+      <VBox alignment="CENTER" maxHeight="200.0" maxWidth="250.0" minHeight="200.0" minWidth="250.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="93.0" fitWidth="196.0">
+               <image>
+                  <Image url="@../../../Res/logoMain.png" />
+               </image>
+            </ImageView>
+            <HBox id="custom-back" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" stylesheets="@../../../Res/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="dark-blue" mnemonicParsing="false" onAction="#goPlayView" prefHeight="50.0" prefWidth="124.0" stylesheets="@../../../Res/style.css" text="Jouez !" textAlignment="CENTER">
+                     <tooltip>
+                        <Tooltip text="En ligne ou seul" />
+                     </tooltip>
+                  </Button>
+                  <Button id="dark-blue" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goClassement" prefHeight="50.0" prefWidth="124.0" stylesheets="@../../../Res/style.css" text="Classement" textAlignment="CENTER" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

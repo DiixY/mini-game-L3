@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -7,9 +8,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane id="custom-back" minHeight="400.0" minWidth="640.0" stylesheets="@../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.SudoChar1Controller">
+<BorderPane id="custom-back" minHeight="400.0" minWidth="640.0" stylesheets="@../../../Res/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.SudoChar3Controller">
    <center>
-      <GridPane id="custom-bg-sudo" alignment="CENTER" hgap="1.0" maxHeight="270.0" maxWidth="270.0" minHeight="270.0" minWidth="270.0" prefHeight="270.0" prefWidth="270.0" stylesheets="@../../Res/style.css" vgap="1.0" BorderPane.alignment="CENTER">
+      <GridPane id="custom-bg-sudo" alignment="CENTER" hgap="1.0" maxHeight="270.0" maxWidth="270.0" minHeight="270.0" minWidth="270.0" prefHeight="270.0" prefWidth="270.0" stylesheets="@../../../Res/style.css" vgap="1.0" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
             <ColumnConstraints maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
@@ -21,7 +22,7 @@
             <RowConstraints maxHeight="90.0" minHeight="90.0" prefHeight="90.0" />
         </rowConstraints>
          <children>
-            <GridPane alignment="CENTER" stylesheets="@../../Res/style.css">
+            <GridPane alignment="CENTER" stylesheets="@../../../Res/style.css">
                <columnConstraints>
                   <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
                   <ColumnConstraints halignment="RIGHT" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
@@ -33,35 +34,31 @@
                   <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
                </rowConstraints>
                <children>
-                  <Label alignment="CENTER" text="E" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <ChoiceBox fx:id="c1" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" />
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="H" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="c1" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="H" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <ChoiceBox fx:id="c11" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="O" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="c11" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Label text="C" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <ChoiceBox fx:id="c7" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" />
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="c7" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="F" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <ChoiceBox fx:id="c6" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.rowIndex="1" />
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="R" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="c6" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="D" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                     <font>
-                        <Font name="Arvin" size="19.0" />
-                     </font>
-                  </Label>
+                  <ChoiceBox fx:id="c12" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <GridPane alignment="CENTER" GridPane.columnIndex="1">
@@ -77,22 +74,30 @@
                </rowConstraints>
                <children>
                   <ChoiceBox fx:id="c9" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <ChoiceBox fx:id="c13" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                   <ChoiceBox fx:id="c8" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="A" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="K" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="c2" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" />
-                  <ChoiceBox fx:id="c3" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="H" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <ChoiceBox fx:id="c3" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.rowIndex="1" />
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="H" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="c12" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="I" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="D" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Arvin" size="19.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="c4" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="W" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arvin" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="O" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
@@ -111,31 +116,27 @@
                   <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="A" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="H" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="c4" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="F" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="W" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
                   <ChoiceBox fx:id="c5" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" />
                   <ChoiceBox fx:id="c15" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="B" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="K" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
                   <ChoiceBox fx:id="c14" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <ChoiceBox fx:id="c10" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="G" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                     <font>
-                        <Font name="Arvin" size="19.0" />
-                     </font>
-                  </Label>
+                  <ChoiceBox fx:id="c19" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.rowIndex="1" />
+                  <ChoiceBox fx:id="c20" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <GridPane alignment="CENTER" GridPane.rowIndex="1">
@@ -151,30 +152,26 @@
                </rowConstraints>
                <children>
                   <ChoiceBox fx:id="c26" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.rowIndex="2" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="D" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                     <font>
-                        <Font name="Arvin" size="19.0" />
-                     </font>
-                  </Label>
-                  <ChoiceBox fx:id="c16" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" />
+                  <ChoiceBox fx:id="c16" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" />
                   <ChoiceBox fx:id="c21" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.rowIndex="1" />
-                  <ChoiceBox fx:id="c27" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="A" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <ChoiceBox fx:id="c27" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="R" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
                   <ChoiceBox fx:id="c17" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="D" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="H" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="S" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
+                  <ChoiceBox fx:id="c37" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <GridPane alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -189,41 +186,37 @@
                   <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="G" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                     <font>
-                        <Font name="Arvin" size="19.0" />
-                     </font>
-                  </Label>
                   <ChoiceBox fx:id="c18" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" />
-                  <ChoiceBox fx:id="c22" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.rowIndex="1" />
-                  <ChoiceBox fx:id="c23" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <ChoiceBox fx:id="c22" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" />
+                  <ChoiceBox fx:id="c23" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="C" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="O" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="c24" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="B" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="K" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="I" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="F" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
+                  <ChoiceBox fx:id="c33" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <ChoiceBox fx:id="c32" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <GridPane alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <columnConstraints>
                   <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
-                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints halignment="CENTER" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
                   <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
                </columnConstraints>
                <rowConstraints>
@@ -232,31 +225,31 @@
                   <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="F" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="W" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="I" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="D" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="c20" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" />
-                  <ChoiceBox fx:id="c28" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.rowIndex="2" />
-                  <ChoiceBox fx:id="c29" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="H" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <ChoiceBox fx:id="c28" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="R" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="c19" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" />
                   <ChoiceBox fx:id="c25" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="C" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <ChoiceBox fx:id="c2" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <ChoiceBox fx:id="c24" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="O" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
+                  <ChoiceBox fx:id="c13" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
             <GridPane alignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
@@ -272,25 +265,25 @@
                </rowConstraints>
                <children>
                   <ChoiceBox fx:id="c30" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="G" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="O" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="H" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="H" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="c40" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.rowIndex="2" />
-                  <ChoiceBox fx:id="c41" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="B" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <ChoiceBox fx:id="c40" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.rowIndex="1" />
+                  <ChoiceBox fx:id="c41" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="K" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="c31" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="D" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <ChoiceBox fx:id="c31" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" />
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="F" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
@@ -310,34 +303,46 @@
                   <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="B" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="K" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
                   <ChoiceBox fx:id="c43" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="F" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="D" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
                   <ChoiceBox fx:id="c36" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.rowIndex="1" />
-                  <ChoiceBox fx:id="c42" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <ChoiceBox fx:id="c33" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <ChoiceBox fx:id="c42" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.rowIndex="2" />
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="H" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="c37" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <ChoiceBox fx:id="c32" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" />
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Arvin" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="S" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Arvin" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="F" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Arvin" size="19.0" />
+                     </font>
+                  </Label>
                </children>
             </GridPane>
             <GridPane alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <columnConstraints>
                   <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
                   <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
-                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
                </columnConstraints>
                <rowConstraints>
                   <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
@@ -345,35 +350,31 @@
                   <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="H" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="S" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="G" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="c39" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="D" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <ChoiceBox fx:id="c39" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="R" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Label id="font-face" alignment="CENTER" stylesheets="@../../../Res/style.css" text="K" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Arvin" size="19.0" />
                      </font>
                   </Label>
                   <ChoiceBox fx:id="c34" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" />
-                  <Label id="font-face" alignment="CENTER" stylesheets="@../../Res/style.css" text="E" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                     <font>
-                        <Font name="Arvin" size="19.0" />
-                     </font>
-                  </Label>
                   <ChoiceBox fx:id="c38" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.rowIndex="1" />
-                  <ChoiceBox fx:id="c44" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <ChoiceBox fx:id="c44" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <ChoiceBox fx:id="c29" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" prefHeight="26.0" prefWidth="26.0" GridPane.columnIndex="2" />
                </children>
             </GridPane>
          </children>
@@ -385,8 +386,8 @@
    <right>
       <VBox alignment="CENTER" maxHeight="200.0" maxWidth="100.0" minHeight="200.0" minWidth="100.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Button id="dark-blue" fx:id="launch" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#start" prefHeight="40.0" prefWidth="100.0" stylesheets="@../../Res/style.css" text="Lancer" />
-            <Button id="dark-blue" fx:id="try_sudo" disable="true" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#verif" prefHeight="40.0" prefWidth="100.0" stylesheets="@../../Res/style.css" text="Vérifier" />
+            <Button id="dark-blue" fx:id="launch" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#start" prefHeight="40.0" prefWidth="100.0" stylesheets="@../../../Res/style.css" text="Lancer" />
+            <Button id="dark-blue" fx:id="try_sudo" disable="true" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#verif" prefHeight="40.0" prefWidth="100.0" stylesheets="@../../../Res/style.css" text="Vérifier" />
          </children>
          <padding>
             <Insets right="10.0" />
@@ -397,7 +398,7 @@
       </VBox>
    </right>
    <top>
-      <Label fx:id="chances" alignment="CENTER" maxHeight="25.0" maxWidth="300.0" minHeight="25.0" minWidth="300.0" prefHeight="25.0" prefWidth="300.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+      <Label fx:id="chances" alignment="CENTER" maxHeight="25.0" maxWidth="300.0" minHeight="25.0" minWidth="300.0" prefHeight="25.0" prefWidth="300.0" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets top="20.0" />
          </BorderPane.margin>
@@ -417,11 +418,27 @@
                   <Insets bottom="25.0" left="20.0" />
                </BorderPane.margin>
             </Label>
-            <Button id="dark-blue" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#goSudoChar" prefHeight="40.0" prefWidth="100.0" stylesheets="@../../Res/style.css" text="Retour" textAlignment="CENTER" />
+            <Button id="dark-blue" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#goSudoChar" prefHeight="40.0" prefWidth="100.0" stylesheets="@../../../Res/style.css" text="Retour" textAlignment="CENTER" />
          </children>
          <BorderPane.margin>
             <Insets bottom="50.0" left="10.0" />
          </BorderPane.margin>
       </VBox>
    </left>
+   <bottom>
+      <HBox alignment="CENTER" maxHeight="40.0" maxWidth="200.0" minHeight="40.0" minWidth="200.0" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="namefield" alignment="CENTER" promptText="Choisis ton Pseudo !" visible="false" />
+            <Button id="dark-blue" fx:id="validate" alignment="CENTER" contentDisplay="CENTER" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#initPlayer" prefHeight="25.0" prefWidth="25.0" stylesheets="@../../../Res/style.css" text="Button" textAlignment="CENTER" visible="false">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../../../Res/check.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
 </BorderPane>

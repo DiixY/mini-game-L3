@@ -97,7 +97,10 @@ public final class PlayerGestion {
 	public void loadPlayers() {//charge les joueurs d'un fichier
 		File File = new File(fpath);
 		FileInputStream FileStream;
-
+		
+		/*Ligne pour lire des fichiers dans un .jar*/
+		/*InputStream flux= getClass().getResourceAsStream("/Annexes/Dictionary.txt");*/
+		
 		if(File.exists()) {
 			try {
 				FileStream = new FileInputStream(File);
@@ -115,8 +118,7 @@ public final class PlayerGestion {
 
 			}			   
 		}
-		else
-			System.out.println("#Erreur:: Le fichier de sauvegarde n'existe pas. \n");
+
 	}
 
 	public void generalRanking(ArrayList<Player> list) {//calcul le score general d'un joueur et tri la liste 
@@ -124,6 +126,7 @@ public final class PlayerGestion {
 			p.setScoreG(p.getScoreMotMel() + p.getScoreMotus() + p.getScorePen() + p.getScoreSud() + p.getScoreSudAZ());
 		}
 		Collections.sort(this.getPlayerList(), Collections.reverseOrder());
+		Collections.reverse(this.getPlayerList());
 	}
 
 	public ArrayList<Player> getPlayerList() {
@@ -138,30 +141,17 @@ public final class PlayerGestion {
 		return fpath;
 	}
 
-	public Player choosePlayer() {
-		Scanner sc = new Scanner(System.in);
+	public Player choosePlayer(String pseudo) {
 		if(this.getPlayerList() != null) {
 			if(!this.getPlayerList().isEmpty()){
-				System.out.println("Liste des joueurs disponibles: ");
-				for(Player b:this.getPlayerList()){
-					System.out.print("||");
-					System.out.print(b.getPseudo()+"||");
-				}
 
-				System.out.println("\n Saisir le nom du joeur a selectionner:");
-				String pseudo=sc.nextLine();
-				sc.close();
 				for(Player b:this.getPlayerList()){  
 					if(b.getPseudo().equals(pseudo)) {
 						return b;
 					}
 				}
 			}
-			else
-				System.out.println("#Erreur: La liste de jeu est vide. \n");
 		}
-		else
-			System.out.println("#Erreur: La liste de jeu est null");
 		return null;
 
 	}
@@ -172,5 +162,31 @@ public final class PlayerGestion {
 		}
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		String s = "";
+		this.generalRanking(getPlayerList());	
+		if(this.playerList.size()>10)
+		{
+			for(int i = 0;i<10;i++)
+			{
+				Player p = (Player)this.playerList.get(i);
+				s = s + p.getPseudo()+"\t" +"- Générale : "+p.getScoreG()+" P : "+p.getScorePen()+" MM : "+p.getScoreMotMel()+" M : "+p.getScoreMotus()+" SC : "+p.getScoreSud()+" SL : "+p.getScoreSudAZ()+"\n";
+			}
+		}
+		else
+		{
+			for(int i = 0;i<this.playerList.size();i++)
+			{
+				Player p = (Player)this.playerList.get(i);
+				s = s + p.getPseudo()+"\t" +"- Générale : "+p.getScoreG()+" P : "+p.getScorePen()+" MM : "+p.getScoreMotMel()+" M : "+p.getScoreMotus()+" SC : "+p.getScoreSud()+" SL : "+p.getScoreSudAZ()+"\n";
+			}
+		}
+			
+		return s;
+	}
+
+	
 
 }
