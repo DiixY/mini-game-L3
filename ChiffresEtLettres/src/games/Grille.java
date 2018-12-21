@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 
+//Classe qui permet de lire une grille dans un txt et de la retranscrire en tableau 2 dimensions (Sudoku,MotMelee,
 public class Grille {
 
 	private char grille[][];
@@ -21,9 +22,6 @@ public class Grille {
 
 		try {
 
-			
-			
-			
 			
 			this.grille = new char[x-1][y];
 			/*Ligne pour lire des fichiers dans un .jar*/
@@ -39,12 +37,13 @@ public class Grille {
 			for(int i=1;i<this.x;i++)
 			{	
 				temp = br.readLine();
+				//transforme la ligne dans le buffer en tableau de caractÃ¨re
 				this.grille[i-1] = temp.toCharArray();
 			}
 
 			br.close();
 		} catch (FileNotFoundException e) {
-			System.out.println ("Le fichier n'a pas été trouvé");
+			System.out.println ("Le fichier n'a pas Ã©tÃ© trouvÃ©");
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
