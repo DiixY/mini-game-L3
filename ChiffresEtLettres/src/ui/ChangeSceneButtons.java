@@ -16,6 +16,9 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import ui.layout.*;
 
+
+//Classe qui regroupe toutes les fonctions pour les boutons dans l'interface graphique (redirection entre fenetre)
+//Et les variables/fonctions de manipulation pour avoir un joueur (present dans tout les jeux)
 public class ChangeSceneButtons {
 	
 	protected PlayerGestion pg;
