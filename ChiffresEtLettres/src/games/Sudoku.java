@@ -18,7 +18,7 @@ public class Sudoku {
 		this.chance = 15;
 	}
 
-
+	//Verifie si la grille est entièrement remplis (si il n'y a plus de 0 dans la grille
 	public boolean verifAllPlayed()
 	{
 		for(int i = 0;i<9;i++)
@@ -33,6 +33,7 @@ public class Sudoku {
 		return true;
 	}
 
+	//verifie l'unicité de la grille par ligne (on utilisera le tableau de caractère autorisé)
 	public boolean verifLine()
 	{
 		int count;
@@ -56,7 +57,7 @@ public class Sudoku {
 		return true;
 	}
 
-
+	//verifie l'unicité de la grille par colonne (on utilisera le tableau de caractère autorisé)
 	public boolean verifRow()
 	{
 		int count;
@@ -81,7 +82,7 @@ public class Sudoku {
 	}
 
 
-	//Verification Region :
+	//Transforme un tableau 2 dimensions en tableau 1 dimension (pour manipuler les regions):
 	public char[] createRegionArray(int l, int r)
 	{
 		char[] res = new char[9];
@@ -98,7 +99,8 @@ public class Sudoku {
 
 		return res;
 	}
-
+	
+	//verifie l'unicité de la grille par region (on transformera les regions en lignes pour simplifier les calculs)
 	public boolean verifRegion()
 	{
 		ArrayList<char[]> listR = new ArrayList<char[]>();
@@ -138,6 +140,7 @@ public class Sudoku {
 		else return false;
 	}
 	
+	//verifie si le caractere entré est autorisé dans la grille
 	public boolean isAutorized(char c)
 	{
 		for(char test:this.grille.getAutorise())
@@ -147,7 +150,8 @@ public class Sudoku {
 		}
 		return false;
 	}
-
+	
+	//affiche la grille (version console)
 	public void displayGrid()
 	{
 		for(int i = 0;i<9;i++)
@@ -162,6 +166,7 @@ public class Sudoku {
 		}
 	}
 
+	//joue un coup dans la grille avec les coordonnées fournis et le caractere
 	public boolean playCoup(int x,int y,char coup)
 	{
 		char temp;
