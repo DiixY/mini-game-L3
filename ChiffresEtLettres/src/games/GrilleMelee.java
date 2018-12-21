@@ -19,6 +19,8 @@ public class GrilleMelee extends Grille {
 		//InputStream flux=getClass().getResourceAsStream("/"+fpath);
 		//InputStreamReader lecture=new InputStreamReader(flux);
 		
+		
+		//recupere les mots autorisés dans le tableau autorise de type string en detectant le caractere '-'
 		File f = new File(fpath);
 		FileReader lecture = new FileReader(f);
 		BufferedReader br = new BufferedReader(lecture);
@@ -42,7 +44,4 @@ public class GrilleMelee extends Grille {
 		this.autorise = autorise;
 	}
 	
-	
-	
-
 }
